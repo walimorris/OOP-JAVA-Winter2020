@@ -4,7 +4,7 @@
  * Date   : 01/06/2020
  */
 
-class Hello1 {
+public class Hello1 {
     public static void main(String[] args) { 
         System.out.println("Hello World");
     
