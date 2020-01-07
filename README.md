@@ -32,3 +32,9 @@ understanding what a static method is. Finally here's the program results:
 
 ![Challenge2!](Hello1.png)
 
+***Introduction Challenge3: Drawing Figures***
+This challenge comes from the textbook @Building Java Programs: A Back to Basics Approach, 5th edition By Stuart Reges and 
+Marty Stepp. Challenge 3 focuses more on utilizing procedural decomposition using static methods and minimizing duplication. 
+
+![Challenge3!](Figures.png)
+
