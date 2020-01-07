@@ -17,7 +17,6 @@ public class Figures {
         hexigon();
         System.out.println(); 
         stopSign(); 	
-
     } 
     public static void line() { 
         System.out.println("+--------+"); 
