@@ -14,3 +14,5 @@ I was surprised when it actually worked. I decided to replace these methods beca
 be a good design. Questions: I still don't fully understand the main function()
 public static void main(String[] args)----- What is the purpose of args?
 
+![Challenge1!](Rocket.png)
+
