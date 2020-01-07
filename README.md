@@ -2,7 +2,7 @@
 
 ***Object Oriented Programming course*** 
 
-***Below are some of the assignments I've worked on this quarter***
+***Below are some of the assignments I've worked on Winter Semester***
 
 ***Introduction Challenge: Creating a Rocket***
 This exercise was introduced in our first class and seemed really cool. Some things I've learned: 
