@@ -8,7 +8,7 @@ class Hello1 {
     public static void main(String[] args) { 
         System.out.println("Hello World");
     
-        for(int i=0; i<5; i++) {
+        for(int i=0;i<5;i++) {
             drawBox(); 
 	}
     }
@@ -19,7 +19,7 @@ class Hello1 {
     System.out.println(top); 
     System.out.println(mid);
     System.out.println(bot);   
-	} 
+    }
 } 
  
 
