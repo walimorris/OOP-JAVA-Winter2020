@@ -5,7 +5,6 @@
  *  Date  : 01/06/2020
  */ 
 
-
 class Rocket{ 
     public static void main(String[] args){
 	drawTri(); 
