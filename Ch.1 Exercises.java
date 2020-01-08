@@ -7,7 +7,6 @@
  * date  : Jan 07, 2019 
  */
  
-
 public class Stewie { 
     public static void main(String[] args) { 
         drawVictoryBox(); 
@@ -22,7 +21,6 @@ public class Stewie {
 	System.out.println("\\\\\\\\\\\\\\\\\\\\\\"); 
     }
 }
-
 
 /* Building Java Programs 5th Edition: Chapter 1 
  * Exercise 2: Write a complete program called 
@@ -48,7 +46,6 @@ public class Spikey {
     } 
 }
 
-
 /* Building Java Programs 5th Edition: Chapter 1 
  * Exercise 3: Write a complete program called 
  * Wellformed that prints the output in this solution.
@@ -70,7 +67,6 @@ public class WellFormed {
 	System.out.println("(But we type \\\" instead!)"); 
     } 
 }
-
 
 /* Building Java Programs 5th Edition: Chapter 1 
  * Exercise 4: Write a complete program called 
