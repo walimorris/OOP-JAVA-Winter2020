@@ -73,7 +73,7 @@ public class WellFormed {
  * Difference that prints the output in this solution.
  * 
  * Author: Wali Morris 
- * file  : Differece.java 
+ * file  : Difference.java 
  * date  : Jan 07, 2019 
  */
 
