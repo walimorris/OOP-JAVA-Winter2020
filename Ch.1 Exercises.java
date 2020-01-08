@@ -89,3 +89,49 @@ public class Difference {
 	System.out.println("the other is what appears on the \"console.\""); 	
     } 
 } 
+
+/* Building Java Programs 5th Edition: Chapter 1 
+ * Exercise 5: Write a complete program called 
+ * Difference that prints the output in this solution.
+ * 
+ * Author: Wali Morris 
+ * file  : MuchBetter.java 
+ * date  : Jan 07, 2019 
+ */
+
+public class MuchBetter {
+    public static void main(String[] args) {
+        someBetterText();
+    }
+
+    public static void someBetterText() {
+        System.out.println("A \"quoted\" String is\nmuch better if you learn");
+        System.out.println("the rules of \"escape sequences\".\nAlso, \"\" represents an empty string.");
+        System.out.println("Don't forget: use \\\" instead of \" !\n'' is not the same as \"");
+    }
+}
+
+/* Building Java Programs 5th Edition: Chapter 1 
+ * Exercise 4: Write a complete program called Meta
+ * whose output is the text that would be the source 
+ * code of a Java program that prints "Hello World!"
+ * as its output.
+ * 
+ * Author: Wali Morris 
+ * file  : Meta.java 
+ * date  : Jan 07, 2019 
+ */
+
+public class Meta {
+    public static void main(String[] args) {
+      helloWorldText();
+    }
+
+    public static void helloWorldText() {
+        System.out.println("public class HelloWorld {");
+        System.out.println("    public static void main(String[] args) {");
+        System.out.println("        System.out.println(\"Hello World!\");");
+        System.out.println("    }");
+        System.out.println("}");
+    }
+}
