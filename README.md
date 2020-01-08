@@ -41,6 +41,9 @@ Marty Stepp. Challenge 3 focuses more on utilizing procedural decomposition usin
 
 ***Chapter1 Exercises*** 
 
+***Exercises 1-3***
 ![Exercises1-3!](/Pics/Exercises1-3.png)
+
+***Exercises 4-6***
 ![Exercises4-6!](/Pics/Exercises4-6.png)
 
