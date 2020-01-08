@@ -2,7 +2,8 @@
 
 ***Object Oriented Programming course*** 
 
-***Below are some of the assignments I've worked on Winter Semester***
+***This Repository contains Java programs worked on throughout Winter Semester***
+***Below is an introductory to Java Programming***
 
 ***Introduction Challenge1: Creating a Rocket***
 This exercise was introduced in our first class and seemed really cool. Some things I've learned: 
