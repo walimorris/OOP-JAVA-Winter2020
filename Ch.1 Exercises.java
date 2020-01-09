@@ -489,3 +489,22 @@ public class EggStop {
         bottomEgg();
     }
 }
+
+/* Exercise 16: Write a program called Shining that prints the following line
+ * of output 1000 times. 
+ *
+ * Author : Wali Morris
+ * File   : Shining.java
+ * date   : 01/09/2020
+ */
+
+public class Shining {
+    public static void main(String[] args) {
+        for(int i=0;i<1000;i++)
+            theShining();
+    }
+
+    public static void theShining() {
+        System.out.println("All work and no play makes Jack a dull boy.");
+    }
+}
