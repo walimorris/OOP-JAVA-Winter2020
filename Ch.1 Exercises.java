@@ -508,3 +508,52 @@ public class Shining {
         System.out.println("All work and no play makes Jack a dull boy.");
     }
 }
+
+/* Exercise 17: Write a program called FarewellGoodBye that prints the 
+ * following lyrics. Use static methods to show structure and eliminate 
+ * redundancy in your solution.
+ *
+ * Author : Wali Morris
+ * File   : FarewellGoodBye.java
+ * Date   : 01/09/2020 
+ */
+
+public class FarewellGoodBye {
+    public static void main(String[] args) {
+        firstVerse();
+        secondVerse();
+        thirdVerse();
+    }
+
+    public static void fareWell() {
+        System.out.println("Farewell,\ngoodbye\nau revoir,");
+    }
+    public static void goodNight() {
+        System.out.println("goodnight!\nIt's time, to go,\nand I'll be out of sight!");
+        System.out.println();
+    }
+
+    public static void takeCare() {
+        System.out.println("take care!\nI'll say, goodbye,\nthat's neither here nor there!");
+        System.out.println();
+    }
+
+    public static void seeYouLater() {
+        System.out.println("see you later!\nI hope, you think,\nI'm a lover, not a hater!");
+    }
+
+    public static void firstVerse() {
+        fareWell();
+        goodNight();
+    }
+
+    public static void secondVerse() {
+        fareWell();
+        takeCare();
+    }
+
+    public static void thirdVerse() {
+        fareWell();
+        seeYouLater();
+    }
+}
