@@ -394,7 +394,7 @@ public class StarFigures {
  *
  * Author : Wali Morris 
  * File   : Lanterns.java
- * Date   : 01/08/2020
+ * Date   : 01/09/2020
  */
 
 public class Lanterns {
@@ -441,5 +441,51 @@ public class Lanterns {
         drawTwoStarsFiveLines();
         drawFiveStars();
         drawFiveStars();
+    }
+}
+
+/* Exercise 15: Write a Java called EggStop that generates the following output
+ * Use static methods to show structure and eliminate redundancy in your solution.
+ *
+ * Author : Wali Morris
+ * File   : EggStop
+ * date   : 01/09/2020
+ */
+
+public class EggStop {
+    public static void main(String[] args) {
+        drawHexagon();
+        bottomEgg();
+        System.out.println("+-----------+");
+        drawStopEgg();
+        topEgg();
+        System.out.println("+-----------+");
+    }
+
+    public static void topEgg() {
+        System.out.println("  ________   ");
+        System.out.println(" /        \\ ");
+        System.out.println("/          \\");
+    }
+
+    public static void middleEgg() {
+        System.out.println("|   STOP   |");
+    }
+
+    public static void bottomEgg() {
+        System.out.println("\\          /");
+        System.out.println(" \\        / ");
+        System.out.println("  ________   ");
+    }
+
+    public static void drawHexagon() {
+        topEgg();
+        bottomEgg();
+    }
+
+    public static void drawStopEgg() {
+        topEgg();
+        middleEgg();
+        bottomEgg();
     }
 }
