@@ -315,3 +315,32 @@ public class TwoRockets {
         System.out.println(verlines);
     }
 }
+
+/* Exercise 12: Write a Program called FightSong that produces the output found
+ * in this solution. Use at least two static methods to show structure and 
+ * eliminate redundancy in your solution. 
+ *
+ * Author : Wali Morris
+ * File   : FightSong.java
+ * Date   : 01/08/2020
+ */
+
+public class FightSong {
+    public static void main(String[] args) {
+        for(int i=0;i<2;i++) {
+            singVerseOne();
+            System.out.println();
+            singVerseTwo();
+            System.out.println();
+        }
+    }
+
+    public static void singVerseOne() {
+        System.out.println("Go, team, go!\nYou can do it.");
+    }
+
+    public static void singVerseTwo() {
+        System.out.println("Go, team, go!\nYou can do it.\nYou're the best,\nIn the west.");
+        System.out.println("Go, team, go!\nYou can do it.");
+    }
+}
