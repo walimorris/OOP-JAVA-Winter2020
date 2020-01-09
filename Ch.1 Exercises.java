@@ -344,3 +344,46 @@ public class FightSong {
         System.out.println("Go, team, go!\nYou can do it.");
     }
 }
+
+/* Exercise 13: Write a Java program called StarFigures that generates the 
+ * following output of stars , as found in this solution. Use static methods
+ * to show structure and eliminate redundancy in your solution. 
+ *
+ * Author : Wali Morris 
+ * File   : StarFigures.java
+ * Date   : 01/08/2020
+ */
+
+public class StarFigures {
+    public static void main(String[] args) {
+        twoRowsOfFive();
+        twoOneTwo();
+        System.out.println();
+        twoRowsOfFive();
+        twoOneTwo();
+        twoRowsOfFive();
+        System.out.println();
+
+        for(int i=0;i<3;i++) {
+            oneStar();
+        }
+
+        twoRowsOfFive();
+        twoOneTwo();
+    }
+
+    public static void twoRowsOfFive() {
+        System.out.println("*****");
+        System.out.println("*****");
+    }
+
+    public static void twoOneTwo() {
+        System.out.println(" * * ");
+        System.out.println("  *  ");
+        System.out.println(" * * ");
+    }
+
+    public static void oneStar() {
+        System.out.println("  *  ");
+    }
+}
