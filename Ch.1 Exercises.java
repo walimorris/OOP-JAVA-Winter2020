@@ -135,3 +135,95 @@ public class Meta {
         System.out.println("}");
     }
 }
+
+/* Building Java Programs 5th Edition: Chapter 1 
+ * Exercise 7: Write a complete program called Mantra
+ * That prints the following output in this solution. 
+ * Use at least one static method besides main.
+ * 
+ * Author: Wali Morris 
+ * file  : Mantra.java 
+ * date  : Jan 08, 2019 
+ */
+
+public class Mantra {
+    public static void main(String[] args) {
+        writeMantraText();
+        System.out.println();
+        writeMantraText();
+    }
+
+    public static void writeMantraText() {
+        System.out.println("There's one thing every coder must understand:");
+        System.out.println("The System.out.println command.");
+    }
+}
+
+/* Building Java Programs 5th Edition: Chapter 1 
+ * Exercise 8: Write a complete program called 
+ * Stewie2 that prints the output in this solution.
+ * Use at least one static method besides main.
+ * 
+ * Author: Wali Morris 
+ * file  : Stewie2.java 
+ * date  : Jan 08, 2019 
+ */
+
+public class Stewie2 {
+    public static void main(String[] args) {
+           forwardSlashRow();
+           for(int i=0;i<5;i++){
+               victoryBackSlash();
+           }
+    }
+
+    public static void printVictoryText() {
+        System.out.println("|| Victory is mine! ||");
+    }
+
+    public static void forwardSlashRow() {
+        System.out.println("//////////////////////");
+    }
+
+    public static void backSlashRow() {
+        System.out.print("\\\\\\\\\\\\\\\\\\\\\\");
+        System.out.println("\\\\\\\\\\\\\\\\\\\\\\");
+    }
+
+    public static void victoryBackSlash() {
+        printVictoryText();
+        backSlashRow();
+    }
+}
+
+/* Building Java Programs 5th Edition: Chapter 1 
+ * Exercise 9: Write a complete program called 
+ * Egg that displays the output in this solution.
+ * 
+ * Author: Wali Morris 
+ * file  : Egg.java 
+ * date  : Jan 08, 2019 
+ */
+
+public class Egg {
+    public static void main(String[] args) {
+        drawTopEgg();
+        drawYoke();
+        drawBottomEgg();
+    }
+
+    public static void drawTopEgg() {
+        System.out.println("  _________");
+        System.out.println(" /         \\");
+        System.out.println("/           \\");
+    }
+
+    public static void drawYoke() {
+        System.out.println(" -\"-'-\"-'-\"- ");
+    }
+
+    public static void drawBottomEgg() {
+        System.out.println("\\           /");
+        System.out.println(" \\_________/");
+    }
+}
