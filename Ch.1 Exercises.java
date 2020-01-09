@@ -4,7 +4,7 @@
  * 
  * Author: Wali Morris 
  * file  : Stewie.java 
- * date  : Jan 07, 2019 
+ * date  : Jan 07, 2020
  */
  
 public class Stewie { 
@@ -28,7 +28,7 @@ public class Stewie {
  * 
  * Author: Wali Morris 
  * file  : Spikey.java 
- * date  : Jan 07, 2019 
+ * date  : Jan 07, 2020
  */
 
 public class Spikey { 
@@ -52,7 +52,7 @@ public class Spikey {
  * 
  * Author: Wali Morris 
  * file  : Wellformed.java 
- * date  : Jan 07, 2019 
+ * date  : Jan 07, 2020 
  */
 
 public class WellFormed { 
@@ -74,7 +74,7 @@ public class WellFormed {
  * 
  * Author: Wali Morris 
  * file  : Difference.java 
- * date  : Jan 07, 2019 
+ * date  : Jan 07, 2020
  */
 
 public class Difference { 
@@ -96,7 +96,7 @@ public class Difference {
  * 
  * Author: Wali Morris 
  * file  : MuchBetter.java 
- * date  : Jan 07, 2019 
+ * date  : Jan 07, 2020 
  */
 
 public class MuchBetter {
@@ -119,7 +119,7 @@ public class MuchBetter {
  * 
  * Author: Wali Morris 
  * file  : Meta.java 
- * date  : Jan 07, 2019 
+ * date  : Jan 07, 2020
  */
 
 public class Meta {
@@ -143,7 +143,7 @@ public class Meta {
  * 
  * Author: Wali Morris 
  * file  : Mantra.java 
- * date  : Jan 08, 2019 
+ * date  : Jan 08, 2020
  */
 
 public class Mantra {
@@ -166,7 +166,7 @@ public class Mantra {
  * 
  * Author: Wali Morris 
  * file  : Stewie2.java 
- * date  : Jan 08, 2019 
+ * date  : Jan 08, 2020 
  */
 
 public class Stewie2 {
@@ -202,7 +202,7 @@ public class Stewie2 {
  * 
  * Author: Wali Morris 
  * file  : Egg.java 
- * date  : Jan 08, 2019 
+ * date  : Jan 08, 2020 
  */
 
 public class Egg {
@@ -234,7 +234,7 @@ public class Egg {
  * 
  * Author : Wali Morris
  * File   : Egg2.java 
- * Date   : 01/08/2019 
+ * Date   : 01/08/2020 
  */
 
 public class Egg2 {
