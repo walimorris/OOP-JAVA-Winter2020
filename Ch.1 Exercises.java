@@ -227,3 +227,43 @@ public class Egg {
         System.out.println(" \\_________/");
     }
 }
+
+/* Exercise 10: Modify the program from the previous exercise to become 
+ * a new program Egg2 that displays the following output in this solution. 
+ * Use static methods as appropriate. 
+ * 
+ * Author : Wali Morris
+ * File   : Egg2.java 
+ * Date   : 01/08/2019 
+ */
+
+public class Egg2 {
+    public static void main(String[] args) {
+        for(int i=0;i<2;i++){
+            drawTopEgg();
+            drawBottomEgg();
+            drawYoke();
+            System.out.println();
+        }
+        drawBottomEgg();
+        System.out.println();
+        drawTopEgg();
+        drawYoke();
+        drawBottomEgg();
+    }
+
+    public static void drawTopEgg() {
+        System.out.println("  _________");
+        System.out.println(" /         \\");
+        System.out.println("/           \\");
+    }
+
+    public static void drawYoke() {
+        System.out.println(" -\"-'-\"-'-\"- ");
+    }
+
+    public static void drawBottomEgg() {
+        System.out.println("\\           /");
+        System.out.println(" \\_________/");
+    } 
+} 
