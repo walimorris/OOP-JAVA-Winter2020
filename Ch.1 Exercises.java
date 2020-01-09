@@ -387,3 +387,59 @@ public class StarFigures {
         System.out.println("  *  ");
     }
 }
+
+/* Exercise 14: Write a Java program called Lanterns that generates the output
+ * seen in this solution. use static methods to show structure and eliminate
+ * redundancy in your solution.
+ *
+ * Author : Wali Morris 
+ * File   : Lanterns.java
+ * Date   : 01/08/2020
+ */
+
+public class Lanterns {
+    public static void main(String[] args) {
+        drawTopLantern();
+        drawMidLantern();
+        drawBottomLantern();
+    }
+
+    public static void drawFiveStars() {
+        System.out.println("    *****    ");
+    }
+
+    public static void drawNineStars() {
+        System.out.println("   *******   ");
+    }
+    public static void drawThirteenStars() {
+        System.out.println("*************");
+    }
+
+    public static void drawTwoStarsFiveLines() {
+        System.out.println("* | | | | | *");
+    }
+
+    public static void drawTopLantern() {
+        drawFiveStars();
+        drawNineStars();
+        drawThirteenStars();
+        System.out.println();
+    }
+
+    public static void drawMidLantern() {
+        drawTopLantern();
+        drawTwoStarsFiveLines();
+        drawThirteenStars();
+        drawTopLantern();
+        System.out.println();
+    }
+
+    public static void drawBottomLantern() {
+        drawTopLantern();
+        drawFiveStars();
+        drawTwoStarsFiveLines();
+        drawTwoStarsFiveLines();
+        drawFiveStars();
+        drawFiveStars();
+    }
+}
