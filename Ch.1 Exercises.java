@@ -267,3 +267,51 @@ public class Egg2 {
         System.out.println(" \\_________/");
     } 
 } 
+
+/* Exercise 11: Write a Java program called TwoRockets that generates 
+ * the following output. Use static methods to show structure and 
+ * eliminate redundancy in your solution. Note that there are two 
+ * rocket ships next to each other. What redundancy can you eliminate
+ * using static methods? What redundancy cannot be eliminated?
+ *
+ * Author : Wali Morris 
+ * File   : TwoRockets.java
+ * Date   : 01/08/2020 
+ */
+
+public class TwoRockets {
+    public static void main(String[] args) {
+        drawTri();
+        drawBox();
+        drawLabelBox();
+        drawBox();
+        drawTri();
+    }
+
+    public static void drawBox(){
+        String hor = "+------+ +------+";
+        String ver = "|      | |      |";
+        System.out.println(hor);
+        System.out.println(ver);
+        System.out.println(ver);
+        System.out.println(ver);
+        System.out.println(hor);
+    }
+    public static void drawTri(){
+        String top = "   /\\       /\\";
+        String mid = "  /  \\     /  \\";
+        String bot = " /    \\   /    \\";
+        System.out.println(top);
+        System.out.println(mid);
+        System.out.println(bot);
+    }
+    public static void drawLabelBox(){
+        String verlines = "|      | |      |";
+        String topLabel = "|United| |United|";
+        String midLabel = "|States| |States|";
+        System.out.println(verlines);
+        System.out.println(topLabel);
+        System.out.println(midLabel);
+        System.out.println(verlines);
+    }
+}
