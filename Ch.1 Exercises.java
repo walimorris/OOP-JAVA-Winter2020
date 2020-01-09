@@ -112,7 +112,7 @@ public class MuchBetter {
 }
 
 /* Building Java Programs 5th Edition: Chapter 1 
- * Exercise 4: Write a complete program called Meta
+ * Exercise 6: Write a complete program called Meta
  * whose output is the text that would be the source 
  * code of a Java program that prints "Hello World!"
  * as its output.
