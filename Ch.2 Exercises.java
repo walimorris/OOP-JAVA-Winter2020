@@ -1,6 +1,6 @@
-/* In physics, a common useful equation for finding the position s of a
- * body in linear motion at a given time t, based on its initial pos
- * s0, initial velocity v0, and rate of acceleration a, is : 
+/* Exercise 1: In physics, a common useful equation for finding the 
+ * position s of body in linear motion at a given time t, based on its 
+ * initial pos s0, initial velocity v0, and rate of acceleration a, is: 
  * s = s0 + vot + 1/2at^2
  * Write code to compute s on the basis of these values. 
  *
@@ -22,7 +22,7 @@ public class PositionOfS {
     }
 }
 
-/* Write a for loop that produces the following output: 
+/* Exercise 2: Write a for loop that produces the following output: 
  * 1 4 9 16 25 36 49 64 81 100
  *
  * Author : Wali Morris 
