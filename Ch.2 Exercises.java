@@ -42,3 +42,20 @@ public class LoopsAreSoFun {
     }
 }
 
+/* Exercise 4: Write a nested for loop to produce 4 rows of 4 stars.
+ *
+ * Author : Wali Morris
+ * File   : StarsOf5.java
+ * Date   : 01/10/2020
+ */
+
+public class StarsOf5 {
+    public static void main(String[] args) {
+        for(int i=1;i<=4;i++) {
+            for(int j=1;j<=5;j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
