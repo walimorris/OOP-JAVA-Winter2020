@@ -55,6 +55,27 @@ public class StarsOf5 {
             for(int j=1;j<=5;j++) {
                 System.out.print("*");
             }
+            
+            System.out.println();
+        }
+    }
+}
+
+/* Exercise 5: Write nested for loops to produce a figure that starts
+ * with 1 star and increments to 5
+ *
+ * Author : Wali Morris
+ * File   : StarMountain.java
+ * Date   : 01/10/2020
+ */
+
+public class StarMountain {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++) {
+            for(int k=1;k<=i;k++) {
+                System.out.print("*");
+            }
+
             System.out.println();
         }
     }
