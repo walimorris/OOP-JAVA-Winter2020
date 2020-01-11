@@ -1,3 +1,6 @@
+//Chapter2: Primitive data types;Definite Loops; for loops; nested loops and managing complexity.
+//By: Wali Morris 
+
 /* Exercise 1: In physics, a common useful equation for finding the 
  * position s of body in linear motion at a given time t, based on its 
  * initial pos s0, initial velocity v0, and rate of acceleration a, is: 
@@ -74,6 +77,26 @@ public class StarMountain {
         for(int i=1;i<=5;i++) {
             for(int k=1;k<=i;k++) {
                 System.out.print("*");
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+/* Exercise 6: Write nested for loops to produce a figure that prints 
+ * a mountain of letters, from 1-7
+ *
+ * Author : Wali Morris 
+ * File   : LuckySeven.java
+ * Date   : 01/10/2020
+ */
+
+public class LuckySeven {
+    public static void main(String[] args) {
+        for(int i=1;i<=7;i++) {
+            for(int j=1;j<=i;j++) {
+                System.out.print(i);
             }
 
             System.out.println();
