@@ -86,3 +86,30 @@ public class PrintingPowers {
         System.out.println();
     }
 }
+
+/* Write a methods called printGrid that accepts two integers represetning a 
+ * number of rows and columns and prints a grid of integers from 1 
+ * (rows * columns) in column major order. 
+ *
+ * Author : Wali Morris 
+ * File   : PrintingGrids.java
+ * Date   : 01/12/2020
+ */
+
+public class PrintingGrids {
+    public static void main(String[] args) {
+        printGrid(4, 6);
+        System.out.println();
+        printGrid(5, 5);
+    }
+
+    public static void printGrid(int x, int y) {
+        for(int i=1;i<=x;i++) {
+            for(int j=i;j<=x*y;j+=x) {
+                System.out.print(j+" ");
+            }
+
+            System.out.println();
+        }
+    }
+}
