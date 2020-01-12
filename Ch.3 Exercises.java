@@ -38,3 +38,27 @@ public class ReturnExample {
         return x * y;
     }
 }
+
+/* Write a method called printNumbers that accepts a maximum number as an 
+ * argument and prints each number from 1 up to that maximum, inclusive, 
+ * boxed by squared brackets.
+ *
+ * Author : Wali Morris
+ * File   : PrintingNumbers.java
+ * Date   : 01/12/2020
+ */
+
+public class PrintingNumbers {
+    public static void main(String[] args) {
+        printNumbers(15);
+        printNumbers(5);
+    }
+
+    public static void printNumbers(int x) {
+        for(int i=1;i<=x;i++) {
+            System.out.print("[" + i + "]" + " ");
+        }
+
+        System.out.println();
+    }
+}
