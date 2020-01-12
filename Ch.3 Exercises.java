@@ -62,3 +62,27 @@ public class PrintingNumbers {
         System.out.println();
     }
 }
+
+/* Write a method called printPowersOf2 that accepts a maximum numbers as an 
+ * arguement and prints each power of 2 from 2^0(1) up to that maximum power
+ * inclusive. 
+ *
+ * Author : Wali Morris
+ * File   : PrintingPowers.java
+ * Date   : 01/12/2020
+ */
+
+public class PrintingPowers {
+    public static void main(String[] args) {
+        printPowersOf2(3);
+        printPowersOf2(10);
+    }
+
+    public static void printPowersOf2(int x) {
+        for(int i=0;i<=x;i++) {
+            System.out.print((int)Math.pow(2,i)+" ");
+        }
+
+        System.out.println();
+    }
+}
