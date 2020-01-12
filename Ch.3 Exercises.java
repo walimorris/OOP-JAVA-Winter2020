@@ -135,3 +135,30 @@ public class AbsoluteValues {
         return greatestVal;
     }
 }
+
+/* Write a method called quadratic that solves quadratic equations and prints
+ * their roots. In this solution you can assume assume the equations have two 
+ * real roots, although this is not always the case mathematically. 
+ *
+ * Author : Wali Morris
+ * File   : Quadratics.java 
+ * Date   : 01/12/2020
+ */
+
+public class Quadratics {
+    public static void main(String[] args) {
+        System.out.print("Equation1: ");
+        quadratic(1,-7,12);
+        System.out.print("Equation2: ");
+        quadratic(1,3,2);
+    }
+
+    // How to return two statements?
+    public static void quadratic(int a, int b, int c) {
+        double discRoot1 = (-b - (b*b - 4*a*c)) / (2*a);
+        double discRoot2 = (-b + (b*b - 4*a*c)) / (2*a);
+        System.out.print("x1 = " + (int)discRoot1 + ", ");
+        System.out.println("x2 = " + (int)discRoot2);
+    }
+}
+
