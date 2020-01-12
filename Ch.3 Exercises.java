@@ -113,3 +113,25 @@ public class PrintingGrids {
         }
     }
 }
+
+/* Write a method called largerAbsVal that takes two integers as parameters and
+ * returns the larger of the two absolute values. A callof largerAbsVal(11,2) 
+ * would return 11, and a call of largerAbsVal(4,-5) would return 5. 
+ *
+ * Author : Wali Morris 
+ * File   : AbsoluteValues.java
+ * Date   : 01/12/2020
+ */
+
+public class AbsoluteValues {
+    public static void main(String[] args) {
+        int largerVal = largerAbsVal(4, -5);
+        System.out.println("Largest absolute value is: " + largerVal);
+    }
+
+    public static int largerAbsVal(int x, int y) {
+        int absX = Math.abs(x), absY = Math.abs(y);
+        int greatestVal = Math.max(absX, absY);
+        return greatestVal;
+    }
+}
