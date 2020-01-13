@@ -401,8 +401,8 @@ public class ReverseStrings {
     /* initialize i as the length of the string -1, if the string
      * is "Hello there, Java!" then length is 18-1 or 17 to take 
      * in account that indexing starts at 0. Here, we start at the 
-     * greatest character in the string and decrement by 1 to 0, or the 
-     * first character in the string. 
+     * greatest character in the string and decrement by 1 to 0, in 
+     * other words until we reach the first character in the string.
      */
     public static void printReverse(String s) {
         for(int i=s.length()-1;i>=0;i--) {
