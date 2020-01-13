@@ -1,3 +1,5 @@
+//Chapter 3 does a dive into the Java Math library, methods, parameters and objects! 
+
 /* Write a method that write a certain number or space. 
  *
  * Author : Wali Morris
