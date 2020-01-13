@@ -263,3 +263,30 @@ public class ScientificNotation {
 
     public static double scientific(double base, int exponent) {
         return base * Math.pow(10, exponent);
+    }
+    
+    /* Write a method called pay that accepts two parameters: a real number for a 
+ * TA's salary, and an integer for the number of hours the TA worked this week.
+ * The method should return how much money to pay the TA. 
+ *
+ * Author : Wali Morris 
+ * File   : TaSalary.java
+ * Date   : 01/12/2020
+ */
+
+public class TaSalary {
+    public static void main(String[] args) {
+        double assistantOnePay = pay(5.50, 6);
+        double assistantTwoPay = pay(4.00, 11);
+        System.out.println("First TA pay: $" + assistantOnePay);
+        System.out.println("Second TA pay: $" + assistantTwoPay);
+    }
+
+    public static double pay(double salary, int hours) {
+        if(hours > 8) {
+            return (salary * 8) + ((salary * 1.5) * (hours - 8));
+        }
+        else
+            return (salary * hours);
+    }
+}
