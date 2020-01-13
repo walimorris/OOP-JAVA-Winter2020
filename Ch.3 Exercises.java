@@ -162,3 +162,25 @@ public class Quadratics {
     }
 }
 
+/* Write a method called lastDigit that returns the last digit of an integer. 
+ * This should work for negative numbers as well. 
+ *
+ * Author : Wali Morris 
+ * File   : ReturningDigits.java
+ * Date   : 01/12/2020
+ */
+
+public class ReturningDigits {
+    public static void main(String[] args) {
+        int digitOne = 1435, digitTwo = -716;
+        int ansOne = lastDigit(digitOne), ansTwo = lastDigit(digitTwo);
+        System.out.print("The last digit of ");
+        System.out.println(+ digitOne + " is " + ansOne);
+        System.out.print("The last digit of ");
+        System.out.println(+ digitTwo + " is " + ansTwo);
+    }
+
+    public static int lastDigit(int x) {
+        return Math.abs(x) % 10;
+    }
+}
