@@ -205,3 +205,39 @@ public class AreaOfCircle {
         return ((Math.PI) * (radius * radius));
     }
 }
+
+/* Write a method called distance that accepts four integer coordinates x1,y1,
+ * x2,y2 as parameters and computes the distance between(x1,y1) and (x2,y2) on 
+ * the Cartesian plane. 
+ *
+ * Author : Wali Morris 
+ * File   : ComputingDistance.java
+ * Date   : 01/12/2020
+ */
+
+import java.util.*;
+
+public class ComputingDistance {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        double x1, x2, y1, y2;
+        double distanceBetweenPoints;
+        System.out.print("Enter x1: ");
+        x1 = console.nextInt();
+        System.out.print("Enter y1: ");
+        y1 = console.nextInt();
+        System.out.print("Enter x2: ");
+        x2 = console.nextInt();
+        System.out.print("Enter y2: ");
+        y2 = console.nextInt();
+        distanceBetweenPoints = distance(x1,x2,y1,y2);
+        System.out.print("The distance between ");
+        System.out.print("("+x1+","+y1+") and ");
+        System.out.println("("+x2+","+y2+") = " + distanceBetweenPoints);
+    }
+
+    public static double distance(double x1, double x2, double y1, double y2) {
+        return Math.sqrt((Math.pow(x2-x1,2)) + (Math.pow(y2-y1,2)));
+    }
+}
