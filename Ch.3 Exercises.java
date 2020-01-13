@@ -365,7 +365,7 @@ public class TriangleArea {
     }
 }
 
-* Write a method called vertical that accepts a string as its parameter and 
+/* Write a method called vertical that accepts a string as its parameter and 
  * prints each letter of the string on seperate lines. 
  *
  * Author : Wali Morris 
