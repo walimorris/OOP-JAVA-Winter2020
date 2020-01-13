@@ -184,3 +184,24 @@ public class ReturningDigits {
         return Math.abs(x) % 10;
     }
 }
+
+/* Write a method called area that accepts as a parameter the radius of a 
+ * circle and that returns the area of the circle. 
+ *
+ * Author : Wali Morris 
+ * File   : AreaOfCircle.java
+ * Date   : 01/12/2020
+ */
+
+public class AreaOfCircle {
+    public static void main(String[] args) {
+        double radius = 2.0;
+        double circleArea = area(radius);
+        System.out.print("The area of a circle with radius of " + radius);
+        System.out.println(" is " + circleArea);
+    }
+
+    public static double area(double radius) {
+        return ((Math.PI) * (radius * radius));
+    }
+}
