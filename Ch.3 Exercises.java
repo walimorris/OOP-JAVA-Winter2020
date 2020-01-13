@@ -241,3 +241,25 @@ public class ComputingDistance {
         return Math.sqrt((Math.pow(x2-x1,2)) + (Math.pow(y2-y1,2)));
     }
 }
+
+/* Write a method called scientific that accepts a real number base and an 
+ * exponent as paramters and computes the base times 10 to the exponent, as
+ * seen in scientific notation. 
+ *
+ * Author : Wali Morris 
+ * File   : ScientificNotation.java
+ * Date   : 01/12/2020 
+ */
+
+public class ScientificNotation {
+    public static void main(String[] args) {
+        double solutionOne = scientific(6.23, 5);
+        double solutionTwo = scientific(1.9, -2);
+        System.out.print("6.23 with an exponent of 5 produces ");
+        System.out.println(solutionOne + " in scientific notation.");
+        System.out.print("\n1.9 with an exponent of -2 produces ");
+        System.out.println(solutionTwo + " in scientific notation.");
+    }
+
+    public static double scientific(double base, int exponent) {
+        return base * Math.pow(10, exponent);
