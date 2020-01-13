@@ -364,3 +364,23 @@ public class TriangleArea {
         return area;
     }
 }
+
+* Write a method called vertical that accepts a string as its parameter and 
+ * prints each letter of the string on seperate lines. 
+ *
+ * Author : Wali Morris 
+ * File   : VericalLetters.java 
+ * Date   : 01/12/2020
+ */
+
+public class VerticalLetters {
+    public static void main(String[] args) {
+        vertical("More Loops");
+    }
+
+    public static void vertical(String x) {
+        for(int i=0;i<x.length();i++) {
+            System.out.println(x.charAt(i));
+        }
+    }
+}
