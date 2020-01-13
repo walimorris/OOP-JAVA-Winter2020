@@ -342,3 +342,25 @@ public class VolumeOfASphere {
         return (double)4/3 * Math.PI * Math.pow(r, 3);
     }
 }
+
+/* Write a method called triangleArea that accepts the three side lengths of a
+ * triangle as parameters and returns the area of a triangle with those side 
+ * lengths using Heron's formula. 
+ *
+ * Author : Wali Morris
+ * File   : TriangleArea.java
+ * Date   : 01/12/2020 
+ */
+
+public class TriangleArea {
+    public static void main(String[] args) {
+        double area = triangleArea(8, 5.2, 7.1);
+        System.out.println("The area is " + area);
+    }
+
+    public static double triangleArea(double a, double b, double c) {
+        double s = (a + b + c) / 2;
+        double area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+        return area;
+    }
+}
