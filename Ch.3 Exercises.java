@@ -412,3 +412,36 @@ public class ReverseStrings {
         System.out.println();
     }
 }
+
+/* Write a method called printIndexed that accepts a string as its parameter 
+ * and prints the string's characters in order followed by their indexes in 
+ * reverse order. 
+ *
+ * Author : Wali Morris 
+ * File   : Indexed.java
+ * Date   : 01/13/2020 
+ */
+
+public class Indexed {
+    public static void main(String[] args) {
+        printIndexed("ZELDA");
+    }
+
+    public static void printIndexed(String s) {
+        /* initialize length of string and a counter variable j. 
+         * for Every loop the character at j will print, followed by 
+         * the integer value of i, which is length of string - 1. 
+         * We subtract 1 to make up for the fact that indexing 
+         * starts at 0. Using 'i>=0' ensures that i will reach 0.
+         */
+        int str = s.length();
+        int j = 0;
+        for(int i=str-1;i>=0;i--) {
+            System.out.print(s.charAt(j));
+            System.out.print(i);
+            j++;
+        }
+
+        System.out.println();
+    }
+}
