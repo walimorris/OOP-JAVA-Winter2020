@@ -316,3 +316,27 @@ public class CylinderSurfaceArea {
         return (2 * Math.PI * r * r) + (2 * Math.PI * r * h);
     }
 }
+
+/* Write a method called sphereVolume that accepts a radius as a parameter and 
+ * returns the volume of a sphere with that radius. 
+ *
+ * Author : Wali Morris 
+ * File   : VolumeOfASphere.java
+ * Date   : 01/12/2020
+ */
+
+public class VolumeOfASphere {
+    public static void main(String[] args) {
+        double sphere = sphereVolume(2.0);
+        System.out.print("A sphere with a radius of 2.0 = ");
+        System.out.println(sphere);
+    }
+
+    /* For correct calculations we compute 4/3 as a double. Calculating 
+     * 4/3 will result in a 1 due to java arthmetic, which is fine, but 
+     * not the correct calculation. 
+     */
+    public static double sphereVolume(double r) {
+        return (double)4/3 * Math.PI * Math.pow(r, 3);
+    }
+}
