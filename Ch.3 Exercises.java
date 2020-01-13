@@ -294,4 +294,25 @@ public class TaSalary {
      }
 }
     
-    
+/* Write a method called cylinderSurfaceArea that accepts a radius and height 
+ * as parameters and returns the surface area of a cylinder with those 
+ * dimensions. 
+ *
+ * Author : Wali Morris 
+ * File   : CylinderSurfaceArea.java
+ * Date   : 01/12/2020
+ */
+
+public class CylinderSurfaceArea {
+    public static void main(String[] args) {
+        double surfaceArea = cylinderSurfaceArea(3.0, 4.5);
+        System.out.print("Surface area of a cylinder with ");
+        System.out.print("radius 3.0 and height 4.5 = ");
+        System.out.println(surfaceArea);
+    }
+
+    // r(radius) and h(height)
+    public static double cylinderSurfaceArea(double r, double h) {
+        return (2 * Math.PI * r * r) + (2 * Math.PI * r * h);
+    }
+}
