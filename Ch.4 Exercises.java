@@ -47,3 +47,36 @@ public class Replace {
     }
 }
 ~ 
+/* Write a method called daysInMonth that takes a month(an integer between 1 
+ * and 12) as a parameter and returns the number of days in that month in this
+ * year. Assume the code is not being run during a leap year. 
+ *
+ * Author : Wali Morris
+ * File   : Days.java
+ * Date   : 01/13/2020
+ */
+
+public class Days {
+    public static void main(String[] args) {
+        int jan = daysInMonth(1);
+        int jun = daysInMonth(6);
+        System.out.printf("The number of days in January: %d", jan);
+        System.out.printf("\nThe number of days in June: %d\n", jun);
+    }
+
+    //pre: months must be between 1 - 12, inclusive, throws IllegalArguementException if not 
+    public static int daysInMonth(int m) {
+        int numberOfDays = 31;
+        if(m < 1 || m > 12) {
+            throw new IllegalArgumentException("month must be 1 - 12");
+        } else if(m == 2) {
+            numberOfDays = 28;
+            return numberOfDays;
+        } else if(m == 4 || m == 6 || m == 9 || m == 11 ) {
+            numberOfDays = 30;
+            return numberOfDays;
+        } else {
+            return numberOfDays;
+        }
+    }
+}
