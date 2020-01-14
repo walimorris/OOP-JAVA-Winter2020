@@ -64,7 +64,7 @@ public class Days {
         System.out.printf("\nThe number of days in June: %d\n", jun);
     }
 
-    //pre: months must be between 1 - 12, inclusive, throws IllegalArguementException if not 
+    //pre: months must be between 1 - 12, throws IllegalArguementException if not 
     public static int daysInMonth(int m) {
         int numberOfDays = 31;
         if(m < 1 || m > 12) {
