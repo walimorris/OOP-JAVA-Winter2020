@@ -289,10 +289,9 @@ public class TaSalary {
      public static double pay(double salary, int hours) {
          if(hours > MAX_HOURS) {
              return (salary * MAX_HOURS) + ((salary * 1.5) * (hours - MAX_HOURS));
-         }
-
-         else
+         } else {
              return (salary * hours);
+         }
      }
 }
     
