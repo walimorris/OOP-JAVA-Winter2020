@@ -46,7 +46,7 @@ public class Replace {
         return finalStr;
     }
 }
-~ 
+
 /* Write a method called daysInMonth that takes a month(an integer between 1 
  * and 12) as a parameter and returns the number of days in that month in this
  * year. Assume the code is not being run during a leap year. 
