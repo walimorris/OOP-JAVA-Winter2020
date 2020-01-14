@@ -80,3 +80,45 @@ public class Days {
         }
     }
 }
+
+/* Write a method called printRange that accepts two integers as arguements and 
+ * prints the sequence of numbers between the two arguements, seperated by 
+ * spaces. Print an increasing sequence if the first arguement is smaller than
+ * the second; otherwise, print a decreasing sequence. If the two numbers are 
+ * the same, that number should be printed by itself. 
+ *
+ * Author : Wali Morris
+ * File   : PrintingRange.java
+ * Date   : 01/13/2020
+ */
+
+public class PrintingRange {
+    public static void main(String[] args) {
+        printRange(2, 7);
+        printRange(5, 5);
+        printRange(23, 43);
+        printRange(43, 23);
+    }
+
+    public static void printRange(int x, int y) {
+        if(x < y) {
+            for(int i=x;i<=y;i++) {
+            System.out.print(i + " ");
+        }
+
+        //ends first if statement's print() 
+        System.out.println();
+
+        } else if(x > y) {
+            for(int i=x;i>=y;i--) {
+                System.out.print(i + " ");
+        }
+
+        //ends else if statement's print()
+        System.out.println();
+
+        } else {
+            System.out.println(x);
+        }
+    }
+}
