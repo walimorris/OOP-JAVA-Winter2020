@@ -1,5 +1,4 @@
 //Chapter 1: Static Methods, procedural decomposition.
-//By: Wali Morris
 
 /* Building Java Programs 5th Edition: Chapter 1 
  * Exercise 1: Write a complete program called 
