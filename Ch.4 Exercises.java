@@ -33,8 +33,8 @@ public class FractionSums {
 
 public class Replace {
     public static void main(String[] args) {
-        String repeat = repl("Hello", 3);
-        System.out.println(repeat);
+        String repeatHello = repl("Hello", 3);
+        System.out.println(repeatHello);
     }
 
     public static String repl(String s, int x) {
