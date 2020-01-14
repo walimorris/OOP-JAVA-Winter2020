@@ -22,3 +22,28 @@ public class FractionSums {
         return sum;
     }
 }
+
+/* Write a method called repl that accepts a String and a number of repetitions
+ * as parameters and returns the String concatenated that many times.
+ *
+ * Author : Wali Morris
+ * File   : Replace.java
+ * Date   : 01/13/2020
+ */
+
+public class Replace {
+    public static void main(String[] args) {
+        String repeat = repl("Hello", 3);
+        System.out.println(repeat);
+    }
+
+    public static String repl(String s, int x) {
+        String finalStr = "";
+        for(int i=1;i<=x;i++) {
+            finalStr += s;
+        }
+
+        return finalStr;
+    }
+}
+~ 
