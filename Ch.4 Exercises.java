@@ -105,7 +105,6 @@ public class PrintingRange {
             for(int i=x;i<=y;i++) {
             System.out.print(i + " ");
         }
-
         //ends first if statement's print() 
         System.out.println();
 
@@ -113,7 +112,6 @@ public class PrintingRange {
             for(int i=x;i>=y;i--) {
                 System.out.print(i + " ");
         }
-
         //ends else if statement's print()
         System.out.println();
 
