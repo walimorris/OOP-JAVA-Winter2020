@@ -137,3 +137,36 @@ public class LuckySeven {
         }
     }
 }
+
+/* Exercise 7: Write a nested for loop to produce a stairwell figure 
+ * that begins with the with 1 to the given integer. 
+ *
+ * Author : Wali Morris 
+ * File   : StairWell.java
+ * Date   : 01/15/2020 
+ */
+
+import java.util.*;
+
+public class StairWell {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        System.out.print("How many stairs: ");
+        int stairs = console.nextInt();
+        /* Initialize i to stairs and decrement ever iteration
+         * of the outter loop. Enter the inner loop and initialize 
+         * int j to i, write a space for every number i(stairs). 
+         * After the inner loop iterations decrement j. Next 
+         * iteration will write 1 less space to the console, creating
+         * a figure that prints each integer down and in. 
+         */
+        for(int i=stairs;i>=1;i--) {
+            for(int j=i;j>=1;j--) {
+                System.out.print(" ");//continual spaces are written with print() 
+            }
+
+            System.out.println(i);// integer i is final printed and ends nested loop iteration
+        }
+    }
+}
