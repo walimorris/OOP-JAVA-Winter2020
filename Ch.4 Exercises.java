@@ -159,7 +159,6 @@ public class EvenSum {
             if(num % 2 == 0) {
                 sum += num;
             }
-
             if(num > max && num % 2 == 0) {
                 max = num;
             }
