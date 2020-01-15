@@ -119,7 +119,7 @@ public class StarMountain {
 }
 
 /* Exercise 6: Write nested for loops to produce a figure that prints 
- * a mountain of letters, from 1-7
+ * a mountain of numbers, from 1-7
  *
  * Author : Wali Morris 
  * File   : LuckySeven.java
@@ -139,7 +139,7 @@ public class LuckySeven {
 }
 
 /* Exercise 7: Write a nested for loop to produce a stairwell figure 
- * that begins with the with 1 to the given integer. 
+ * that begins with the with 1 down to the given integer. 
  *
  * Author : Wali Morris 
  * File   : StairWell.java
