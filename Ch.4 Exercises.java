@@ -170,3 +170,48 @@ public class EvenSum {
     }
 }
 
+/* Write a method called printGPA that accepts a scanner for the console as a 
+ * parameter and calculates a students grade point average. The user will type
+ * a line of input contaiing the student's name, then a number that represents
+ * the number of scores, followed by that many integer scores. 
+ *
+ * Author : Wali Morris
+ * File   : GPA.java
+ * Date   : 01/14/2020
+ */
+
+import java.util.*;
+
+public class GPA {
+    public static void main(String[] args) {
+        printIntro();
+
+        Scanner console = new Scanner(System.in);
+        printGPA(console);
+    }
+
+    public static void printIntro() {
+        System.out.println("This program calculates a students GPA.");
+        System.out.println("A user will enter their name followed by");
+        System.out.println("the number of grades they want calculated.");
+    }
+
+    public static void printGPA(Scanner console) {
+        System.out.print("\nEnter a student record(name): ");
+        String name = console.nextLine();
+        System.out.print("Enter number of grades to compute: ");
+        int base = console.nextInt();
+        System.out.print("Enter grade(percentage): ");
+        double sum = console.nextInt();
+
+        for(int i=1;i<=base-1;i++) {
+            System.out.print("Enter grade: ");
+            sum += console.nextInt();
+        }
+
+        double gpa = sum/base;
+        System.out.printf("\n%s's grade is ", name);
+        System.out.printf("%.1f%%\n", gpa);
+    }
+}
+~ 
