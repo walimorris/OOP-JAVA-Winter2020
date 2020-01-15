@@ -433,8 +433,7 @@ public class Indexed {
          * We subtract 1 to make up for the fact that indexing 
          * starts at 0. Using 'i>=0' ensures that i will reach 0.
          */
-        int str = s.length();
-        int j = 0;
+        int str = s.length(), j = 0; 
         for(int i=str-1;i>=0;i--) {
             System.out.print(s.charAt(j));
             System.out.print(i);
