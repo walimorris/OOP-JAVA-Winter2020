@@ -205,7 +205,7 @@ public class GPA {
         double sum = console.nextInt();
 
         for(int i=1;i<=base-1;i++) {
-            System.out.print("Enter grade: ");
+            System.out.print("Enter grade(percentage): ");
             sum += console.nextInt();
         }
 
