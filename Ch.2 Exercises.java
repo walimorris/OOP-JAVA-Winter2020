@@ -16,10 +16,11 @@ public class PositionOfS {
     public static void main(String[] args) {
         int s0=43, v0=32, t=21, a=5;
 
-        /* we could just say .5 in place of (double)1/2 and get the same
+        /* We could just say .5 in place of (double)1/2 and get the same
          * answer. Without explicitly converting 1/2 to .5 or without 
-         * declaring (double) before 1/2, this computes to 0, and the 
-         * answer is off */
+         * declaring (double) before 1/2, if so, this would computes to 0
+         * and the answer will be incorrect.
+         */
         double s = s0 + (v0*t) + (double)1/2 * (a*t*t);
         System.out.println("The position s = " + s);
     }
@@ -39,8 +40,41 @@ public class LoopsAreSoFun {
             System.out.print(i*i + " ");
 
         }
-        /* Allows any output after loop to continue on newline 
-         * since print() was used. */
+        
+        System.out.println();
+    }
+}
+
+/* Exercise 3: The Fibonacci numbers are a sequence of integers in which the first two 
+ * elements are  1, and each following element is the sum of the two preceding
+ * elements.  
+ *
+ * Author : Wali Morris 
+ * File   : Fibonacci.java
+ * date   : 01/10/2020
+ */
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        int k = 12, num1 = 0, num2 = 1;
+
+        /* k is a counter and represents the number of iterations 
+         * through the fibonnaci sequence. The first number in the
+         * sequence is 1. num1(first number in sequence) is 
+         * initialized to zero. This is because num2(which is 1) 
+         * will be added to the preceding num1 to equal the sum(1). 
+         * num1 becomes num2(the sum of 0 + 1). num1 is then printed, 
+         * which represents the current number in the sequence. This 
+         * is repeated until the counter = 12(kth Fibonnaci num in 
+         * the sequence).
+         */
+        for(int i=1;i<=k;i++) {
+            int sum = num1 + num2;
+            num1 = num2;
+            num2 = sum;
+            System.out.print(num1 + " ");
+        }
+
         System.out.println();
     }
 }
