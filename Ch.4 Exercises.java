@@ -120,3 +120,53 @@ public class PrintingRange {
         }
     }
 }
+
+/* Write a method called evenSumMax that accepts a Scanner for the console as a
+ * parameter. The method should prompt the user for a number of integers, then
+ * prompt the integer that many times. Once the user has entered all the integers, 
+ * the method should print the sum of all the even numbers the user typed, along
+ * with the largest even number typed. You may assume that the user will type at
+ * least one nonnegative even number. 
+ *
+ * Author : Wali Morris 
+ * File   : EvenSum.java
+ * Date   : 01/14/2020
+ */
+
+import java.util.*;
+
+public class EvenSum {
+    public static void main(String[] args) {
+        printIntro();
+
+        Scanner console = new Scanner(System.in);
+        evenSumMax(console);
+    }
+
+    public static void printIntro() {
+        System.out.println("This program prompts for a number of times");
+        System.out.println("you'll enter a single integer to the console.");
+        System.out.println("Those integers will be summed and printed.");
+    }
+
+    public static void evenSumMax(Scanner console) {
+        System.out.print("\nHow many integers would you like to enter? ");
+        int counter = console.nextInt();
+        int max = 0, sum = 0, num;
+        for(int i=1;i<=counter;i++) {
+            System.out.print("\nEnter a number: ");
+            num = console.nextInt();
+            if(num % 2 == 0) {
+                sum += num;
+            }
+
+            if(num > max && num % 2 == 0) {
+                max = num;
+            }
+        }
+
+        System.out.printf("\nEven sum = %d , ", sum);
+        System.out.printf("Even max = %d\n", max);
+    }
+}
+
