@@ -282,26 +282,26 @@ public class LongestName {
         Scanner console = new Scanner(System.in);
         console.useDelimiter("\\n");
 
-        int numNames = inputNames(console);
-        longestName(console, numNames);
+        int numberOfNames = inputNames(console);
+        longestName(console, numberOfNames);
     }
 
     public static int inputNames(Scanner console) {
         System.out.print("How many names to enter: ");
-        int numNames = console.nextInt();
-        while(numNames<2) {
+        int numberOfNames = console.nextInt();
+        while(numberOfNames < 2) {
             System.out.println("Please choose atleast 2 names.");
             System.out.print("How many names to enter: ");
-            numNames = console.nextInt();
+            numberOfNames = console.nextInt();
         }
 
-        return numNames;
+        return numberOfNames;
     }
 
-    public static void longestName(Scanner console, int x) {
+    public static void longestName(Scanner console, int numberOfNames) {
         String longestName = "";
         int longestNameValue = longestName.length();
-        for(int i=1;i<=x;i++) {
+        for(int i=1;i<=numberOfNames;i++) {
             System.out.print("name #" + i + ": ");
             /* initializing delimiter with console ends user input
              * after pressing enter with endline \n and allows the 
