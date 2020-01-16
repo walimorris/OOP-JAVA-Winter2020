@@ -170,3 +170,39 @@ public class StairWell {
         }
     }
 }
+
+/* Exercise 10: It's common to print a rotating, increasing list of 
+ * single-digit numbers at the start of a program's output as a visual 
+ * guide to number the columns of the output to follow. With this in 
+ * mind, write nested for loop to produce the following output 60 
+ * characters wide:
+ *
+ *          |         |         |         |         |         |
+ * 123456789012345678901234567890123456789012345678901234567890           
+ *
+ * Author : Wali Morris 
+ * File   : VisualLoops.java 
+ * Date   : 01/16/2020
+ */
+
+public class VisualLoops {
+    /* This for loop initializes an empty string to hold our
+     * visual numbers. Every loop(9 inner loops) writes 9 spaces, 
+     * the outer loop(6 loops) prints "|"(this is the 10th character)
+     * and lastly concatenates visual numbers 6 times, for each outer
+     * loop. Outside of the loop, the final visual numbers string is 
+     * printed. 
+     */
+    public static void main(String[] args) {
+        String visualNumbers = "";
+        for(int i=1;i<=6;i++) {
+            for(int j=1;j<=9;j++) {
+                System.out.print(" ");
+            }
+            System.out.print("|");
+            visualNumbers += "1234567890";
+        }
+        System.out.println("\n" + visualNumbers);
+    }
+}
+
