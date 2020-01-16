@@ -214,3 +214,53 @@ public class GPA {
     }
 }
 ~ 
+/* Write a method called smallestLargest that accepts a Scanner for the console
+ * as a parameter and asks the user to enter numbers, then prints the smallest 
+ * and largest of all the numbers supplied by the user. You may assume that the
+ * user enters a valid number greater than 0 for the number of numbers to read
+ *
+ * Author : Wali Morris 
+ * File   : SmallestLargest.java
+ * Date   : 01/15/2020 
+ */
+
+import java.util.*;
+
+public class SmallestLargest {
+    public static void main(String[] args) {
+
+        Scanner console = new Scanner(System.in);
+        smallestLargest(console);
+    }
+
+    public static void smallestLargest(Scanner console) {
+        System.out.print("How many integers to write: ");
+        int base = console.nextInt();
+        while(base<2) {
+            System.out.println("Please enter a number greater than 1.");
+            System.out.print("How many integers to write: ");
+            base = console.nextInt();
+        }
+
+        System.out.print("number 1: ");
+        int max = console.nextInt();
+        int min = max;
+        /* This for loop drives the decision between smallest and largest. 
+         * max is initialized by user decision and min is initialized as max. 
+         * The next number is chosen and if its greater than min/max that number 
+         * becomes max, if it's lower it becomes min. Every number and loop 
+         * after can now be compared to the current min and max num. 
+         */
+        for(int i=2;i<=base;i++) {
+            System.out.print("number " + i + ": ");
+            int num = console.nextInt();
+            if(num>=max) {
+                max = num;
+            } else if(num<=min) {
+                min = num;
+            }
+         }
+         System.out.printf("Smallest: %d\n", min);
+         System.out.printf("Largest : %d\n", max);
+    }
+}
