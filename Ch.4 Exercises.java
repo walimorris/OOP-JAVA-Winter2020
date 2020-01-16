@@ -264,3 +264,57 @@ public class SmallestLargest {
          System.out.printf("Largest : %d\n", max);
     }
 }
+
+/* Write a method called longestName that accepts a Scanner for the console 
+ * and an integer n as parameters and prompts for n names, then prints the 
+ * longest name (the name that contains the most characters). 
+ *
+ * Author : Wali Morris
+ * File   : LongestName.java
+ * Date   : 01/15/2020
+ */
+
+import java.util.*;
+
+public class LongestName {
+    public static void main(String[] args) {
+
+        Scanner console = new Scanner(System.in);
+        console.useDelimiter("\\n");
+
+        int numNames = inputNames(console);
+        longestName(console, numNames);
+    }
+
+    public static int inputNames(Scanner console) {
+        System.out.print("How many names to enter: ");
+        int numNames = console.nextInt();
+        while(numNames<2) {
+            System.out.println("Please choose atleast 2 names.");
+            System.out.print("How many names to enter: ");
+            numNames = console.nextInt();
+        }
+
+        return numNames;
+    }
+
+    public static void longestName(Scanner console, int x) {
+        String longestName = "";
+        int longestNameValue = longestName.length();
+        for(int i=1;i<=x;i++) {
+            System.out.print("name #" + i + ": ");
+            /* initializing delimiter with console ends user input
+             * after pressing enter with endline \n and allows the 
+             * use of next() rather than nextLine()
+             */
+            String currentName = console.next();
+            int currentNameValue = currentName.length();
+            if(currentNameValue > longestNameValue) {
+                longestName = currentName;
+                longestNameValue = currentNameValue;
+            }
+        }
+
+        System.out.println("Longest name is: " + longestName);
+    }
+}
