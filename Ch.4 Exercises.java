@@ -436,5 +436,44 @@ public class GradeScale {
                  finalGPA -= .1;
              }
              return finalGPA;
+         } 
+     } 
+} 
+
+/* This class is a more proficient solution to the above program and 
+ * uses an algebraic equation to find a students GPA. This makes it 
+ * smaller and faster to find GPA. 
+ *
+ * Author : Wali Morris 
+ * File   : SuperGradeScale.java
+ * Date   : 01/16/2020
+ */
+
+import java.util.*;
+
+public class SuperGradeScale {
+    public static void main(String[] args) {
+
+        Scanner console = new Scanner(System.in);
+
+        System.out.print("Enter course score: ");
+        int courseScore = console.nextInt();
+        double courseGrade = getGPA(courseScore);
+        System.out.printf("course grade: %.1f\n", courseGrade);
+    }
+
+    public static double getGPA(int score) {
+        //pre: score must be >=0 or <=100 else IllegalArgumentException is thown 
+         if(score < 0 || score > 100) {
+             throw new IllegalArgumentException("Score must be >= 0 or <= 100 " + score);
+         } else if(score < 60) { // special case: any score less than 60 but greater than 0  
+             return 0.0;
+         } else if(score >=60 && score <= 62) { // special case: score of 60 - 62
+             return 0.7;
+         } else if(score >= 95) { // special case: score of 95 and greater 
+             return 4.0;
+         } else {
+             return (score * .1) - 5.5;
          }
-     }
+    }
+}
