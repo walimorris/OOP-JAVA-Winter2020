@@ -359,3 +359,27 @@ public class TriangleTypes {
         }
     }
 }
+
+/* Write a method called average that takes two integers as parameters and 
+ * returns the average of the two integers
+ *
+ * Author : Wali Morris 
+ * File   : Average.java
+ * date   : 01/16/2020
+ */
+
+public class Average {
+    public static void main(String[] args) {
+        double average1 = average(16, 32);
+        double average2 = average(17, 18);
+        System.out.println("The Average of 16 and 32: " + average1);
+        System.out.println("The Average of 17 and 18: " + average2);
+    }
+    /* This method takes two integers and returns a double 
+     * in order to return a more exact value for their
+     * average
+     */
+    public static double average(int num1, int num2) {
+        return ((double)num1 + (double)num2) / 2;
+    }
+}
