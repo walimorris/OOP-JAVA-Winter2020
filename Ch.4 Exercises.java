@@ -334,12 +334,10 @@ public class TriangleTypes {
             String triangle1 = printTriangleType(5, 7, 7);
             String triangle2 = printTriangleType(6, 6, 6);
             String triangle3 = printTriangleType(5, 7, 8);
-            String triangle4 = printTriangleType(2, 18, 2);
 
             System.out.println("triangle1 type: " + triangle1);
             System.out.println("triangle2 type: " + triangle2);
             System.out.println("triangle3 type: " + triangle3);
-            System.out.println("triangle4 type: " + triangle4);
     }
 
     /* This method takes 3 intergers(x,y,z). Each integer represents
@@ -348,15 +346,17 @@ public class TriangleTypes {
      */
     public static String printTriangleType(int sideX, int sideY, int sideZ) {
         String triangleType = "isosceles";
-        if(sideX == sideY && sideY == sideZ) {
-            triangleType = "equilateral"; // all sides are equal  
+        if(sideX > sideY + sideZ || sideY > sideX + sideZ || sideZ > sideX + sideY) {
+            throw new IllegalArgumentException("One side is greater than the sum of the other two.");
+        } else if(sideX == sideY && sideY == sideZ) {
+            return "equilateral"; // all sides are equal  
         } else if(sideX != sideY && sideX != sideZ && sideY != sideZ) {
-            triangleType = "scalene"; // all sides are unequal
+            return "scalene"; // all sides are unequal
+        } else {   
+            /* if neither all sides are unequal or equal, it must be that one side is either 
+             * equal to another thats unequal to the last and by default is an isoceles.
+             */
+            return triangleType;
         }
-
-        /* if neither all sides are unequal or equal, it must be that one side is either 
-         * equal to another thats unequal to the last and by default is an isoceles.
-         */
-        return triangleType;
     }
 }
