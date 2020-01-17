@@ -383,3 +383,58 @@ public class Average {
         return ((double)num1 + (double)num2) / 2;
     }
 }
+
+/* Write a method called getGrade that accepts an integer representing 
+ * a student's grade in a course and returns that student's numerical 
+ * course grade. The grade can be between 0.0(failing) and 4.0(perfect).
+ * Assume the scores are in the range 0 to 100. 
+ *
+ * Author : Wali Morris
+ * File   : GradeScale.java
+ * Date   : 01/16/2020
+ */
+
+import java.util.*;
+
+public class GradeScale {
+    /* These class constants represent university grading scale. These
+     * values are used to initialize variables in the below for loop and
+     * decision structure. Max Score is 100, though on the GPA scale, 
+     * a 95,96,97,98 or 99 is no different than a 100.
+     */
+    public static final double MAX_GPA = 4.0;
+    public static final int MAX_SCORE = 94;
+
+     public static void main(String[] args) {
+         Scanner console = new Scanner(System.in);
+
+         System.out.print("Enter course score: ");
+         int courseScore = console.nextInt();
+         double courseGrade = getGrade(courseScore);
+         System.out.printf("course grade: %.1f\n", courseGrade);
+     }
+
+     public static double getGrade(int score) {
+         //pre: score must be >=0 or <=100 else IllegalArgumentException is thown 
+         if(score < 0 || score > 100) {
+             throw new IllegalArgumentException("Score must be >= 0 or <= 100 " + score);
+         } else if(score < 60) { // special case: any score less than 60 but greater than 0  
+             return 0.0;
+         } else if(score >=60 && score <= 62) { // special case: score of 60 - 62
+             return 0.7;
+         } else if(score >= 95) { // special case: score of 95 and greater 
+             return 4.0;
+         } else {
+             /* if the score is not a special case we initialize finalGPA as MAX_GPA
+              * and finalScore as MAX_SCORE. This allows the for loop to decrement 
+              * finalGPA and subtract the MAX_GPA by .1 until finalGPA matches the 
+              * score(which is lower), the score will represent its GPA. 
+              */
+             double finalGPA = MAX_GPA;
+             int finalScore = MAX_SCORE;
+             for(int i=finalScore;score<=i;i--) {
+                 finalGPA -= .1;
+             }
+             return finalGPA;
+         }
+     }
