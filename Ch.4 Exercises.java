@@ -541,3 +541,49 @@ public class Stutters {
         return newVar;
     }
 }
+
+/* Write a method called quadrant that accepts as parameters a pair of double 
+ * values representing and (x,y) point and returns the quadrant number for that
+ * point. If the point falls on x or y axis, return 0. 
+ *
+ * Author : Wali Morris 
+ * File   : Quadrants.java
+ * date   : 01/17/2020
+ */
+
+public class Quadrants {
+    public static void main(String[] args) {
+        int point1 = quadrant(-1.0, 2.0);
+        int point2 = quadrant(0.0, 0.0);
+        int point3 = quadrant(8.0, 9.0);
+
+        /* if point x or y is 0, the point lies on the x or y 
+         * axis, so return 0. test: should all return 0.
+         */
+        int point4 = quadrant(0.0, -9.0);
+        int point5 = quadrant(5.4, 0.0);
+        int point6 = quadrant(-11.2, 0.0);
+        int point7 = quadrant(0.0, 6.5);
+        System.out.printf("point 1: %d\n", point1);
+        System.out.printf("point 2: %d\n", point2);
+        System.out.printf("point 3: %d\n", point3);
+        System.out.printf("point 4: %d\n", point4);
+        System.out.printf("point 5: %d\n", point5);
+        System.out.printf("point 6: %d\n", point6);
+        System.out.printf("point 7: %d\n", point7);
+    }
+
+    public static int quadrant(double x, double y) {
+        if(x > 0 && y > 0) { //positive,positive: Quadrant 1
+            return 1;
+        } else if(x > 0 && y < 0) { //positve,negative: Quadrant 4
+            return 4;
+        } else if(x < 0 && y > 0) { //negative, positive: Quadrant 2
+            return 2;
+        } else if(x < 0 && y < 0) { // negative, negative: Quadrant 3
+            return 3;
+        } else { //either point x or y is 0, point falls on x or y axis 
+            return 0;
+        }
+    }
+}
