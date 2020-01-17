@@ -500,7 +500,6 @@ public class Palindrome {
     public static void isPalindrome(Scanner console) {
         System.out.print("Enter a word: ");
         String wordToEvaluate = console.nextLine();
-
         String wordReversed = "";
         int wordLength = wordToEvaluate.length() - 1;
         for(int i=wordLength;i>=0;i--) {
