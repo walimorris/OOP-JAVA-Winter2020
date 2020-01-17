@@ -318,3 +318,45 @@ public class LongestName {
         System.out.println("Longest name is: " + longestName);
     }
 }
+
+/* Write a method called printTriangleTypes. This method accepts three integer
+ * arguments representing the lengths of the sides of a triangle and prints 
+ * the type of triangle that these sides form. The three types are: 
+ * isosceles, equilateral, scalene. 
+ *
+ * Author : Wali Morris
+ * File   : TriangleTypes.java
+ * Date   : 01/16/2020
+ */
+
+public class TriangleTypes {
+    public static void main(String[] args) {
+            String triangle1 = printTriangleType(5, 7, 7);
+            String triangle2 = printTriangleType(6, 6, 6);
+            String triangle3 = printTriangleType(5, 7, 8);
+            String triangle4 = printTriangleType(2, 18, 2);
+
+            System.out.println("triangle1 type: " + triangle1);
+            System.out.println("triangle2 type: " + triangle2);
+            System.out.println("triangle3 type: " + triangle3);
+            System.out.println("triangle4 type: " + triangle4);
+    }
+
+    /* This method takes 3 intergers(x,y,z). Each integer represents
+     * each side of a triangle and returns a String of its type 
+     * dependant on the length of each side.
+     */
+    public static String printTriangleType(int sideX, int sideY, int sideZ) {
+        String triangleType = "isosceles";
+        if(sideX == sideY && sideY == sideZ) {
+            triangleType = "equilateral"; // all sides are equal  
+        } else if(sideX != sideY && sideX != sideZ && sideY != sideZ) {
+            triangleType = "scalene"; // all sides are unequal
+        }
+
+        /* if neither all sides are unequal or equal, it must be that one side is either 
+         * equal to another thats unequal to the last and by default is an isoceles.
+         */
+        return triangleType;
+    }
+}
