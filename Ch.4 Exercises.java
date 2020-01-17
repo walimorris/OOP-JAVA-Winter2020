@@ -477,3 +477,40 @@ public class SuperGradeScale {
          }
     }
 }
+
+/* Write a method called isPalindrome that accepts a Scanner for the console
+ * as a parameter, prompts the user to enter one or more words, and prints 
+ * whether the entered String is a palindrome.  
+ *
+ * Author : Wali Morris 
+ * File   : Palindrome.java 
+ * Date   : 01/17/2020 
+ */
+
+import java.util.*;
+
+public class Palindrome {
+    public static void main(String[] args) {
+
+        Scanner console = new Scanner(System.in);
+
+        isPalindrome(console);
+    }
+
+    public static void isPalindrome(Scanner console) {
+        System.out.print("Enter a word: ");
+        String wordToEvaluate = console.nextLine();
+
+        String wordReversed = "";
+        int wordLength = wordToEvaluate.length() - 1;
+        for(int i=wordLength;i>=0;i--) {
+            wordReversed += wordToEvaluate.charAt(i);
+        }
+
+        if(wordReversed.toLowerCase().equals(wordToEvaluate.toLowerCase())) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+    }
+}
