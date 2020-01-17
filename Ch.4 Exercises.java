@@ -158,9 +158,8 @@ public class EvenSum {
             num = console.nextInt();
             if(num % 2 == 0) {
                 sum += num;
-            }
-            if(num > max && num % 2 == 0) {
-                max = num;
+            } else if(num > max && num % 2 == 0) {
+                max = num; 
             }
         }
 
