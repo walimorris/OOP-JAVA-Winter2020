@@ -513,3 +513,31 @@ public class Palindrome {
         }
     }
 }
+
+/* Write a method called stutter that accepts a string parameter and returns 
+ * that string with its characters repeated twice. 
+ *
+ * Author : Wali Morris 
+ * File   : Stutters.java
+ * Date   : 01/17/2020 
+ */
+
+public class Stutters {
+    public static void main(String[] args) {
+        String var1 = stutters("coconuts!!");
+        String var2 = stutters("pineapples!");
+        System.out.println(var1);
+        System.out.println(var2);
+    }
+
+    public static String stutters(String word) {
+        String newVar = "";
+        for(int i=0;i<=word.length()-1;i++) {
+            for(int j=0;j<2;j++) {
+                newVar += word.charAt(i);
+            }
+        }
+
+        return newVar;
+    }
+}
