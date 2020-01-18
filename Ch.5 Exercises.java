@@ -35,4 +35,4 @@ public class FactorsOf2 {
             System.out.println(n);
         }
     }
-    
+}
