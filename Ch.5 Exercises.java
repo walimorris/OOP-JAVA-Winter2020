@@ -14,13 +14,11 @@ public class FactorsOf2 {
         showTwos(120);
     }
 
-    /* This function takes one arguement, an integer n, which is 
-     * decided if its divisible by two. If not, then 2 is not a 
-     * factor of n. If n is divisible by two, showTwos() divides 
-     * n / 2 and that value becomes n; until this n value % 2 
-     * doesn't equal 0, the loop continues. Every iteration '2 *'
-     * is added to the print summary. After the condition is met 
-     * the final value of n is printed.
+    /* This function takes one arguement, an integer n, which is decided if its divisible 
+     * by two. If not, then 2 is not a factor of n. If n is divisible by two, showTwos() 
+     * divides n / 2 and that value becomes n; until this n value % 2 doesn't equal 0, 
+     * the loop continues. Every iteration '2 *' is added to the print summary. After 
+     * the condition is met the final value of n is printed.
      */
     public static void showTwos(int n) {
         if(!(n % 2 == 0)) {
@@ -77,14 +75,11 @@ public class RandomX {
         randomX();
     }
 
-    /* A psuedo random number is initalized and thrown into 
-     * a do-while loop which ensures randomX() is conducted 
-     * atleast once, in the rare case 16 happens to be the 
-     * first random number and to ensure 16 x's are printed 
-     * during any loop. The random number is then thrown 
-     * into a for loop to iterate the number of times of the
-     * random number to print x, random number is checked 
-     * if it is 16, if not, the process is repeated.
+    /* A psuedo random number is initalized and thrown into a do-while loop which ensures 
+     * randomX() is conducted atleast once, in the rare case 16 happens to be the first 
+     * random number and to ensure 16 x's are printed during any loop. The random number is 
+     * then thrown into a for loop to iterate the number of times of the random number to  
+     * print x, random number is checked if it is 16, if not, the process is repeated.
      */
     public static void randomX() {
         Random r = new Random();
