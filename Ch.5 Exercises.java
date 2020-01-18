@@ -57,6 +57,6 @@ public class GreatestCommonDivisor {
             b = a % b;
             a = temp;
         }
-        return a;
+        return Math.abs(a);
     }
 }
