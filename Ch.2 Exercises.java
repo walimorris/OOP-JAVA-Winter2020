@@ -56,20 +56,9 @@ public class LoopsAreSoFun {
 
 public class Fibonacci {
     public static void main(String[] args) {
-        int k = 12, num1 = 0, num2 = 1;
-
-        /* k is a counter and represents the number of iterations 
-         * through the fibonnaci sequence. The first number in the
-         * sequence is 1. num1(first number in sequence) is 
-         * initialized to zero. This is because num2(which is 1) 
-         * will be added to the preceding num1 to equal the sum(1). 
-         * num1 becomes num2(the sum of 0 + 1). num1 is then printed, 
-         * which represents the current number in the sequence. This 
-         * is repeated until the counter = 12(kth Fibonnaci num in 
-         * the sequence).
-         */
-        for(int i=1;i<=k;i++) {
-            int sum = num1 + num2;
+        int k = 12, num1 = 0, num2 = 1; // initiate counter k, represents sequence
+        for(int i=1;i<=k;i++) { // num2 is added to the preceding num1 to equal sum 
+            int sum = num1 + num2; 
             num1 = num2;
             num2 = sum;
             System.out.print(num1 + " ");
