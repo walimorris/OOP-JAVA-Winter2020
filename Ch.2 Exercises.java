@@ -171,6 +171,32 @@ public class StairWell {
     }
 }
 
+/* Exercise 8: This program is StairWell++ (exercise 7) and creates the same figure 
+ * with a slight variant. 
+ *
+ * Author : Wali Morris 
+ * File   : SuperStairWell.java
+ * Date   : 01/18/2020
+ */
+
+import java.util.*;
+
+public class SuperStairWell {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++) {
+            // as variable i grows, spaces lessen       
+            for(int j=1;j<=(5-i);j++) {
+                System.out.print(" ");
+            }
+            //controls how many values of i are printed 
+            for(int k=1;k<=i;k++) {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+
 /* Exercise 10: It's common to print a rotating, increasing list of 
  * single-digit numbers at the start of a program's output as a visual 
  * guide to number the columns of the output to follow. With this in 
