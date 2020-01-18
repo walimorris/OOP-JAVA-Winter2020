@@ -36,3 +36,27 @@ public class FactorsOf2 {
         }
     }
 }
+
+/* Write a method called gcd that accepts two integers as parameters and 
+ * returns the greatest common divisor of the two numbers.
+ *
+ * Author : Wali Morris 
+ * File   : GreatestCommonDivisor.java
+ * Date   : 01/17/2020
+ */
+
+public class GreatestCommonDivisor {
+    public static void main(String[] args) {
+        int gcdVar1 = gcd(270, 192);
+        System.out.printf("GCD of 270, 192: %d\n", gcdVar1);
+    }
+
+    public static int gcd(int a, int b) {
+        while( b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+}
