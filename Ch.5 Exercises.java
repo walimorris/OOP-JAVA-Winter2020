@@ -60,3 +60,42 @@ public class GreatestCommonDivisor {
         return Math.abs(a);
     }
 }
+
+/* Exercise 4: Write a method called randomX that prints lines that contain a 
+ * random number of "x" characters(between 5 and 20 inclusive) until it prints 
+ * a line that contains 16 or more characters. 
+ *
+ * Author : Wali Morris 
+ * File   : RandomX.java
+ * Date   : 01/18/2020 
+ */
+
+import java.util.*;
+
+public class RandomX {
+    public static void main(String[] args) {
+        randomX();
+    }
+
+    /* A psuedo random number is initalized and thrown into 
+     * a do-while loop which ensures randomX() is conducted 
+     * atleast once, in the rare case 16 happens to be the 
+     * first random number and to ensure 16 x's are printed 
+     * during any loop. The random number is then thrown 
+     * into a for loop to iterate the number of times of the
+     * random number to print x, random number is checked 
+     * if it is 16, if not, the process is repeated.
+     */
+    public static void randomX() {
+        Random r = new Random();
+        int randomNum = 0;
+
+        do {
+            randomNum = 5 + r.nextInt(15);
+            for(int i=0;i<randomNum;i++) {
+                System.out.print("x");
+            }
+            System.out.println();
+        } while(randomNum != 16);
+    }
+}
