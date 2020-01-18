@@ -37,8 +37,8 @@ public class FactorsOf2 {
     }
 }
 
-/* Write a method called gcd that accepts two integers as parameters and 
- * returns the greatest common divisor of the two numbers.
+/* Exercise 2: Write a method called gcd that accepts two integers as 
+ * parameters and returns the greatest common divisor of the two numbers.
  *
  * Author : Wali Morris 
  * File   : GreatestCommonDivisor.java
