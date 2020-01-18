@@ -1,5 +1,5 @@
-/* Write a method called showTwos that shows the factors of 2 in a given 
- * integer. 
+/* Exercise 1: Write a method called showTwos that shows the factors of 2 
+ * in a given integer. 
  *
  * Author : Wali Morris 
  * File   : FactorsOf2.java
