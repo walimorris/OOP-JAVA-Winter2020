@@ -125,3 +125,45 @@ public class Guesses {
         System.out.printf("Total Guesses: %d\n", count);
     }
 }
+
+/* Write a method called diceSum that accepts a Scanner for the console as a
+ * parameter and prompts for a desired sum, then repeatedly simulates the 
+ * rolling of 2 six-sided dice until their sum is the desired sum. 
+ *
+ * Author : Wali Morris
+ * File   : DiceGame.java
+ * Date   : 01/19/2020
+ */
+
+import java.util.*;
+
+public class DiceGame {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        diceSum(console);
+    }
+
+    public static void diceSum(Scanner console) {
+        Random randomGenerator = new Random();
+
+        int dice1 = randomGenerator.nextInt(6) + 1;
+        int dice2 = randomGenerator.nextInt(6) + 1;
+        int sum = dice1 + dice2;
+
+        String error = "Sum should be atleast 2 and no greater than 12";
+        System.out.print("Enter desired dice sum: ");
+        int desiredSum = console.nextInt();
+        if(desiredSum < 2 || desiredSum > 12) {
+            throw new IllegalArgumentException(error);
+        }
+        System.out.println(dice1 + " and " + dice2 + " = " + sum);
+        while(sum != desiredSum) {
+            sum = 0;
+            dice1 = randomGenerator.nextInt(6) + 1;
+            dice2 = randomGenerator.nextInt(6) + 1;
+            sum = dice1 + dice2;
+            System.out.println(dice1 + " and " + dice2 + " = " + sum);
+        } 
+    } 
+} 
