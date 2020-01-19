@@ -240,3 +240,23 @@ public class ZeroToNine {
         }
     }
 }
+
+/* Exercise 13: A modification to exercise 12. 
+ *
+ * Author : Wali Morris 
+ * File   : NineToOne.java
+ * Date   : 01/19/2020
+ */
+
+public class NineToOne {
+    public static void main(String[] args) {
+        for(int i=0;i<5;i++) {
+            for(int j=9;j>=1;j--) {
+                for(int k=0;k<5;k++)
+                    System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+ 
