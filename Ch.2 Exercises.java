@@ -221,3 +221,22 @@ public class VisualLoops {
     }
 }
 
+/* Exercise 12: A nested for loop that prints triple 0-9 on three seperate 
+ * lines. 
+ *
+ * Author : Wali Morris 
+ * File   : ZeroToNine.java
+ * Date   : 01/18/2020
+ */
+
+public class ZeroToNine {
+    public static void main(String[] args) {
+        for(int i=0;i<3;i++) {
+            for(int j=0;j<=9;j++) {
+                for(int k=0;k<3;k++)
+                    System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
