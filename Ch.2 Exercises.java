@@ -260,3 +260,21 @@ public class NineToOne {
     }
 }
  
+/* Exercise 14: A modification to exercise 13. 
+ *
+ * Author : Wali Morris 
+ * File   : DecrementNineToOne.java
+ * Date   : 01/19/2020
+ */
+
+public class DecrementNineToOne {
+    public static void main(String[] args) {
+        for(int i=0;i<4;i++) {
+            for(int j=9;j>=1;j--) {
+                for(int k=1;k<=j;k++)
+                    System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
