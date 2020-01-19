@@ -94,3 +94,34 @@ public class RandomX {
         } while(randomNum != 16);
     }
 }
+
+/* Exercise 6: Write a method called makeGuesses that guesses numbers between 1 
+ * and 50 inclusive until it makes a guess of at least 48. It should report 
+ * each guess and at the end should report the total number of guesses made. 
+ *
+ * Author : Wali Morris 
+ * File   : Guesses.java
+ * Date   : 01/19/2020
+ */
+
+import java.util.*;
+
+public class Guesses {
+    public static void main(String[] args) {
+        makeGuesses();
+    }
+
+    public static void makeGuesses() {
+        Random randomInteger = new Random();  
+
+        int count = 1;
+        int guess = randomInteger.nextInt(50) + 1;
+        while(guess < 48) {
+            System.out.printf("Guess = %d\n", guess);
+            guess = randomInteger.nextInt(50) + 1;
+            count++;
+        }
+        System.out.printf("Guess = %d\n", guess);
+        System.out.printf("Total Guesses: %d\n", count);
+    }
+}
