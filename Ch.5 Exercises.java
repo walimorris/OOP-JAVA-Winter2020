@@ -126,9 +126,9 @@ public class Guesses {
     }
 }
 
-/* Write a method called diceSum that accepts a Scanner for the console as a
- * parameter and prompts for a desired sum, then repeatedly simulates the 
- * rolling of 2 six-sided dice until their sum is the desired sum. 
+/* Exercise 7: Write a method called diceSum that accepts a Scanner for the 
+ * console as a parameter and prompts for a desired sum, then repeatedly 
+ * simulates the rolling of 2 six-sided dice until their sum is the desired sum. 
  *
  * Author : Wali Morris
  * File   : DiceGame.java
