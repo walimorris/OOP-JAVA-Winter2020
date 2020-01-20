@@ -167,3 +167,38 @@ public class DiceGame {
         } 
     } 
 } 
+
+/* Exercise 8: Write a method called randomWalk that performs steps of a random 
+ * one-dimensional walk. The random walk should begin at position 0. On each step, 
+ * you should either increase or decrease the position by one(equal probabilty)
+ * Your code should continue making steps util a position of 3 or -3 is reached
+ * and then report the maximum position that was reached during the walk.
+ *
+ * Author : Wali Morris 
+ * File   : RandomWalk.java
+ * Date   : 01/20/2020 
+ */
+
+import java.util.*;
+
+public class RandomWalk {
+    public static void main(String[] args) {
+        randomWalk();
+    }
+
+    public static void randomWalk() {
+        Random randomGenerator = new Random();
+
+        int walk = randomGenerator.nextInt(2);
+        int sum = 0;
+        while(sum != 3 && sum != -3) {
+            if(walk == 0) {
+                sum ++;
+            } else {
+                sum --;
+            }
+            System.out.printf("Pos: %d\n", sum);
+            walk = randomGenerator.nextInt(2);
+        }
+    }
+}
