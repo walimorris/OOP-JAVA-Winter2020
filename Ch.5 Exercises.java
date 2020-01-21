@@ -431,10 +431,10 @@ public class Consecutive {
     }
 }
 
-/* Write a method called hasMidpoint that accepts three integers as parameters 
- * and returns true if one of the integers is the midpoint between the other 
- * two integers; that is, if one integer is exactly halfway between them. Your 
- * method should return false if no such midpoint exists. 
+/* Exercise 14: Write a method called hasMidpoint that accepts three integers as 
+ * parameters and returns true if one of the integers is the midpoint between the 
+ * other two integers; that is, if one integer is exactly halfway between them. 
+ * Your method should return false if no such midpoint exists. 
  *
  * Author : Wali Morris 
  * File   : MidPoint.java
