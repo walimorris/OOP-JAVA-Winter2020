@@ -371,3 +371,62 @@ public class SentinelAverage {
         System.out.printf("Average: %.2f\n", average);
     }
 }
+
+/* Exercise 13: Write a method called consecutive that accepts three integers 
+ * as parameter and returns true if they are three consecutive numbers - that is, 
+ * if the numbers can be arranged into an order such that, assuming some integer k, 
+ * the parameters' values are k, k+1, and k+2. Your method shoudl return false
+ * if the integers are not consecutive. NOTE: the order is not significant; the
+ * method should return the same result for the same three integers passed in 
+ * any order. 
+ *
+ * Author : Wali Morris
+ * File   : Consecutive.java
+ * Date   : 01/21/2020
+ */
+
+public class Consecutive {
+    public static void main(String[] args) {
+        // run many tests
+        boolean numList1 = consecutive(1, 2, 3); // true
+        boolean numList2 = consecutive(1, 3, 2); // true
+        boolean numList3 = consecutive(2, 1, 3); // true
+        boolean numList4 = consecutive(2, 3, 1); // true
+        boolean numList5 = consecutive(3, 2, 1); // true
+        boolean numList6 = consecutive(3, 1, 2); // true
+        boolean numList7 = consecutive(3, 5, 7); // false
+        boolean numList8 = consecutive(1, 2, 2); // false
+        boolean numList9 = consecutive(7, 7, 9); // false
+        boolean numList10 = consecutive(9, 2, 4);// false 
+
+        System.out.println("List 1 contains consecutive numbers(1,2,3): " + numList1);
+        System.out.println("List 2 contains consecutive numbers(1,3,2): " + numList2);
+        System.out.println("List 3 contains consecutive numbers(2,1,3): " + numList3);
+        System.out.println("List 4 contains consecutive numbers(2,3,1): " + numList4);
+        System.out.println("List 5 contains consecutive numbers(3,2,1): " + numList5);
+        System.out.println("List 6 contains consecutive numbers(3,1,2): " + numList6);
+        System.out.println("List 7 contains consecutive numbers(3,5,7): " + numList7);
+        System.out.println("List 8 contains consecutive numbers(1,2,2): " + numList8);
+        System.out.println("List 9 contains consecutive numbers(7,7,9): " + numList9);
+        System.out.println("List 10 contains consecutive numbers(9,2,4): " + numList10);
+    }
+    
+    /* for each integer there are 2 different patterns 2 * 3 = 6 different ways
+     * three consecutive numbers can be ordered. If none of these consecutive 
+     * patterns are met, the list is returned false. 
+     */
+    public static boolean consecutive(int x, int y, int z) {
+        boolean v1 = (y == x + 1 && z == y + 1);
+        boolean v2 = (y == z + 1 && x == y + 1);
+        boolean v3 = (y == z + 1 && z == x + 1);
+        boolean v4 = (z == x + 1 && x == y + 1);
+        boolean v5 = (x == z + 1 && y == x + 1);
+        boolean v6 = (z == y + 1 && x == z + 1);
+
+        if(v1 || v2 || v3 || v4 || v5 || v6) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
