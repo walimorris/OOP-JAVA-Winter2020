@@ -227,3 +227,36 @@ public class FencePost {
         System.out.println();
     }
 }
+
+/* Exercise 9: Write a method called printFactors that accepts an integer as 
+ * its parameter  and uses a fencepost loop to print the factors of that number, 
+ * seperated by the word "and". 
+ *
+ * Author : Wali Morris
+ * File   : MoreFactors.java
+ * Date   : 01/20/2020
+ */
+
+public class MoreFactors {
+    public static void main(String[] args) {
+        printFactors(24);
+        printFactors(12);
+        printFactors(1);
+        printFactors(100);
+    }
+
+    // pre: fact must be greater than 0 
+    public static void printFactors(int fact) {
+        if(fact <= 0) {
+             throw new IllegalArgumentException();
+        }
+        System.out.print("1");
+        for(int i=2;i<=fact;i++) {
+            for(int j=1;j<=fact;j++) {
+                if(i * j == fact)
+                    System.out.print(" and " + i);
+            }
+        }
+        System.out.println();
+    }
+}
