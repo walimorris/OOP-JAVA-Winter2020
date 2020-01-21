@@ -279,9 +279,8 @@ public class HopScotch {
         hopscotch(1);
         hopscotch(0);
         hopscotch(-1);
-
     }
-
+    
     public static void hopscotch(int hops) {
         if(hop >= 0) {
             System.out.println("  " + "1" + "  ");
@@ -293,8 +292,8 @@ public class HopScotch {
                 System.out.println("  ");
             }
         } else {
-            // added for fun, if hop is negative, no hops take place.    
-            System.out.println("Where ya hopping to there pal!");
+            // helpful message, if hop is negative, no hops take place.    
+            System.out.println("No where to hop, sorry!");
         }
         System.out.println();
     }
