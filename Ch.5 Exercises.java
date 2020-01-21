@@ -297,3 +297,43 @@ public class HopScotch {
         System.out.println();
     }
 }
+
+/* Exercise 11: Write a mathod called threeHeads that repeatedly flips a coin 
+ * until the results of the coin toss are three heads in a row. You should use
+ * a Random object to make it equally likely that a head or a tail will appear.
+ * Each time the coin is flipped, display H for heads or T for tails. When 
+ * three heads in a row are flipped, the method should print a congratulatory 
+ * message. 
+ *
+ * Author : Wali Morris
+ * File   : HeadsOrTails.java
+ * Date   : 01/20/2020
+ */
+
+import java.util.*;
+
+public class HeadsOrTails {
+    public static void main(String[] args) {
+        threeHeads();
+    }
+
+    public static void threeHeads() {
+        Random flip = new Random();
+
+        int coin = flip.nextInt(2);
+        int heads = 0;
+        int tails = 0;
+        while(heads != 3) {
+            if(coin == 1) { // 1 = heads, 0 = tails
+                heads ++;
+                System.out.print("H");
+            } else { // ruins the streak of coin landing on heads
+                tails ++;
+                System.out.print("T");
+                heads = 0;
+            }
+            coin = flip.nextInt(2);
+        }
+        System.out.println("\nThree Heads, congrats!");
+    }
+}
