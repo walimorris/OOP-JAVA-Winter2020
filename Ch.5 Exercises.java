@@ -463,3 +463,60 @@ public class MidPoint {
         }
     }
 }
+
+/* Exercise 18: Write a method called digitSum that accepts an integer 
+ * as a parameter and returns the sum of the digits of that number. 
+ *
+ * Author : Wali Morris
+ * File   : DigitSum.java 
+ * Date   : 01/21/2020
+ */
+
+import java.util.*;
+
+public class DigitSum {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        System.out.print("Enter any integer: ");
+        int yourInt = console.nextInt();
+        int yourIntSum = digitSum(yourInt);
+        System.out.println("The sum of " + yourInt + " is: " + yourIntSum);
+    }
+
+    public static int digitSum(int digit) {
+        boolean ones = (Math.abs(digit) <= 9);
+        boolean tens = (Math.abs(digit) <= 99 && Math.abs(digit) >= 10);
+        boolean hundreds = (Math.abs(digit) <= 999 && Math.abs(digit) >=100);
+        boolean thousands = (Math.abs(digit) <= 9999 && Math.abs(digit) >=1000);
+        boolean tenThousands = (Math.abs(digit) <= 99999 && Math.abs(digit) >=10000);
+        boolean hundredThousands = (Math.abs(digit) <= 999999 && Math.abs(digit) >=100000);
+        boolean millions = (Math.abs(digit) <= 9999999 && Math.abs(digit) >=1000000);
+        if(ones) {
+            return digit;
+        } else if(tens) {
+            return (Math.abs(digit%100/10)) + (Math.abs(digit%10));
+        } else if(hundreds) {
+            return (Math.abs(digit/100)) + (Math.abs(digit%100/10)) +
+                   (Math.abs(digit%10));
+        } else if(thousands) {
+            return (Math.abs(digit/1000)) + (Math.abs(digit/100%10)) +
+                   (Math.abs(digit%100/10)) + (Math.abs(digit%10));
+        } else if(tenThousands) {
+            return (Math.abs(digit/10000)) + (Math.abs(digit/1000%10)) +
+                   (Math.abs(digit/100%10)) + (Math.abs(digit%100/10)) +
+                   (Math.abs(digit%10));
+        } else if(hundredThousands) {
+            return (Math.abs(digit/100000)) + (Math.abs(digit/10000%10)) +
+                   (Math.abs(digit/1000%10)) + (Math.abs(digit/100%10)) +
+                   (Math.abs(digit%100/10)) + (Math.abs(digit%10));
+        } else if(millions) {
+            return (Math.abs(digit/1000000)) + (Math.abs(digit/100000%10)) +
+                   (Math.abs(digit/10000%10)) + (Math.abs(digit/1000%10)) +
+                   (Math.abs(digit/100%10)) + (Math.abs(digit%100/10)) +
+                   (Math.abs(digit%10));
+        } else {
+            return 0; // anything greater than 7 digits  
+        }
+    }
+}
