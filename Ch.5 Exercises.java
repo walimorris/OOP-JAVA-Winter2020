@@ -358,16 +358,16 @@ public class SentinelAverage {
     }
 
     public static void printAverage(Scanner console) {
-        double count = 0.0, num = 0.0, sum = 0.0, average;
+        double count = 0, num = 0, sum = 0, average = 0;
         while(num >= 0) {
             System.out.print("Enter a number [-1 to quit]: ");
             num = console.nextInt();
             if(num >= 0) {
                 sum += num;
                 count ++;
+                average = sum/count;
             }
         }
-
-        System.out.println("Average: " + sum/count);
+        System.out.printf("Average: %.2f\n", average);
     }
 }
