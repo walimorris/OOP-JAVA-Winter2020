@@ -411,17 +411,17 @@ public class Consecutive {
         System.out.println("List 10 contains consecutive numbers(9,2,4): " + numList10);
     }
     
-    /* for each integer there are 2 different patterns 2 * 3 = 6 different ways
-     * three consecutive numbers can be ordered. If none of these consecutive 
-     * patterns are met, the list is returned false. 
+    /* for each of 3 integers there are 2 different patterns 2 * 3 = 6 different ways
+     * three consecutive numbers can be ordered. If none of these consecutive patterns
+     * are met, the list is returned false. 
      */
     public static boolean consecutive(int x, int y, int z) {
-        boolean v1 = (y == x + 1 && z == y + 1);
-        boolean v2 = (y == z + 1 && x == y + 1);
-        boolean v3 = (y == z + 1 && z == x + 1);
-        boolean v4 = (z == x + 1 && x == y + 1);
-        boolean v5 = (x == z + 1 && y == x + 1);
-        boolean v6 = (z == y + 1 && x == z + 1);
+        boolean v1 = (z == y + 1 && y == x + 1); // 1,2,3 
+        boolean v2 = (y == z + 1 && z == x + 1); // 1,3,2 
+        boolean v3 = (z == x + 1 && x == y + 1); // 2,1,3
+        boolean v4 = (y == x + 1 && x == z + 1); // 2,3,1
+        boolean v5 = (x == y + 1 && y == z + 1); // 3,2,1
+        boolean v6 = (x == z + 1 && z == y + 1); // 3,1,2 
 
         if(v1 || v2 || v3 || v4 || v5 || v6) {
             return true;
