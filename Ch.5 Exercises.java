@@ -260,3 +260,42 @@ public class MoreFactors {
         System.out.println();
     }
 }
+
+/* Exercise 10: Write a method called hopscotch that accepts an integer number
+ * of "hops" as its parameter and prints a pattern of numbers that resembles
+ * a hopscotch board. A "hop" is a three-number sequence where the output shows
+ * two numbers on a line, followed by one number on its own line. 
+ *
+ * Author : Wali Morris
+ * File   : HopScotch.java
+ * Date   : 01/20/2020
+ */
+
+public class HopScotch {
+
+    public static void main(String[] args) {
+        hopscotch(3);
+        hopscotch(2);
+        hopscotch(1);
+        hopscotch(0);
+        hopscotch(-1);
+
+    }
+
+    public static void hopscotch(int hops) {
+        if(hop >= 0) {
+            System.out.println("  " + "1" + "  ");
+            for(int i=2;i<3*hops;i+=3) {
+                System.out.print(i + "   ");
+                System.out.println(i+1);
+                System.out.print("  ");
+                System.out.print(i+2);
+                System.out.println("  ");
+            }
+        } else {
+            // added for fun, if hop is negative, no hops take place.    
+            System.out.println("Where ya hopping to there pal!");
+        }
+        System.out.println();
+    }
+}
