@@ -430,3 +430,36 @@ public class Consecutive {
         }
     }
 }
+
+/* Write a method called hasMidpoint that accepts three integers as parameters 
+ * and returns true if one of the integers is the midpoint between the other 
+ * two integers; that is, if one integer is exactly halfway between them. Your 
+ * method should return false if no such midpoint exists. 
+ *
+ * Author : Wali Morris 
+ * File   : MidPoint.java
+ * Date   : 01/21/2020
+ */
+
+public class MidPoint {
+    public static void main(String[] args) {
+        boolean point1 = hasMidpoint(7, 4, 10);
+        boolean point2 = hasMidpoint(9, 15, 8);
+        boolean point3 = hasMidpoint(5, 5, 5);
+        System.out.println("Does point1 contain a midpoint(7, 4, 10): " + point1);
+        System.out.println("Does point2 contain a midpoint(9, 15, 8): " + point2);
+        System.out.println("Does point3 contain a midpoint(5, 5, 5): " + point3);
+    }
+
+    public static boolean hasMidpoint(int x, int y, int z) {
+        boolean v1 = ((x + y) / 2 == z);
+        boolean v2 = ((x + z) / 2 == y);
+        boolean v3 = ((y + z) / 2 == x);
+        boolean v4 = (y == x && x == z);
+        if(v1 || v2 || v3 || v4) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
