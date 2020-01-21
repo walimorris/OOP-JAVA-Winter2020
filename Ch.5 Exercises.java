@@ -202,3 +202,28 @@ public class RandomWalk {
         }
     }
 }
+
+/* Warmup: In order to practice fencepost loop algorithms; write a solution to 
+ * print the integers 1 - n seperated by a comma. There should be n-1 commas in 
+ * total: 1,2,3,4,5,6,7,8,9,10,...,...,..n.
+ *
+ * Author : Wali Morris
+ * File   : FencePost.java
+ * Date   : 01/20/2020
+ */
+
+public class FencePost {
+    public static void main(String[] args) {
+        jumpOffPost(10);
+        jumpOffPost(20);
+        jumpOffPost(5);
+    }
+
+    public static void jumpOffPost(int n) {
+        System.out.print("1");
+        for(int i=2;i<=n;i++) {
+            System.out.print("," + i);
+        }
+        System.out.println();
+    }
+}
