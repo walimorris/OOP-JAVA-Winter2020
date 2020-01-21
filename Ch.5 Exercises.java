@@ -289,7 +289,6 @@ public class HopScotch {
                 System.out.println(i+1);
                 System.out.print("  ");
                 System.out.print(i+2);
-                System.out.println("  ");
             }
         } else {
             // helpful message, if hop is negative, no hops take place.    
