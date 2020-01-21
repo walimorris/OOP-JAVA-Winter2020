@@ -337,3 +337,37 @@ public class HeadsOrTails {
         System.out.println("\nThree Heads, congrats!");
     }
 }
+
+/* Exercise 12: Write a method called printAverage that uses a sentinel loop to
+ * repeatedly prompt the user for numbers. Once the user types any number less 
+ * than zero, the method should display the average of all nonnegative numbers
+ * typed. Display the average as a double. 
+ *
+ * Author : Wali Morris 
+ * File   : SentinelAverage.java
+ * Date   : 01/20/2020
+ */
+
+import java.util.*;
+
+public class SentinelAverage {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        printAverage(console);
+    }
+
+    public static void printAverage(Scanner console) {
+        double count = 0.0, num = 0.0, sum = 0.0, average;
+        while(num >= 0) {
+            System.out.print("Enter a number [-1 to quit]: ");
+            num = console.nextInt();
+            if(num >= 0) {
+                sum += num;
+                count ++;
+            }
+        }
+
+        System.out.println("Average: " + sum/count);
+    }
+}
