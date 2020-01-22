@@ -149,10 +149,46 @@ public class PowersOfN2 {
     }
 }
 
+/* Exercise 4: Write a method called printSquare that accepts a minimum 
+ * and maximum integer and prints a square of lines of increasin numbers. 
+ * The first line should start with the minimum, and each line that follows 
+ * should start with the next-higher number. The sequence of numbers on a line 
+ * wraps back to the minimum after it hits the maximum. 
+ *
+ * Author : Wali Morris 
+ * File   : PrintSquare.java 
+ * Date   : 01/22/2020
+ */
 
-/* Write a methods called printGrid that accepts two integers represetning a 
- * number of rows and columns and prints a grid of integers from 1 
- * (rows * columns) in column major order. 
+public class PrintSquare {
+    public static void main(String[] args) {
+        printSquare(3, 7);
+        printSquare(1,10);
+        printSquare(100, 120);
+    }
+
+    public static void printSquare(int min, int max) {
+        final int FILL = min;
+        int range = max - min; // the number of loops   
+        for(int i=0;i<=range;i++) {
+            //every iteration adds 1 to min so next line begins with min + 1            
+            for(int j=min;j<=max;j++) {
+                System.out.print(j);
+            }
+            for(int k=0;k<i;k++) { // fills the end of output min+1 after first loop
+                System.out.print(k+FILL);
+            }
+
+            System.out.println();
+            min++; //ensures every loop iteration 1 is added to min
+        }
+    }
+}
+
+
+/* Exercise 5: Write a methods called printGrid that accepts two 
+ * integers represetning a number of rows and columns and prints 
+ * a grid of integers from 1 (rows * columns) in column major order. 
  *
  * Author : Wali Morris 
  * File   : PrintingGrids.java
@@ -177,9 +213,10 @@ public class PrintingGrids {
     }
 }
 
-/* Write a method called largerAbsVal that takes two integers as parameters and
- * returns the larger of the two absolute values. A callof largerAbsVal(11,2) 
- * would return 11, and a call of largerAbsVal(4,-5) would return 5. 
+/* Exercise 6: Write a method called largerAbsVal that takes two integers as 
+ * parameters and returns the larger of the two absolute values. A callof  
+ * largerAbsVal(11,2) would return 11, and a call of largerAbsVal(4,-5) would
+ * return 5. 
  *
  * Author : Wali Morris 
  * File   : AbsoluteValues.java
@@ -199,9 +236,9 @@ public class AbsoluteValues {
     }
 }
 
-/* Write a method called quadratic that solves quadratic equations and prints
- * their roots. In this solution you can assume assume the equations have two 
- * real roots, although this is not always the case mathematically. 
+/* Exercise 8: Write a method called quadratic that solves quadratic equations 
+ * and prints their roots. In this solution you can assume assume the equations
+ * have two real roots, although this is not always the case mathematically. 
  *
  * Author : Wali Morris
  * File   : Quadratics.java 
