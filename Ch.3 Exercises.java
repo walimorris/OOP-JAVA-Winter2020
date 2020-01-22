@@ -65,9 +65,9 @@ public class PrintingNumbers {
     }
 }
 
-/* Write a method called printPowersOf2 that accepts a maximum numbers as an 
- * arguement and prints each power of 2 from 2^0(1) up to that maximum power
- * inclusive. 
+/* Exercise 2: Write a method called printPowersOf2 that accepts a maximum 
+ * numbers as an arguement and prints each power of 2 from 2^0(1) up to that
+ * maximum power inclusive. 
  *
  * Author : Wali Morris
  * File   : PrintingPowers.java
@@ -80,9 +80,34 @@ public class PrintingPowers {
         printPowersOf2(10);
     }
 
-    public static void printPowersOf2(int x) {
-        for(int i=0;i<=x;i++) {
+    public static void printPowersOf2(int n) {
+        for(int i=0;i<=n;i++) {
             System.out.print((int)Math.pow(2,i)+" ");
+        }
+
+        System.out.println();
+    }
+}
+
+/* Exercise 3: Write a method called printPowersOfN that accepts a base and an 
+ * exponent as arguments and prints each power of the base from base^0(1) up to
+ * that maximum power, inclusive. 
+ *
+ * Author : Wali Morris
+ * Date   : 01/21/2020
+ * File   : PowersOfN.java 
+ */
+
+public class PowersOfN {
+    public static void main(String[] args) {
+        printPowersOfN(4, 3);
+        printPowersOfN(5, 6);
+        printPowersOfN(-2, 8);
+    }
+
+    public static void printPowersOfN(int base, int exponent) {
+        for(int i=0;i<=exponent;i++) {
+            System.out.print((int)Math.pow(base, i) + " ");
         }
 
         System.out.println();
