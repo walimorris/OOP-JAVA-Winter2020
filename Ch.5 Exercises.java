@@ -542,8 +542,9 @@ public class BetterDigitSum {
 
         System.out.print("Enter a number(short or long): ");
         int chosenNumber = console.nextInt();
-        int sumOfDigits = digitSum(chosenNumber);
-        System.out.print("The sum of " + chosenNumber + " is: " + sumOfDigits );
+        int sumOfDigits = digitSum(Math.abs(chosenNumber)); // pass the absolute value here 
+        System.out.println("The absolute sum of each digit in " +
+                            chosenNumber + " is: " + sumOfDigits );
     }
 
     public static int digitSum(int digit) {
@@ -552,9 +553,10 @@ public class BetterDigitSum {
         int aConvertedCharDigit = 0;
         for(int i=0;i<=aStringOfDigits.length()-1;i++) {
             aConvertedCharDigit = Character.getNumericValue(aStringOfDigits.charAt(i));
-            sum += aConvertedCharDigit;
+            sum += (aConvertedCharDigit);
         }
         return sum;
     }
 }
+
 
