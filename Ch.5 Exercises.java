@@ -466,6 +466,10 @@ public class MidPoint {
 
 /* Exercise 18: Write a method called digitSum that accepts an integer 
  * as a parameter and returns the sum of the digits of that number. 
+ * NOTE: This is not a great solution to this problem for more than a few
+ * reasons. Please see Exercise 18A following this exercise for a better 
+ * solution. I was hooked on doing some modulus math and it was fun, but 
+ * still, not a great or correct solution. 
  *
  * Author : Wali Morris
  * File   : DigitSum.java 
@@ -520,3 +524,37 @@ public class DigitSum {
         }
     }
 }
+
+/* Exercise 18A:  A much better solution to exercise 18. In the last example
+ * I've done some really tedious math using modulus and division, it was fun
+ * but limited to 7 digits. Here's a proper solution.  
+ *
+ * Author : Wali Morris 
+ * File   : BetterDigitSum.java
+ * Date   : 01/21/2020
+ */
+
+import java.util.*;
+
+public class BetterDigitSum {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        System.out.print("Enter a number(short or long): ");
+        int chosenNumber = console.nextInt();
+        int sumOfDigits = digitSum(chosenNumber);
+        System.out.print("The sum of " + chosenNumber + " is: " + sumOfDigits );
+    }
+
+    public static int digitSum(int digit) {
+        String aStringOfDigits = Integer.toString(digit);
+        int sum = 0;
+        int aConvertedCharDigit = 0;
+        for(int i=0;i<=aStringOfDigits.length()-1;i++) {
+            aConvertedCharDigit = Character.getNumericValue(aStringOfDigits.charAt(i));
+            sum += aConvertedCharDigit;
+        }
+        return sum;
+    }
+}
+
