@@ -1,6 +1,6 @@
 //Chapter 3 does a dive into the Java Math library, methods, parameters and objects! 
 
-/* Write a method that write a certain number or space. 
+/* Warmup: Write a method that write a certain number or space. 
  *
  * Author : Wali Morris
  * File   : WriteSpaces.java
@@ -20,9 +20,9 @@ public class WriteSpaces {
     }
 }
 
-/* Introductory Example: This program determines the amount of coffee a person
- * drinks weekly; depending on the number of coffees consumed each day by the 
- * number of days in a week.
+/* Warm up: This program determines the amount of coffee a person drinks weekly; 
+ * depending on the number of coffees consumed each day by the number of days in 
+ * a week.
  *  
  * Author : Wali Morris 
  * File   : ReturnExample.java 
@@ -41,9 +41,9 @@ public class ReturnExample {
     }
 }
 
-/* Write a method called printNumbers that accepts a maximum number as an 
- * argument and prints each number from 1 up to that maximum, inclusive, 
- * boxed by squared brackets.
+/* Exercise 1: Write a method called printNumbers that accepts a maximum 
+ * number as an argument and prints each number from 1 up to that maximum,
+ * inclusive, boxed by squared brackets.
  *
  * Author : Wali Morris
  * File   : PrintingNumbers.java
