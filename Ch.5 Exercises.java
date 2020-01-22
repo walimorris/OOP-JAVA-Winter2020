@@ -544,7 +544,7 @@ public class BetterDigitSum {
         int chosenNumber = console.nextInt();
         int sumOfDigits = digitSum(Math.abs(chosenNumber)); // pass the absolute value here 
         System.out.println("The absolute sum of each digit in " +
-                            chosenNumber + " is: " + sumOfDigits );
+                            chosenNumber + " is: " + sumOfDigits);
     }
 
     public static int digitSum(int digit) {
