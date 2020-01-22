@@ -490,12 +490,18 @@ public class DigitSum {
 
     public static int digitSum(int digit) {
         boolean ones = (Math.abs(digit) <= 9);
-        boolean tens = (Math.abs(digit) <= 99 && Math.abs(digit) >= 10);
-        boolean hundreds = (Math.abs(digit) <= 999 && Math.abs(digit) >=100);
-        boolean thousands = (Math.abs(digit) <= 9999 && Math.abs(digit) >=1000);
-        boolean tenThousands = (Math.abs(digit) <= 99999 && Math.abs(digit) >=10000);
-        boolean hundredThousands = (Math.abs(digit) <= 999999 && Math.abs(digit) >=100000);
-        boolean millions = (Math.abs(digit) <= 9999999 && Math.abs(digit) >=1000000);
+        boolean tens = (Math.abs(digit) <= 99 &&
+                        Math.abs(digit) >= 10);
+        boolean hundreds = (Math.abs(digit) <= 999 &&
+                            Math.abs(digit) >=100);
+        boolean thousands = (Math.abs(digit) <= 9999 &&
+                             Math.abs(digit) >=1000);
+        boolean tenThousands = (Math.abs(digit) <= 99999 &&
+                                Math.abs(digit) >=10000);
+        boolean hundredThousands = (Math.abs(digit) <= 999999 &&
+                                    Math.abs(digit) >=100000);
+        boolean millions = (Math.abs(digit) <= 9999999 &&
+                            Math.abs(digit) >=1000000);
         if(ones) {
             return digit;
         } else if(tens) {
@@ -524,6 +530,7 @@ public class DigitSum {
         }
     }
 }
+
 
 /* Exercise 18A:  A much better solution to exercise 18. In the last example
  * I've done some really tedious math using modulus and division, it was fun
