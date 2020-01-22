@@ -91,7 +91,8 @@ public class PrintingPowers {
 
 /* Exercise 3: Write a method called printPowersOfN that accepts a base and an 
  * exponent as arguments and prints each power of the base from base^0(1) up to
- * that maximum power, inclusive. 
+ * that maximum power, inclusive. Solution without using Math class follows this 
+ * exercise below. 
  *
  * Author : Wali Morris
  * Date   : 01/21/2020
@@ -113,6 +114,41 @@ public class PowersOfN {
         System.out.println();
     }
 }
+
+/* Exercise 3A: Without using the math class. Write a method called 
+ * printPowersOfN that accepts a base and an exponent as arguments 
+ * and prints each power of the base from base^0(1) up to that maximum 
+ * power, inclusive. 
+ *
+ * Author : Wali Morris
+ * Date   : 01/21/2020
+ * File   : PowersOfN2.java 
+ */
+
+public class PowersOfN2 {
+    public static void main(String[] args) {
+        printPowersOfN(4, 3);
+        printPowersOfN(5, 6);
+        printPowersOfN(-2, 8);
+        printPowersOfN(-4, 0);
+    }
+
+    public static void printPowersOfN(int base, int exponent) {
+        if(base == 0) {
+            throw new IllegalArgumentException("0 is undefined!");
+        }
+
+        System.out.print(1 + " "); //any base to the power of 0 = 1
+        int sum = 1;
+        for(int i=1;i<=exponent;i++) { //we can skip to exponent of 1
+            sum *= base;
+            System.out.print(sum + " ");
+        }
+
+        System.out.println();
+    }
+}
+
 
 /* Write a methods called printGrid that accepts two integers represetning a 
  * number of rows and columns and prints a grid of integers from 1 
