@@ -464,6 +464,48 @@ public class MidPoint {
     }
 }
 
+/* Exercise 15: Write a method called dominant that accepts three integers as 
+ * parameters and returns true if any one of the three integers is larger than 
+ * the sum of the other two integers. The integers might be passed in any order,
+ * so the largest value could be any of the three. We can assume that none of 
+ * the numbers is negative.  
+ *
+ * Author : Wali Morris 
+ * File   : Dominant.java
+ * Date   : 01/22/2020
+ */
+
+import java.util.*;
+
+public class Dominant {
+    public static void main(String[] args) {
+        boolean value1 = dominant(4, 9, 2);
+        boolean value2 = dominant(2, 2, 2);
+        boolean value3 = dominant(10, 11, 12);
+        boolean value4 = dominant(84, 54, 22);
+        System.out.print("There's a number that's dominant in point");
+        System.out.println("(4, 9, 2): " + value1);
+        System.out.print("\nThere's a number that's dominant in point");
+        System.out.println("(2, 2, 2): " + value2);
+        System.out.print("\nThere's a number that's dominant in point");
+        System.out.println("(10, 11, 12): " + value3);
+        System.out.print("\nThere's a number that's dominant in point");
+        System.out.println("(84, 54, 22): " + value4);
+
+    }
+
+    public static boolean dominant(int x, int y, int z) {
+        boolean dominantX = x > y + z;
+        boolean dominantY = y > z + x;
+        boolean dominantZ = z > x + y;
+        if(dominantX || dominantY || dominantZ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 /* Exercise 18: Write a method called digitSum that accepts an integer 
  * as a parameter and returns the sum of the digits of that number. 
  * NOTE: This is not a great solution to this problem for more than a few
