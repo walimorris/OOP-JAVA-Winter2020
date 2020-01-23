@@ -608,4 +608,39 @@ public class BetterDigitSum {
     }
 }
 
+/* Exercise 23: Write a method called hasAnOddDigit that returns 
+ * whether a given positive integer has atleast one digit whose 
+ * value is odd. Return True if the number has at least one odd 
+ * digit and false if none of its digits are odd. 
+ *
+ * Author : Wali Morris
+ * File   : HasOddDigit.java
+ * Date   : 01/23/2020
+ */
 
+import java.util.*;
+
+public class HasOddDigit {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        System.out.print("Choose an integer, large or small: ");
+        int arg = console.nextInt();
+        boolean argSolution = hasAnOddDigit(Math.abs(arg));
+        System.out.println(arg + " contains an odd digit: " + argSolution);
+    }
+
+    public static boolean hasAnOddDigit(int num) {
+        String numAsString = Integer.toString(num);
+        int valueOfDigit = 0;
+        int aConvertedCharDigit = 0;
+        for(int i=0;i<=numAsString.length()-1;i++) {
+            aConvertedCharDigit = Character.getNumericValue(numAsString.charAt(i));
+            valueOfDigit = (aConvertedCharDigit % 2);
+            if(valueOfDigit != 0) { // once an odd digit is found true is returned 
+                return true;
+            }
+        }
+        return false; // if all digits have been searched
+    }
+}
