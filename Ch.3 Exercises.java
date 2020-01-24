@@ -1,6 +1,6 @@
 //Chapter 3 does a dive into the Java Math library, methods, parameters and objects! 
 
-/* Warmup: Write a method that write a certain number or space. 
+/* Warmup: Write a method that writes a certain number or space. 
  *
  * Author : Wali Morris
  * File   : WriteSpaces.java
