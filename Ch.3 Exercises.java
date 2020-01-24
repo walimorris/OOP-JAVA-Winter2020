@@ -95,7 +95,7 @@ public class PrintingPowers {
  * exercise below. 
  *
  * Author : Wali Morris
- * Date   : 01/21/2020
+ * Date   : 01/12/2020
  * File   : PowersOfN.java 
  */
 
@@ -121,7 +121,7 @@ public class PowersOfN {
  * power, inclusive. 
  *
  * Author : Wali Morris
- * Date   : 01/21/2020
+ * Date   : 01/12/2020
  * File   : PowersOfN2.java 
  */
 
@@ -163,7 +163,7 @@ public class PowersOfN2 {
 public class PrintSquare {
     public static void main(String[] args) {
         printSquare(3, 7);
-        printSquare(1,10);
+        printSquare(1, 10);
         printSquare(100, 120);
     }
 
