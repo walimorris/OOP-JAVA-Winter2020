@@ -608,6 +608,48 @@ public class BetterDigitSum {
     }
 }
 
+/* Exercise 19: Write a method called firstDigit that returns the first (most
+ * significant) digit of an integer. 
+ *
+ * Author : Wali Morris
+ * File   : FirstDigit.java
+ * Date   : 01/23/2020
+ */
+
+import java.util.*;
+
+public class FirstDigit {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        System.out.print("Enter an integer, big or small [0 to quit]: ");
+        int arg = console.nextInt();
+        int argSolution = 0;
+        /* An integer with more than 1 digit that begins with 0, such as 097, 
+         * will be read by the compiler as 97. So, 0 seems to be a good number 
+         * to meet quitting conditions.
+         */
+        while(arg != 0) {
+            /* Get the absolute value now. If this value is in the return 
+             * statement below in the firstDigit method as return Math.abs(argSolution)
+             * the compiler will return the integer value of '1'. 
+             */
+            argSolution = firstDigit(Math.abs(arg));
+            System.out.println("The absolute value of the first digit in " +
+                                arg + " is " + argSolution);
+
+            System.out.print("Enter an integer, big or small [0 to quit]: ");
+            arg = console.nextInt();
+        }
+    }
+
+    public static int firstDigit(int arg) {
+        String integerString = Integer.toString(arg);
+        int argSolution = Character.getNumericValue(integerString.charAt(0));
+        return argSolution;
+    }
+}
+
 /* Exercise 23: Write a method called hasAnOddDigit that returns 
  * whether a given positive integer has atleast one digit whose 
  * value is odd. Return True if the number has at least one odd 
