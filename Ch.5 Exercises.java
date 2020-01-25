@@ -730,3 +730,25 @@ public class AllVowels {
         return true;
     }
 }
+
+/* This test is to print out the numberic values of the alphabet.
+ *
+ * Author : Wali Morris 
+ * File   : CharacterValues.java
+ * Date   : 01/25/2020 
+ */
+
+import java.util.*;
+
+public class CharacterValues {
+    public static void main(String[] args) {
+        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        int alphabetLength = (alphabet.length() - 1);
+        char alphabetChar = 'a';
+        for(int i=0;i<=alphabetLength;i++) {
+            alphabetChar = alphabet.charAt(i);
+            System.out.println(alphabet.charAt(i) + ": " +
+                               Character.getNumericValue(alphabetChar));
+        }
+    }
+}
