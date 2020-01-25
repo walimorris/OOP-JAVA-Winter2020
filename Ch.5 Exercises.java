@@ -752,3 +752,47 @@ public class CharacterValues {
         }
     }
 }
+
+/* Exercise 25: From the test exercise in the previous script we know that the 
+ * individual characters from a - z increment from 10 - 35, this allows us to 
+ * compare characters in this exercise. Write a method called charsSorted that
+ * accepts a string as its parameter and returns true if the characters in the
+ * string appear in sorted alphabetical order. 
+ *
+ * Author : Wali Morris 
+ * File   : SortedCharacters.java 
+ * Date   : 01/25/2020 
+ */
+import java.util.*;
+
+public class SortedCharacters {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String strArg = console.nextLine();
+        boolean strArgSolution = charsSorted(strArg.toLowerCase());//all characters passed as lowercase 
+        System.out.println("The String " + "'" + strArg + "'" +
+                           " is sorted: " + strArgSolution);
+    }
+
+    public static boolean charsSorted(String str) {
+        int currentStrCharValue = Character.getNumericValue(str.charAt(0)); //initialize current character 
+        int nextStrCharValue = Character.getNumericValue(str.charAt(0));
+        int strLength = (str.length() - 1);
+        for(int i=1;i<=strLength;i++) {
+            nextStrCharValue = Character.getNumericValue(str.charAt(i)); //get next character
+            /* The current characters numeric value should be less than the next, 
+             * if this is the case than the character passes and we can move on. 
+             * if not, immediately return false. If the character is the same value, 
+             * it will also pass.
+             */
+            if(currentStrCharValue <= nextStrCharValue) {
+                 currentStrCharValue = nextStrCharValue;
+            } else {
+                 return false;
+            }
+        }
+        return true;
+    }
+}
