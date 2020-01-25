@@ -686,3 +686,47 @@ public class HasOddDigit {
         return false; // if all digits have been searched
     }
 }
+
+/* Exercise 24: Write a method called isAllVowels that returns whether a string
+ * consists entirely of vowels(a,e,i,o,u, case-insensitively). If an only if 
+ * every character of the string is a vowel, your method should return true. 
+ *
+ * Author : Wali Morris 
+ * File   : AllVowels.java
+ * Date   : 01/25/2020
+ */
+
+import java.util.*;
+
+public class AllVowels {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String strArg = console.nextLine();
+        boolean strArgSolution = isAllVowels(strArg.toLowerCase()); // pass argument as all lowercase letters
+        System.out.println("Your string" + " '" + strArg + "' " +
+                           "contains all vowels: " + strArgSolution);
+    }
+
+    public static boolean isAllVowels(String str) {
+        String vowels = "aeiou"; // each character tested against string argument individually
+        int strLength = (str.length()-1);
+        int ch = 0;
+        char strChar = 'a';
+        while(ch <= strLength) {
+            // every character in string argument is tested for vowel 
+            strChar = str.charAt(ch);   
+            if( strChar == vowels.charAt(0) ||
+                strChar == vowels.charAt(1) ||
+                strChar == vowels.charAt(2) ||
+                strChar == vowels.charAt(3) ||
+                strChar == vowels.charAt(4)) {
+                ch++;
+            } else {
+                return false; // if character in string is not vowel at anytime return false
+            }
+        }
+        return true;
+    }
+}
