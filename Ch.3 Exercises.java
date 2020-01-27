@@ -108,7 +108,7 @@ public class PowersOfN {
 
     public static void printPowersOfN(int base, int exponent) {
         for(int i=0;i<=exponent;i++) {
-            /* the argument passed to int base remains the same while int i
+            /* the value passed as int base remains the same while int i
              * increments every iteration. Because Math.pow() returns a 
              * double, we must convert our calculation to int. 
              */
