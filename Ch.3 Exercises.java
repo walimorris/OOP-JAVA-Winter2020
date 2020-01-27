@@ -108,6 +108,10 @@ public class PowersOfN {
 
     public static void printPowersOfN(int base, int exponent) {
         for(int i=0;i<=exponent;i++) {
+            /* the argument passed to int base remains the same while int i
+             * increments every iteration. Because Math.pow() returns a 
+             * double, we must convert our calculation to int. 
+             */
             System.out.print((int)Math.pow(base, i) + " ");
         }
 
@@ -115,7 +119,7 @@ public class PowersOfN {
     }
 }
 
-/* Exercise 3A: Without using the math class. Write a method called 
+/* Exercise 3A: Without using the Math class. Write a method called 
  * printPowersOfN that accepts a base and an exponent as arguments 
  * and prints each power of the base from base^0(1) up to that maximum 
  * power, inclusive. 
@@ -138,9 +142,9 @@ public class PowersOfN2 {
             throw new IllegalArgumentException("0 is undefined!");
         }
 
-        System.out.print(1 + " "); //any base to the power of 0 = 1
+        System.out.print(1 + " "); // handles 0 exponents, any base to the power of 0 = 1
         int sum = 1;
-        for(int i=1;i<=exponent;i++) { //we can skip to exponent of 1
+        for(int i=1;i<=exponent;i++) { // we can skip to exponent of 1
             sum *= base;
             System.out.print(sum + " ");
         }
