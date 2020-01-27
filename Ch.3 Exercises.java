@@ -82,7 +82,7 @@ public class PrintingPowers {
 
     public static void printPowersOf2(int n) {
         for(int i=0;i<=n;i++) {
-            System.out.print((int)Math.pow(2,i)+" ");
+            System.out.print((int)Math.pow(2,i) + " ");
         }
 
         System.out.println();
@@ -112,7 +112,7 @@ public class PowersOfN {
              * increments every iteration. Because Math.pow() returns a 
              * double, we must convert our calculation to int. 
              */
-            System.out.print((int)Math.pow(base, i) + " ");
+            System.out.print((int)Math.pow(base,i) + " ");
         }
 
         System.out.println();
