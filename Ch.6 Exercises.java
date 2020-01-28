@@ -24,6 +24,14 @@ public class TestFile {
     }
 }
 
+/* Write a method called boyGirl that accepts a Scanner that is reading its 
+ * input from a file containing a series of names followed by integers. The 
+ * names alternate boys' names and girls' names. Your method should compute 
+ * the absolute difference between the sum of boys' integers and the sum of 
+ * the girls' integers. The input could end with either a boy or girl; you 
+ * may not assume that it contains an even number of names. 
+ *
+ * Author : Wali Morris
  * File   : BoysGirlsName.java 
  * Date   : 01/27/2020
  */
@@ -40,14 +48,11 @@ public class BoysGirlsName {
             processLine(text);
         }
     }
-    /* This function is passed one parameter, a line of text. 
-     * The first piece of text read is a name, followed by an 
-     * integer. It's decided if the name is a boy name or girl 
-     * name. We know boys are first, so the first name and its 
-     * integer goes to the sum of boys. Every other name must be 
-     * a girls name and so its integer goes to the sum of girls.
-     * The absolute difference of the boy and girl integers is 
-     * printed to the console. 
+    /* This function is passed one parameter, a line of text. The first piece of text read 
+     * is a name, followed by an integer. It's decided if the name is a boy name or girl 
+     * name. We know boys are first, so the first name and its integer goes to the sum of 
+     * boys. Every other name must be a girls name and so its integer goes to the sum of girls.
+     * The absolute difference of the boy and girl integers is printed to the console. 
      */
     public static void processLine(String text) {
         Scanner data = new Scanner(text);
@@ -61,9 +66,8 @@ public class BoysGirlsName {
             int boys = data.nextInt();
             System.out.println(boys);
             boysSum += boys;
-            /* Atleast one name exists, but names may be odd so in this case we
-             * must scan ahead to ensure a name exists' and it's the eof. If 
-             * it's the end of file, we must stop reading.
+            /* Atleast one name exists, but names may be odd so in this case we must scan ahead
+             * to ensure a name exists' and it's the eof. If it's the end of file, we must stop reading.
              */
             if(data.hasNext()) {
                 name = data.next();
