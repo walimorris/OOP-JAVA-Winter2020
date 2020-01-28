@@ -82,3 +82,45 @@ public class BoysGirlsName {
         System.out.println("Absolute difference: " + Math.abs(boysSum - girlsSum));
     }
 }
+
+/* Write a method called evenNumbers that accepts a Scanner reading input from a 
+ * file with a series of integers, and report various statistics about the
+ * integers to the console. Report the total number of numbers, the sum of the 
+ * numbers, the count of even numbers and the percent of even numbers. 
+ *
+ * Author : Wali Morris
+ * File   : EvenNumbers.java
+ * Date   : 01/27/2020
+ */
+
+import java.util.*;
+import java.io.*;
+
+public class EvenNumbers {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner input = new Scanner(new File("evennumbers.txt"));
+
+        evenNumbers(input);
+    }
+
+    public static void evenNumbers(Scanner input) {
+        int count = 0, sum = 0, evens = 0, next = 0;
+        double evenPercentage = 0.0;
+        while(input.hasNextInt()) {
+            next = input.nextInt();
+            sum += next;
+            count++;
+            if(next % 2 == 0) {
+                evens++;
+            }
+        }
+        /* use double here in order to get the values 
+         * of even and count as double, rather than int.
+         */
+        evenPercentage = (double) evens/count * 100;
+        System.out.print("Total Numbers: " + count);
+        System.out.println(", Sum: " + sum);
+        System.out.print("Even numbers: " + evens);
+        System.out.printf(" (%.2f)\n", evenPercentage);
+    }
+}
