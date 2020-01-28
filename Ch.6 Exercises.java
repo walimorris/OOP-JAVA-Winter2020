@@ -124,3 +124,43 @@ public class EvenNumbers {
         System.out.printf(" (%.2f)\n", evenPercentage);
     }
 }
+
+/* Write a method called negativeSum that accepts a Scanner reading input
+ * from a file containing a series of integers, and print a message to the
+ * console indicating whether the sum starting from the first number is 
+ * ever negative. You should also return true if a negative sum can be 
+ * reached and false if not. 
+ *
+ * Author : Wali Morris
+ * File   : NegativeSum.java
+ * Date   : 01/27/2020
+ */
+
+import java.util.*;
+import java.io.*;
+
+public class NegativeSum {
+    public static void main(String[] args) throws FileNotFoundException {
+        /* This file contains: -38 4 19 -27 -15 -3 4 19 38
+         * and will return "Sum of -38 after 0 steps" true.
+         */
+        Scanner input = new Scanner(new File("negativesum.txt"));
+
+        boolean argSum = negativeSum(input);
+        System.out.println(argSum);
+    }
+
+    public static boolean negativeSum(Scanner input) {
+        int next = 0, sum = 0, count = 0;
+        while(input.hasNextInt()) {
+            next = input.nextInt();
+            sum += next;
+            if(sum < 0) {
+                System.out.println("sum of " + sum + " after " + count + " steps");
+                return true;
+            }
+        }
+        System.out.println("No negative sum");
+        return false;
+    }
+}
