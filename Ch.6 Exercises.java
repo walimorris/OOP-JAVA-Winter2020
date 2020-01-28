@@ -24,12 +24,12 @@ public class TestFile {
     }
 }
 
-/* Write a method called boyGirl that accepts a Scanner that is reading its 
- * input from a file containing a series of names followed by integers. The 
- * names alternate boys' names and girls' names. Your method should compute 
- * the absolute difference between the sum of boys' integers and the sum of 
- * the girls' integers. The input could end with either a boy or girl; you 
- * may not assume that it contains an even number of names. 
+/* Exercise 1: Write a method called boyGirl that accepts a Scanner that is 
+ * reading its input from a file containing a series of names followed by 
+ * integers. The names alternate boys' names and girls' names. Your method 
+ * should compute the absolute difference between the sum of boys' integers
+ * and the sum of the girls' integers. The input could end with either a boy
+ * or girl; you may not assume that it contains an even number of names. 
  *
  * Author : Wali Morris
  * File   : BoysGirlsName.java 
@@ -83,10 +83,10 @@ public class BoysGirlsName {
     }
 }
 
-/* Write a method called evenNumbers that accepts a Scanner reading input from a 
- * file with a series of integers, and report various statistics about the
- * integers to the console. Report the total number of numbers, the sum of the 
- * numbers, the count of even numbers and the percent of even numbers. 
+/* Exercise 2: Write a method called evenNumbers that accepts a Scanner reading
+ * input from a file with a series of integers, and report various statistics 
+ * about the integers to the console. Report the total number of numbers, the 
+ * sum of the numbers, the count of even numbers and the percent of even numbers. 
  *
  * Author : Wali Morris
  * File   : EvenNumbers.java
@@ -125,11 +125,11 @@ public class EvenNumbers {
     }
 }
 
-/* Write a method called negativeSum that accepts a Scanner reading input
- * from a file containing a series of integers, and print a message to the
- * console indicating whether the sum starting from the first number is 
- * ever negative. You should also return true if a negative sum can be 
- * reached and false if not. 
+/* Exercise 3: Write a method called negativeSum that accepts a Scanner 
+ * reading input from a file containing a series of integers, and print
+ * a message to the console indicating whether the sum starting from the
+ * first number is ever negative. You should also return true if a negative
+ * sum can be reached and false if not. 
  *
  * Author : Wali Morris
  * File   : NegativeSum.java
