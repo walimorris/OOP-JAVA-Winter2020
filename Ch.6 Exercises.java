@@ -231,3 +231,44 @@ public class CountCoins {
         System.out.printf("The total value of all currency: $%.2f\n", sum);
     }
 }
+
+/* Exercise 5: Write a method called readEntireFile that accepts a Scanner 
+ * representing an input file as its parameter, then reads that file and 
+ * returns its entire contents as a string. 
+ *
+ * Author : Wali Morris
+ * File   : ReadEntireFile.java
+ * Date   : 01/29/2020
+ */
+
+import java.util.*;
+import java.io.*;
+
+public class ReadEntireFile {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner input = new Scanner(new File("readEntireFile.txt"));
+
+        String fileContent = readEntireFile(input);
+        System.out.println(fileContent); // using println allows line break 
+    }
+
+    /* This function reads a file Scanner and first ensures there's a single 
+     * line in the file that can be read, if not an error message is printed.
+     * Once the first line is read, the Scanner will continue to read ahead 
+     * for more lines. If there are more lines a String called fileContent 
+     * concatenates every line in file. Using \n is so the file can be read
+     * as its written, with proper line breaks.
+     */
+    public static String readEntireFile(Scanner input) {
+        if(input.hasNextLine()) {
+            String fileContent = input.nextLine();
+            while(input.hasNextLine()) {
+                String line = input.nextLine();
+                fileContent += "\n" + line;
+            }
+            return fileContent;
+        } else {
+            return "Empty File!";
+        }
+    }
+}
