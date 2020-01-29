@@ -181,11 +181,17 @@ import java.io.*;
 
 public class CountCoins {
     public static void main(String[] args) throws FileNotFoundException {
-        // contains: 3 pennies 2 quarters 1 Pennies 23 NickeLs 4 DIMES 
+        // contains: 3 pennies 2 quarters 1 Pennies 23 NickeLs 4 DIMES - pass 
         Scanner input = new Scanner(new File("monies.txt"));
+        // contains: 3 dollars 3 pennies 2 quarters - fail with system exit     
+        Scanner input2 = new Scanner(new File("failCountCoins.txt"));
 
         while(input.hasNextLine()) {
             String text = input.nextLine();
+            countCoins(text);
+        }
+        while(input2.hasNextLine()) {
+            String text = input2.nextLine();
             countCoins(text);
         }
     }
@@ -216,8 +222,9 @@ public class CountCoins {
             } else if(currency.equals("quarters")) {
                 sum += value * .25;
             } else {
-                System.out.print("[Error!] This currency " + currency);
+                System.out.print("[Error!] This currency " + "'" + currency + "'");
                 System.out.println(" is not recognized: please review file.");
+                System.exit(1);
             }
             System.out.printf("Sum: $%.2f\n", sum);
         }
