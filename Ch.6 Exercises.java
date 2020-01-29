@@ -164,3 +164,63 @@ public class NegativeSum {
         return false;
     }
 }
+
+/* Exercise 4: Write a method called countCoins that accepts a Scanner representing 
+ * an input file whose data is a series of pairs of tokens, where each pair begins 
+ * with an integer and is followed by the type of coin, which will be "pennies"(1cent)
+ * "nickels"(5cents), "dimes"(10cents), or "quarters"(25cents), case insensitively. 
+ * Add up the cash values of all the coins and print the total money. 
+ *
+ * Author : Wali Morris 
+ * File   : CountCoins.java
+ * Date   : 01/28/2020
+ */
+
+import java.util.*;
+import java.io.*;
+
+public class CountCoins {
+    public static void main(String[] args) throws FileNotFoundException {
+        // contains: 3 pennies 2 quarters 1 Pennies 23 NickeLs 4 DIMES 
+        Scanner input = new Scanner(new File("monies.txt"));
+
+        while(input.hasNextLine()) {
+            String text = input.nextLine();
+            countCoins(text);
+        }
+    }
+
+    /* This function reads a file, first the count then the currency of the count
+     * and adds the running sum.
+     */
+    public static void countCoins(String text) {
+        Scanner data = new Scanner(text);
+
+        String currencyToken = " ";
+        String currency = " ";
+        int value = 0;
+        double sum = 0;
+        while(data.hasNextInt()) {
+            value = data.nextInt(); // get next count   
+            System.out.println(value);
+            currencyToken = data.next();  // get the currency
+            currency = currencyToken.toLowerCase(); // ensure case insensitivity
+            System.out.println(currency);
+
+            if(currency.equals("pennies")) {
+                sum += value * .01;
+            } else if(currency.equals("nickels")) {
+                sum += value * .05;
+            } else if(currency.equals("dimes")) {
+                sum += value * .10;
+            } else if(currency.equals("quarters")) {
+                sum += value * .25;
+            } else {
+                System.out.print("[Error!] This currency " + currency);
+                System.out.println(" is not recognized: please review file.");
+            }
+            System.out.printf("Sum: $%.2f\n", sum);
+        }
+        System.out.printf("The total value of all currency: $%.2f\n", sum);
+    }
+}
