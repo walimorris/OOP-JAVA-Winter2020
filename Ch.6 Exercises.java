@@ -232,7 +232,37 @@ public class CountCoins {
     }
 }
 
-/* Exercise 5: Write a method called readEntireFile that accepts a Scanner 
+/* Exercise 5: Write a method called collapseSpaces that accepts a Scanner
+ * representing an input file as its parameter, then reads that file and output
+ * it with all its tokens seperated by single spaces, collapsing any sequences 
+ * of multiple spaces into single spaces.
+ *
+ * Author : Wali Morris 
+ * File   : CollapseSpaces.java
+ * Date   : 01/30/2020
+ */
+
+import java.util.*;
+import java.io.*;
+
+public class CollapseSpaces {
+    public static void main(String[] args) throws FileNotFoundException {
+        // file contains: "this  file  contains  2  numbers  and  more  than  17  spaces" 
+        Scanner input = new Scanner(new File("spaceswithnumbers.txt"));
+
+        collaspseSpaces(input); // pass: file content converted to single spaces
+    }
+
+    public static void collaspseSpaces(Scanner input) {
+        while(input.hasNext() || input.hasNextInt()) { // file may contains type string or type int
+            String token = input.next();
+            System.out.print(token + " ");
+        }
+        System.out.println();
+    }
+}
+
+/* Exercise 6: Write a method called readEntireFile that accepts a Scanner 
  * representing an input file as its parameter, then reads that file and 
  * returns its entire contents as a string. 
  *
@@ -270,35 +300,5 @@ public class ReadEntireFile {
         } else {
             return "Empty File!";
         }
-    }
-}
-
-/* Exercise 6: Write a method called collapseSpaces that accepts a Scanner
- * representing an input file as its parameter, then reads that file and output
- * it with all its tokens seperated by single spaces, collapsing any sequences 
- * of multiple spaces into single spaces.
- *
- * Author : Wali Morris 
- * File   : CollapseSpaces.java
- * Date   : 01/30/2020
- */
-
-import java.util.*;
-import java.io.*;
-
-public class CollapseSpaces {
-    public static void main(String[] args) throws FileNotFoundException {
-        // file contains: "this  file  contains  2  numbers  and  more  than  17  spaces" 
-        Scanner input = new Scanner(new File("spaceswithnumbers.txt"));
-
-        collaspseSpaces(input); // pass: file content converted to single spaces
-    }
-
-    public static void collaspseSpaces(Scanner input) {
-        while(input.hasNext() || input.hasNextInt()) { // file may contains type string or type int
-            String token = input.next();
-            System.out.print(token + " ");
-        }
-        System.out.println();
     }
 }
