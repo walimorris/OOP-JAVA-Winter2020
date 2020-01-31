@@ -302,3 +302,36 @@ public class ReadEntireFile {
         }
     }
 }
+
+/* Write a method called flipLines that accepts a Scanner for an input
+ * file and writes to the console the same file's contents with each 
+ * pair of lines reversed in order. If the file contains and odd number
+ * of lines, leave the last line unmodified. 
+ *
+ * Author : Wali Morris
+ * File   : FlipLines.java
+ * Date   : 01/30/2020
+ */
+
+import java.util.*;
+import java.io.*;
+
+public class FlipLines {
+    public static void main(String[] args) throws FileNotFoundException {
+        /* Twas brillig and the slithy toves
+         * did gyre and gimble in the wabe.
+         * All mimsey were the borogroves,
+         * and the mome raths ougrabe. 
+         */
+        Scanner input = new Scanner(new File("shortstory.txt"));
+
+        flipLines(input); // pass: lines were flipped  
+    }
+
+    public static void flipLines(Scanner input) {
+        while(input.hasNextLine()) {
+            String temp = input.nextLine();
+            System.out.println(temp);
+        }
+    }
+}
