@@ -335,3 +335,34 @@ public class FlipLines {
         }
     }
 }
+
+/* Exercise 8: Write a method called doubleSpace that accepts a Scanner for 
+ * an input file and a PrintStream for an output file as its parameters, 
+ * writing into the output file a double-spaced version of the text in the 
+ * input file. 
+ *
+ * Author : Wali Morris
+ * File   : DoubleSpace.java
+ * Date   : 01/31/2020
+ */
+
+import java.util.*;
+import java.io.*;
+
+public class DoubleSpace {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner input = new Scanner(new File("doublespace.txt")); // reads file  
+        PrintStream output = new PrintStream(new File("doublespace2.txt")); // sends output to file
+
+        doubleSpace(input, output);
+    }
+    /* This file reads every line from a file and prints that line to an output file
+     * adding a empty line after every output before the next line is written. 
+     */
+    public static void doubleSpace(Scanner input, PrintStream output) {
+        while(input.hasNextLine()) {
+            output.println(input.nextLine()); // send every line to file
+            output.println(); // write a blank line in file 
+        }
+    }
+}
