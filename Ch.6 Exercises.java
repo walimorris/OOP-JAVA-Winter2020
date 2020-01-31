@@ -303,10 +303,10 @@ public class ReadEntireFile {
     }
 }
 
-/* Write a method called flipLines that accepts a Scanner for an input
- * file and writes to the console the same file's contents with each 
- * pair of lines reversed in order. If the file contains and odd number
- * of lines, leave the last line unmodified. 
+/* Exercise 8: Write a method called flipLines that accepts a Scanner
+ * for an input file and writes to the console the same file's contents
+ * with each pair of lines reversed in order. If the file contains and 
+ * odd number of lines, leave the last line unmodified. 
  *
  * Author : Wali Morris
  * File   : FlipLines.java
