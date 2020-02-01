@@ -366,3 +366,47 @@ public class DoubleSpace {
         }
     }
 }
+
+/* Exercise 9: Write a method called wordWrap that accepts a Scanner representing 
+ * an input file as its parameter and outputs each line of the file to the console, 
+ * word-wrapping all lines that are longer than 60 characters. For example, if a 
+ * line contains 112 characters, the method should replace it with two lines: one 
+ * containing the first 60 characters and another containing the final 52 characters. 
+ * A line containing 217 characters should be wrapped into four lines: three of 
+ * length 60 and a final line of length 37.
+ *
+ * Author : Wali Morris 
+ * File   : WordWrap.java
+ * Date   : 01/31/2020 
+ */
+
+import java.util.*;
+import java.io.*;
+
+public class WordWrap {
+    public static void main(String[] args) throws FileNotFoundException {
+        /* The file contains this sentence in one full line: 
+         * 'Sitting here in this file waiting for someone to open me has been quite boring, 
+         *  but i'm pulling through.'
+         */
+        Scanner input = new Scanner(new File("wordwrap.txt"));
+
+        wordWrap(input); // pass: after first 60 characters a new line is created.  
+    }
+
+    public static void wordWrap(Scanner input) {
+        int count = 0;
+        String line = "";
+        while(input.hasNext()) {
+            String word = input.next();
+            if(line.length() < 60) { // if line is less than 60 characters   
+                line += word + " "; // add the next word
+                System.out.print(word + " ");
+            } else {
+                System.out.print("\n" + word + " "); // if the line is greater than 60, start new line
+                line = ""; // once 60 characters have been reached, create a new empty line     
+            }
+        }
+        System.out.println(); // when file is done, format correctly(prevents run-ons)  
+    }
+}
