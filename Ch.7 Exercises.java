@@ -114,3 +114,46 @@ public class CountRange {
         return count;
     }
 }
+
+/* Exercise 4: Write a method called isSorted that accepts an array of real 
+ * numbers as a parameter and returns true if the list is sorted(nondecreasing) 
+ * order and false otherwise. 
+ *
+ * Author : Wali Morris 
+ * File   : SortingArrays.java
+ * Date   : 02/01/2020
+ */
+
+import java.util.*;
+
+public class SortingArrays {
+    public static void main(String[] args) {
+        // create some lists to test
+        double[] list1 = {16.1, 12.3, 22.2, 14.4};
+        double[] list2 = {1.5, 4.3, 7.0, 19.5, 25.1, 46.2};
+        double[] list3 = {5.0};
+
+        // call isSorted on list objects
+        boolean list1Result = isSorted(list1);
+        boolean list2Result = isSorted(list2);
+        boolean list3Result = isSorted(list3);
+
+        //results
+        System.out.println(Arrays.toString(list1) + " is sorted: " + list1Result);
+        System.out.println(Arrays.toString(list2) + " is sorted: " + list2Result);
+        System.out.println(Arrays.toString(list3) + " is sorted: " + list3Result);
+    }
+
+    public static boolean isSorted(double[] list) {
+        if(list.length == 1) { // array of 1 is sorted 
+            return true;
+        }
+        // if current value in array is greater than next value, array is not sorted min to max 
+        for(int i=0;i<list.length-1;i++) {
+            if(list[i] > list[i+1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
