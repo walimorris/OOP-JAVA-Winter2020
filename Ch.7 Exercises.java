@@ -67,3 +67,50 @@ public class Ranges {
         return (data[max] - data[0] + 1);
     }
 }
+
+/* Exercise 3: Write a method called countInRange that accepts an array of 
+ * integers, a min value and a max value as parameters and returns the count 
+ * of how many elements from the array fall between the minimum and maximum
+ * (inclusive). 
+ *
+ * Author : Wali Morris 
+ * File   : CountRange.java
+ * Date   : 02/01/2020
+ */
+
+import java.util.*;
+
+public class CountRange {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        int[] data = {14, 1, 22, 17, 36, 7, -43, 5}; // create array
+        intro();
+        System.out.print("Chose your minimum: ");
+        int min = console.nextInt();
+        System.out.print("Chose your maximum: ");
+        int max = console.nextInt();
+        int rangeCount = countInRange(data, min, max);
+        System.out.print("How many numbers in this array fall between " + min);
+        System.out.println(" and " + max + ": " + rangeCount);
+
+    }
+
+    public static void intro() {
+        System.out.println("An array: 14, 1, 22, 17, 36, 7, -43, 5.");
+        System.out.println("Choose two numbers, a maximum and a minimum.");
+        System.out.println("Returned will be the count of elements in this array that");
+        System.out.println("fall between your chosen numbers.");
+    }
+
+    public static int countInRange(int[] data, int min, int max) {
+        int count = 0;
+        int dataLength = data.length - 1;
+        for(int i=0;i<dataLength;i++) {
+            if(data[i] >= min && data[i] <= max) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
