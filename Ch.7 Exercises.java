@@ -40,3 +40,30 @@ public class LastIndex {
         return lastIndex;   
     }
 }
+
+/* Exercise 2: Write a method called range that returns the range of values in an array
+ * of integers. The range is defined as 1 more than the difference between the max and 
+ * min values in the array. 
+ *
+ * Author : Wali Morris 
+ * File   : Ranges.java 
+ * Date   : 02/01/2020
+ */
+
+import java.util.*;
+
+public class Ranges {
+    public static void main(String[] args) {
+        int[] data = {36, 12, 25, 19, 46, 31, 22}; // create the array
+
+        int rangeOfData = range(data); // send data array as arguement 
+        System.out.print("The range of " + Arrays.toString(data) + " is " );
+        System.out.println(+ rangeOfData);
+    }
+
+    public static int range(int[] data) {
+        int max = data.length - 1; // accounting for 0 index, max equals length - 1   
+        Arrays.sort(data); // sort array: min - max 
+        return (data[max] - data[0] + 1);
+    }
+}
