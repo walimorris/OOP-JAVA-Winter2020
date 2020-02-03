@@ -157,3 +157,40 @@ public class SortingArrays {
         return true;
     }
 }
+
+/* Exercise 6: Write a method called stdev that returns the standard deviation 
+ * of an array of integers.
+ *
+ * Author : Wali Morris
+ * File   : StandardDeviation.java 
+ * Date   : 02/02/2020
+ */
+
+import java.util.*;
+
+public class StandardDeviation {
+    public static void main(String[] args) {
+        double[] list1 = {1, -2, 4, -4, 9, -6, 16, -8, 25, -10};
+        double stdevOfList1 = stdev(list1);
+        System.out.println(stdevOfList1);
+    }
+
+    public static double stdev(double[] array) {
+        // get the mean
+        double sum = 0.0;
+        for(int i=0;i<array.length;i++) {
+            sum += array[i];
+        }
+        double mean = (double)sum/array.length;
+        // subtract the mean, square the result and replace 
+        sum = 0.0;
+        for(int i=0;i<array.length;i++) {
+            double temp = array[i];
+            // subtract value - mean and square 
+            array[i] = (double)Math.pow(temp-mean, 2);
+            sum += array[i];
+        }
+        double variance = sum/array.length;
+        return Math.sqrt(variance);
+    }
+}
