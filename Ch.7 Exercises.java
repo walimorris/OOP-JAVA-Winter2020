@@ -224,10 +224,8 @@ public class KthLargest {
 
     public static int kthLargest(int num, int[] list) {
         Arrays.sort(list); // sort from smallest to largest
-        // accounting for 0 index, subtract 1 and num
-        int k = list.length - 1 - num;
-        // k is the int in the array that has atleast (num) integers larger
-        return list[k];
+        int k = list.length - 1 - num; // accounting for 0 index, subtract 1 and num
+        return list[k]; // k is the int in the array that has atleast (num) integers larger
     }
 }
 
@@ -266,8 +264,7 @@ public class Median {
         System.out.println("Here's your list: ");
         System.out.println(Arrays.toString(list));
 
-        // return the median integer in list
-        int medianInt = median(list);
+        int medianInt = median(list); // return the median integer in list
         System.out.println("The median integer in your unsorted list is: " + medianInt);
 
     }
