@@ -41,9 +41,9 @@ public class Replace {
     }
 
     public static String repl(String s, int x) {
-        String finalStr = "";
+        String finalStr = ""; // initialize empty string
         for(int i=1;i<=x;i++) {
-            finalStr += s;
+            finalStr += s; // for every loop write string to final
         }
 
         return finalStr;
