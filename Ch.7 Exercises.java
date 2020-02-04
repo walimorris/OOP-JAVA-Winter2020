@@ -194,3 +194,39 @@ public class StandardDeviation {
         return Math.sqrt(variance);
     }
 }
+
+/* Exercise 7: Write a method called kthLargest that accepts an integer k and an
+ * array a as its parameters and returns the element such that k elements have
+ * greater or equal value. 
+ *
+ * Author : Wali Morris
+ * File   : KthLargest.java
+ * Date   : 02/03/2020
+ */
+
+import java.util.*;
+
+public class KthLargest {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        int[] list = {74, 85, 102, 99, 101, 56, 84};
+        // choose a number within 0 and length of list  
+        System.out.print("Choose a number from 0 - " + list.length + ": ");
+        int num = console.nextInt();
+        if(num < 0 || num > list.length) {
+            throw new IllegalArgumentException("Integer out of range.");
+        }
+        int listResults = kthLargest(num, list);
+        System.out.print(listResults + " is the " + (num + 1) + "th largest");
+        System.out.println(" element in the array.");
+    }
+
+    public static int kthLargest(int num, int[] list) {
+        Arrays.sort(list); // sort from smallest to largest
+        // accounting for 0 index, subtract 1 and num
+        int k = list.length - 1 - num;
+        // k is the int in the array that has atleast (num) integers larger
+        return list[k];
+    }
+}
