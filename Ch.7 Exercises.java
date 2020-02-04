@@ -230,3 +230,51 @@ public class KthLargest {
         return list[k];
     }
 }
+
+/* Exercise 8: Write a method called median that accepts an array of integers 
+ * as its parameter and returns the median of the numbers in the array. Assume 
+ * that the array is of odd size. 
+ *
+ * Author : Wali Morris
+ * File   : Median.java
+ * Date   : 02/03/2020
+ */
+
+import java.util.*;
+
+public class Median {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        // help the user create a list
+        System.out.println("Choose an odd amount of integers you want included in your list");
+        System.out.print("containing 0 - 99 integers(inclusive): ");
+        int listCount = console.nextInt();
+        while(listCount % 2 != 1) { // if chosen number is not odd 
+            System.out.print("Sorry this integer is not odd, please chose an odd integer: ");
+            listCount = console.nextInt();
+        }
+
+        // allow the user to choose each number up until their desired count
+        int[] list = new int[listCount]; // initialize an array of desired amount  
+        for(int i=0;i<listCount;i++) {
+            System.out.print("Integer" + (i + 1) + ": ");
+            int num = console.nextInt();
+            list[i] = num;
+        }
+        System.out.println("List length: " + list.length);
+        System.out.println("Here's your list: ");
+        System.out.println(Arrays.toString(list));
+
+        // return the median integer in list
+        int medianInt = median(list);
+        System.out.println("The median integer in your unsorted list is: " + medianInt);
+
+    }
+
+    public static int median(int[] list) {
+        int median = list.length / 2; // represents index value
+        // accounting for 0 index, will return the resulting product's index value      
+        return list[median];
+    }
+}
