@@ -1,5 +1,7 @@
-/* Write a method called fractionSum that accepts an integer parameter n and 
- * returns as a double the sum of the first n terms of the sequence. You may
+// Chapter 4: Conditionals 
+
+/* Exercise 1: Write a method called fractionSum that accepts an integer parameter 
+ * n and returns as a double the sum of the first n terms of the sequence. You may
  * assume that the parameter n is non negative.
  *
  * Author : Wali Morris
@@ -23,8 +25,9 @@ public class FractionSums {
     }
 }
 
-/* Write a method called repl that accepts a String and a number of repetitions
- * as parameters and returns the String concatenated that many times.
+/* Exercise 2: Write a method called repl that accepts a String and a number
+ * of repetitions as parameters and returns the String concatenated that many
+ * times.
  *
  * Author : Wali Morris
  * File   : Replace.java
@@ -47,9 +50,9 @@ public class Replace {
     }
 }
 
-/* Write a method called daysInMonth that takes a month(an integer between 1 
- * and 12) as a parameter and returns the number of days in that month in this
- * year. Assume the code is not being run during a leap year. 
+/* Exercise 4: Write a method called daysInMonth that takes a month(an integer 
+ * between 1 and 12) as a parameter and returns the number of days in that month
+ * in this year. Assume the code is not being run during a leap year. 
  *
  * Author : Wali Morris
  * File   : Days.java
@@ -81,11 +84,11 @@ public class Days {
     }
 }
 
-/* Write a method called printRange that accepts two integers as arguements and 
- * prints the sequence of numbers between the two arguements, seperated by 
- * spaces. Print an increasing sequence if the first arguement is smaller than
- * the second; otherwise, print a decreasing sequence. If the two numbers are 
- * the same, that number should be printed by itself. 
+/* Exercise 6: Write a method called printRange that accepts two integers as 
+ * arguements and prints the sequence of numbers between the two arguements, 
+ * seperated by spaces. Print an increasing sequence if the first arguement 
+ * is smaller than the second; otherwise, print a decreasing sequence. If the 
+ * two numbers are the same, that number should be printed by itself. 
  *
  * Author : Wali Morris
  * File   : PrintingRange.java
@@ -121,12 +124,12 @@ public class PrintingRange {
     }
 }
 
-/* Write a method called evenSumMax that accepts a Scanner for the console as a
- * parameter. The method should prompt the user for a number of integers, then
- * prompt the integer that many times. Once the user has entered all the integers, 
- * the method should print the sum of all the even numbers the user typed, along
- * with the largest even number typed. You may assume that the user will type at
- * least one nonnegative even number. 
+/* Exercise 9: Write a method called evenSumMax that accepts a Scanner for the 
+ * console as a parameter. The method should prompt the user for a number of 
+ * integers, then prompt the integer that many times. Once the user has entered 
+ * all the integers, the method should print the sum of all the even numbers the 
+ * user typed, along with the largest even number typed. You may assume that the
+ * user will type at least one nonnegative even number. 
  *
  * Author : Wali Morris 
  * File   : EvenSum.java
