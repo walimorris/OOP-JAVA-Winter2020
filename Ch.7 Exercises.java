@@ -278,3 +278,47 @@ public class Median {
         return list[median];
     }
 }
+
+/* Exercise 9: Write a method called minGap that accepts an integer array 
+ * as a parameter and returns the minimum difference or gap between adjacent 
+ * values in the array, where the gap is defined as the later value minus 
+ * the earlier value.
+ *
+ * Author : Wali Morris
+ * File   : MinGap.java
+ * Date   : 02/04/2020
+ */
+
+import java.util.*;
+
+public class MinGap {
+    public static void main(String[] args) {
+        int[] array = {1, 3, 6, 7, 12};
+        int minimumGap = minGap(array);
+        System.out.print("Minimum gap in array:  " + Arrays.toString(array));
+        System.out.println(" is: " + minimumGap);
+    }
+
+    public static int minGap(int[] array) {
+        if(array.length < 2) {
+            return 0;
+        }
+        Arrays.sort(array);
+        // fence-post loop to initialize the first gap as minimum gap this far
+        int minGap = array[1] - array[0];
+        int i = 1;
+        /* In order to avert index out of range, stop loop at 2nd to last index, 
+         * count ahead to last index and subtract from current index. The pattern 
+         * is to count the length of the array - 1
+         */
+        while(i < array.length-1) {
+            int tempGap = array[i+1] - array[i];
+            if(tempGap < minGap) { // if the values are less than minimum gap 
+                minGap = tempGap; // temp gap becomes minimum gap 
+            }
+            i++; // increment index(i) for next gap value 
+        }
+        return minGap;
+    }
+}
+
