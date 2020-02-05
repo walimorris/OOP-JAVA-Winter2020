@@ -396,3 +396,52 @@ public class Unique {
         return true; // every value is unique 
     }
 }
+
+/* Exercise 12: Write a method called priceIsRight that mimics the guessing 
+ * rules from the game show The Price is Right. The metod accepts as parameters
+ * an array of integers representing the contestants' bid and an integer 
+ * representing a correct price. The method returns the element in the bids
+ * array that is closest in value to the correct price without being larger 
+ * than that price. 
+ *
+ * Author : Wali Morris
+ * File   : PriceIsRight.java
+ * Date   : 02/05/2020
+ */
+
+import java.util.*;
+
+public class PriceIsRight {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        int price = 205; // select correct bid: make this random selection 
+        System.out.println("The price has been chosen!");
+        System.out.println("Chose 5 bids within the range of $0 - $300");
+        int[] bids = new int[5]; // initialize empty array of 5 bids    
+        int userBids = 0;
+        while(userBids < 5) { // user enters 5 bids
+            System.out.print("Bid" + (userBids+1) + ": ");
+            bids[userBids] = console.nextDouble();
+
+            // if bid is out of range keep asking for current bid
+            while(bids[userBids] < 0 || bids[userBids] > 300) {
+                System.out.println("Bid out of range. Try again. ");
+                System.out.print("Bid" + (userBids+1) + ": ");
+                bids[userBids] = console.nextDouble(); // ask for bid in correct range..again 
+            }
+            userBids++; // after correct bid, increment how many bids have been chosen
+        }
+        System.out.print("Here are your bids: ");
+        System.out.println(Arrays.toString(bids)); // print the bids
+
+        // find the closest bid
+        int bidSolution = priceIsRight(bids, price);
+        if(bidSolution == -1) {
+            System.out.print("All your bids were well over the correct bid: "); 
+            System.out.println(bidSolution);
+        }
+        System.out.print("Your closest bid is:" + bidSolution);
+    }
+
+    public static int priceIsRight(int[] bids, int price) {
