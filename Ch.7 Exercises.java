@@ -319,3 +319,43 @@ public class MinGap {
     }
 }
 
+/* Exercise 10: Write a method called percentEven that accepts an array
+ * of integers as a parameter and returns percentage of even numbers in the
+ * array as a real number. 
+ *
+ * Author : Wali Morris
+ * File   : PercentEven.java
+ * Date   : 02/04/2020
+ */
+
+import java.util.*;
+
+public class PercentEven {
+    public static void main(String[] args) {
+        int[] array1 = {6, 2, 9, 11, 3};
+        int[] array2 = {3, 5, 7, 9, 11, 15}; // test for all odd values: should return 0.0%
+        double arraySolution1 = percentEven(array1);
+        double arraySolution2 = percentEven(array2);
+        System.out.print(Arrays.toString(array1) + " contains ");
+        System.out.printf("%.2f%%", arraySolution1);// percentage rounded two decimal places 
+        System.out.println(" even values.");
+
+        // array solution with all odd values
+        System.out.print(Arrays.toString(array2) + " contains ");
+        System.out.printf("%.2f%%", arraySolution2);
+        System.out.println(" even values.");
+    }
+
+    public static double percentEven(int[] array) {
+        int evenNumbers = 0;// initialize 0 even values 
+        for(int i=0;i<array.length;i++) {
+            if(array[i] % 2 == 0) { // check which array values are even 
+                evenNumbers++;
+            }
+        }
+        // given the length of array; calculate the percentage each value represents
+        double arrayPercentage = (double) 100 / array.length;
+        // multiply the product of each even value by the total percentage of array
+        return arrayPercentage * evenNumbers;
+    }
+}
