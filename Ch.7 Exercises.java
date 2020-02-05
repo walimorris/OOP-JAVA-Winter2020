@@ -359,3 +359,42 @@ public class PercentEven {
         return arrayPercentage * evenNumbers;
     }
 }
+
+/* Exercise 11: Write a method called isUnique that accepts an array of integers 
+ * as a parameter and returns a boolean value indicating whether or not the values
+ * in the array are unique. The values in the list are considered unique if there
+ * is no pair of values that are equal. 
+ *
+ * Author : Wali Morris
+ * File   : Unique.java
+ * Date   : 02/04/2020
+ */
+
+import java.util.*;
+
+public class Unique {
+    public static void main(String[] args) {
+        int[] array1 = {3, 8, 12, 2, 9, 17, 43, -8, 46};// should pass: true
+        int[] array2 = {4, 7, 3, 9, 12, -47, 3, 74};// should fail: false       
+        boolean array1Solution = isUnique(array1);
+        System.out.print(Arrays.toString(array1) + " is unique: ");
+        System.out.println(array1Solution);
+        System.out.println();
+        boolean array2Solution = isUnique(array2);
+        System.out.print(Arrays.toString(array2) + " is unique: ");
+        System.out.println(array2Solution);
+    }
+
+    public static boolean isUnique(int[] array) {
+        for(int i=0;i<array.length;i++) { // start at first value in array
+            // for every current value compare next value up until end of array 
+            for(int j=i+1;j<array.length;j++) {
+                // if current value appears twice, the list is not unique return false 
+                if(array[j] == array[i]) {
+                    return false;
+                }
+            }
+        }
+        return true; // every value is unique 
+    }
+}
