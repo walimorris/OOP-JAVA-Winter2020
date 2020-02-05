@@ -398,7 +398,7 @@ public class Unique {
 }
 
 /* Exercise 12: Write a method called priceIsRight that mimics the guessing 
- * rules from the game show The Price is Right. The metod accepts as parameters
+ * rules from the game show The Price is Right. The method accepts as parameters
  * an array of integers representing the contestants' bid and an integer 
  * representing a correct price. The method returns the element in the bids
  * array that is closest in value to the correct price without being larger 
@@ -414,7 +414,7 @@ import java.util.*;
 public class PriceIsRight {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
-
+        
         int price = 205; // select correct bid: make this random selection 
         System.out.println("The price has been chosen!");
         System.out.println("Chose 5 bids within the range of $0 - $300");
@@ -422,13 +422,18 @@ public class PriceIsRight {
         int userBids = 0;
         while(userBids < 5) { // user enters 5 bids
             System.out.print("Bid" + (userBids+1) + ": ");
-            bids[userBids] = console.nextDouble();
+            bids[userBids] = console.nextInt();
+            if(bids[userBids] == price) { // if correct bid, break, print congrats, and end! 
+                System.out.println("YOUR PRICE IS RIGHT!");
+                System.out.println("Your bid of " + bids[userBids] + " is correct. Congrats!");
+                System.exit(0); // correct bid, end with success! 
+            }
 
             // if bid is out of range keep asking for current bid
             while(bids[userBids] < 0 || bids[userBids] > 300) {
                 System.out.println("Bid out of range. Try again. ");
                 System.out.print("Bid" + (userBids+1) + ": ");
-                bids[userBids] = console.nextDouble(); // ask for bid in correct range..again 
+                bids[userBids] = console.nextInt(); // ask for bid in correct range..again 
             }
             userBids++; // after correct bid, increment how many bids have been chosen
         }
@@ -438,10 +443,40 @@ public class PriceIsRight {
         // find the closest bid
         int bidSolution = priceIsRight(bids, price);
         if(bidSolution == -1) {
-            System.out.print("All your bids were well over the correct bid: "); 
+            System.out.print("All your bids were well over the correct bid: ");
             System.out.println(bidSolution);
+        } else {
+            System.out.println("Your closest bid is: " + bidSolution);
         }
-        System.out.print("Your closest bid is:" + bidSolution);
     }
-
+    
     public static int priceIsRight(int[] bids, int price) {
+        int closestBid = -1;
+        int count = 0;
+        for(int i=0;i<bids.length;i++) {
+            count = i;
+            if(bids[i] < price) { // if bid is less than price 
+                int closestPrice = price - bids[i]; // get the difference
+                closestBid = bids[i];
+                break; // get the first closest bid and break
+            }
+        }
+        // each value has been examined and every value is greater than price 
+        if(closestBid == -1) {
+            return -1;
+        } else {
+            // A bid less than value has been found, examine the remaining bids
+            int closestPrice = price - bids[count]; // the current bid
+            for(int i = count;i<bids.length;i++) { // return to loop and compare other bids
+                if(bids[i] < price) { // if bid is less than price  
+                    int difference = price - bids[i]; // get the difference 
+                    if(difference < closestPrice) { // if difference is smaller than last difference
+                        closestPrice = difference;
+                        closestBid = bids[i]; // closest bid to price equals the current bid
+                    }
+                }
+            }
+            return closestBid;
+        }
+    }
+}
