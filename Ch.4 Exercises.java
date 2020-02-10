@@ -178,7 +178,6 @@ public class Seasons {
     }
 }
 
-
 /* Exercise 4: Write a method called daysInMonth that takes a month(an integer 
  * between 1 and 12) as a parameter and returns the number of days in that month
  * in this year. Assume the code is not being run during a leap year. 
@@ -300,10 +299,10 @@ public class EvenSum {
     }
 }
 
-/* Write a method called printGPA that accepts a scanner for the console as a 
- * parameter and calculates a students grade point average. The user will type
- * a line of input contaiing the student's name, then a number that represents
- * the number of scores, followed by that many integer scores. 
+/* Exercise 10: Write a method called printGPA that accepts a scanner for the 
+ * console as a parameter and calculates a students grade point average. The 
+ * user will type a line of input containing the student's name, then a number 
+ * that represents the number of scores, followed by that many integer scores. 
  *
  * Author : Wali Morris
  * File   : GPA.java
@@ -328,20 +327,21 @@ public class GPA {
 
     public static void printGPA(Scanner console) {
         System.out.print("\nEnter a student record(name): ");
-        String name = console.nextLine();
+        String name = console.nextLine(); // get the students name 
         System.out.print("Enter number of grades to compute: ");
-        int base = console.nextInt();
-        System.out.print("Enter grade(percentage): ");
-        double sum = console.nextInt();
-
-        for(int i=1;i<=base-1;i++) {
+        int base = console.nextInt(); // get numbers of grades student would like to input 
+        System.out.print("Enter grade(percentage): "); 
+        double sum = console.nextInt(); 
+        
+        // loop until the user's desired numbers of grade inputs are met.
+        for(int i=1;i<=base-1;i++) { 
             System.out.print("Enter grade(percentage): ");
-            sum += console.nextInt();
+            sum += console.nextInt(); // add percentage every loop to itself
         }
 
-        double gpa = sum/base;
-        System.out.printf("\n%s's grade is ", name);
-        System.out.printf("%.1f%%\n", gpa);
+        double gpa = sum/base; // divide total percent by number of grades given
+        System.out.printf("\n%s's grade is ", name); 
+        System.out.printf("%.1f%%\n", gpa); // compute student's grade to 1 decimal point
     }
 }
 ~ 
