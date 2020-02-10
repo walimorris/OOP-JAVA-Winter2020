@@ -572,10 +572,10 @@ public class GradeScale {
      } 
 } 
 
-/* Write a method called getGrade that accepts an integer representing 
- * a student's grade in a course and returns that student's numerical 
- * course grade. The grade can be between 0.0(failing) and 4.0(perfect).
- * Assume the scores are in the range 0 to 100. 
+/* Exercise15B: Write a method called getGrade that accepts an integer 
+ * representing a student's grade in a course and returns that student's
+ * numerical course grade. The grade can be between 0.0(failing) and 
+ * 4.0(perfect). Assume the scores are in the range 0 to 100. 
  *
  * Author : Wali Morris 
  * File   : SuperGradeScale.java
