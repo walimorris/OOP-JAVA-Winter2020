@@ -50,6 +50,135 @@ public class Replace {
     }
 }
 
+/* Exercise 3: Write a method called season that takes as parameters two 
+ * integers representing a month and day and returns a String indicating 
+ * the season for that month and day. Assume that the month is specified 
+ * as an integer between 1 and 12 and the day of month is a number 1 and 
+ * 31. If the date falls between 12/16 and 3/15, the method should return 
+ * "winter". If the date falls between 3/16 and 6/15, the method should 
+ * return "spring". If the date falls between 6/16 and 9/15, the method 
+ * should return "summer" and if the date falls between 9/16 and 12/15, 
+ * the method should return "fall". 
+ *
+ * Author : Wali Morris 
+ * File   : Seasons.java
+ * Date   : 01/13/2020
+ */
+
+public class Seasons {
+    public static void main(String[] args) {
+        // A few tests
+        String season1 = season(12,16); // winter       
+        String season2 = season(1, 22); // winter 
+        String season3 = season(3, 15); // winter
+        String season4 = season(3, 16); // spring
+        String season5 = season(4, 2);  // spring 
+        String season6 = season(6, 15); // spring 
+        String season7 = season(6, 16); // summer 
+        String season8 = season(7, 31); // summer
+        String season9 = season(9, 15); // summer
+        String season10 = season(9, 16); // fall 
+        String season11 = season(10, 31); // fall 
+        String season12 = season(12, 15); // fall 
+        System.out.println("12/16: " + season1); // pass 
+        System.out.println("01/22: " + season2); // pass
+        System.out.println("03/15: " + season3); // pass
+        System.out.println("03/16: " + season4); // pass
+        System.out.println("04/02: " + season5); // pass
+        System.out.println("06/15: " + season6); // pass
+        System.out.println("06/16: " + season7); // pass
+        System.out.println("07/31: " + season8); // pass
+        System.out.println("09/15: " + season9); // pass
+        System.out.println("09/16: " + season10);// pass
+        System.out.println("10/31: " + season11);// pass
+        System.out.println("12/15: " + season12);// pass        
+    }
+    /* This method takes two arguments(month and day) which is assisted
+     * by a helper function to determine what season of the year the 
+     * month and day represent. The month and day passed to season is 
+     * also passed to each helper function and returns true if its values
+     * represent 
+     */
+    public static String season(int month, int day) {
+        if(month > 12 && day > 31) {
+            throw new IllegalArgumentException("The date input is out of range");
+        } else if(isWinter(month, day)) {
+            return "winter";
+        } else if(isSpring(month, day)) {
+            return "Spring";
+        } else if(isSummer(month, day)) {
+            return "Summer";
+        } else {
+            return "Fall";
+        }
+    }
+    
+    /* This helper function evaluates two parameters(month and day) to determine
+     * if the integer month and integer day falls within its certain season. 
+     * isWinter falls within 12/16 - 3/15
+     */
+    public static boolean isWinter(int month, int day) {
+        boolean startWinter = month == 12 && day >= 16
+                && day <= 31;
+        boolean thruWinter = month == 1 || month == 2 && day >= 1
+                && day <= 31;
+        boolean endWinter = month == 3 && day >= 1 && day <= 15;
+        if(startWinter || thruWinter || endWinter) {
+            return true;
+        }
+        return false;
+    }
+    
+    /* This helper function evaluates two parameters(month and day) to determine
+     * if the integer month and integer day falls within its certain season. 
+     * isSpring falls within 3/16 - 6/15
+     */
+    public static boolean isSpring(int month, int day ) {
+        boolean startSpring = month == 3 && day >= 16
+                && day <= 31;
+        boolean thruSpring = month == 4 || month == 5 && day >= 1
+                && day <= 31;
+        boolean endSpring = month == 6 && day >= 1 && day <= 15;
+        if(startSpring || thruSpring || endSpring) {
+            return true;
+        }
+        return false;
+    }
+
+    /* This helper function evaluates two parameters(month and day) to determine
+     * if the integer month and integer day falls within its certain season.
+     * isSummer falls within 6/16 - 9/15
+     */
+    public static boolean isSummer(int month, int day) {
+        boolean startSummer = month == 6 && day >= 16
+                && day <= 31;
+        boolean thruSummer = month == 7 || month == 8 && day >= 1
+                && day <= 31;
+        boolean endSummer = month == 9 && day >= 1 && day <= 15;
+        if(startSummer || thruSummer || endSummer) {
+            return true;
+        }
+        return false;
+    }
+    
+    /* This helper function evaluates two parameters(month and day) to determine
+     * if the integer month and integer day falls within its certain season.
+     * isFall falls within 9/16 - 12/15
+     */
+    public static boolean isFall(int month, int day) {
+        boolean startFall = month == 9 && day >= 16
+                && day <= 31;
+        boolean thruFall = month == 10 || month == 11 && day >= 1
+                && day <= 31;
+        boolean endFall = month == 12  && day >= 1 && day <= 15;
+        if(startFall || thruFall || endFall) {
+            return true;
+        }
+        return false;
+    }
+}
+
+
 /* Exercise 4: Write a method called daysInMonth that takes a month(an integer 
  * between 1 and 12) as a parameter and returns the number of days in that month
  * in this year. Assume the code is not being run during a leap year. 
