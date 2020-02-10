@@ -610,9 +610,9 @@ public class SuperGradeScale {
     }
 }
 
-/* Write a method called isPalindrome that accepts a Scanner for the console
- * as a parameter, prompts the user to enter one or more words, and prints 
- * whether the entered String is a palindrome.  
+/* Exercise 16: Write a method called isPalindrome that accepts a Scanner 
+ * for the console as a parameter, prompts the user to enter one or more 
+ * words, and prints whether the entered String is a palindrome.  
  *
  * Author : Wali Morris 
  * File   : Palindrome.java 
