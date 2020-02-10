@@ -572,9 +572,10 @@ public class GradeScale {
      } 
 } 
 
-/* This class is a more proficient solution to the above program and 
- * uses an algebraic equation to find a students GPA. This makes it 
- * smaller and faster to find GPA. 
+/* Write a method called getGrade that accepts an integer representing 
+ * a student's grade in a course and returns that student's numerical 
+ * course grade. The grade can be between 0.0(failing) and 4.0(perfect).
+ * Assume the scores are in the range 0 to 100. 
  *
  * Author : Wali Morris 
  * File   : SuperGradeScale.java
@@ -593,7 +594,10 @@ public class SuperGradeScale {
         double courseGrade = getGPA(courseScore);
         System.out.printf("course grade: %.1f\n", courseGrade);
     }
-
+    /* GPA is calculated using the algebraic expression (score * .1) - 55
+     * special cases such as a score lower than 60 andscore greater than 95 
+     * can be quickly computed, other the formula above is used. 
+     */
     public static double getGPA(int score) {
         //pre: score must be >=0 or <=100 else IllegalArgumentException is thown 
          if(score < 0 || score > 100) {
