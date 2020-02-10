@@ -674,9 +674,9 @@ public class Stutters {
     }
 }
 
-/* Write a method called quadrant that accepts as parameters a pair of double 
- * values representing and (x,y) point and returns the quadrant number for that
- * point. If the point falls on x or y axis, return 0. 
+/* Exercise 19: Write a method called quadrant that accepts as parameters a pair
+ * of double values representing and (x,y) point and returns the quadrant number
+ * for that point. If the point falls on x or y axis, return 0. 
  *
  * Author : Wali Morris 
  * File   : Quadrants.java
