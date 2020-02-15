@@ -156,6 +156,65 @@ public class SortingArrays {
     }
 }
 
+/* Exercise 5: Write a method called mode that returns the most frequent occurring
+ * element of an array of integers. Assume that the array has at least one element
+ * and that every element in the array has a value between 1 - 100 inclusive. Break 
+ * ties by choosing the lower value. 
+ *
+ * Author : Wali Morris
+ * File   : Mode.java
+ * Date   : 02/13/2020
+ */
+
+import java.util.*;
+
+public class Mode {
+    public static void main(String[] args) {
+        int[] array1 = {27, 15, 15, 11, 11, 27}; // pass, 11 is returned because it's the smallest value
+        int[] array2 = {999, 765, 345, 233, 788, 999, 345}; // pass, 345 is returned, it's smaller than 999 
+        int[] array3 = {2, 4, 5, 8, 1, 2, 5, 7, 8, 8, 17, 54, 3, 2, 5, 7, 5, 99, 76, 5, 45, 33, 12, 5};
+        int mostFrequentElement3 = mode(array3);
+        int mostFrequentElement2 = mode(array2);
+        int mostFrequentElement1 = mode(array1);
+        System.out.println("Here's your array: " + Arrays.toString(array3));
+        System.out.print("The element in the array that appears most frequently is: ");
+        System.out.println(mostFrequentElement3);
+        System.out.println("Here's your array: " + Arrays.toString(array2));
+        System.out.print("The element in the array that appears most frequently is: ");
+        System.out.println(mostFrequentElement2);
+        System.out.println("Here's your array: " + Arrays.toString(array1));
+        System.out.print("The element in the array that appears most frequently is: ");
+        System.out.println(mostFrequentElement1);
+    }
+    
+    public static int mode(int[] array) {
+        Arrays.sort(array);// sort the array
+        /* initialize count and max count to the current value in index[0] */
+        int count = 1, maxCount = 1, freqVal = array[0];
+        for(int i=0;i<array.length-1;i++) {
+            if(array[i+1] == array[i]) { // if the next array is the same add to count
+                count++;
+            } else if(array[i+1] != array[i] && count > maxCount) {
+                freqVal = array[i]; // current index value has greatest count
+                maxCount = count;
+                count = 1; // start over at next index
+            } else if(array[i+1] != array[i] && count == maxCount && array[i] < freqVal) {
+                /* the current index value has the same count as most frequent value, a test
+                 * to see which value is smaller wins the most frequent value spot */
+                freqVal = array[i]; // smaller value carries on to most frequent value
+                count = 1;  // start over at next index
+            } else {
+                count = 1; // there's a dud, this value is not equal or greater than current count. Start over
+            }
+        }
+        System.out.println(freqVal + " appears " + maxCount + " times");
+        return freqVal;
+    }
+}
+
+
+
+
 /* Exercise 6: Write a method called stdev that returns the standard deviation 
  * of an array of integers.
  *
