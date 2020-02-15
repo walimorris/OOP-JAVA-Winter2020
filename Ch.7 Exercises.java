@@ -539,7 +539,7 @@ public class PriceIsRight {
 
 /* Exercise 13: Write a method called longestSortedSequence that accepts 
  * an array of integers as a parameter and returns the length of the 
- * longested sorted sequence of integers in the array. Duplicates count
+ * longest sorted sequence of integers in the array. Duplicates count
  * in a sequence. 
  *
  * Author : Wali Morris 
@@ -575,7 +575,7 @@ public class LongestSortedSequence {
                 maxCount = count; // if current count is greater, it becomes maxcount
                 count = 1; // start over
             } else {
-                count = 1; // start over in any other case 
+                count = 1; // start over in all other cases 
             }
         }
         return maxCount;
