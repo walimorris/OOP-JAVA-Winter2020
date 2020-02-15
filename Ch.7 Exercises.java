@@ -536,3 +536,48 @@ public class PriceIsRight {
         }
     }
 }
+
+/* Exercise 13: Write a method called longestSortedSequence that accepts 
+ * an array of integers as a parameter and returns the length of the 
+ * longested sorted sequence of integers in the array. Duplicates count
+ * in a sequence. 
+ *
+ * Author : Wali Morris 
+ * File   : longestSortedSequence.java
+ * Date   : 02/14/2020 
+ */
+
+import java.util.*;
+
+public class LongestSortedSequence {
+    public static void main(String[] args) {
+        int[] array1 = {3, 8, 10, 1, 9, 14, -3, 0, 14, 207, 56, 98, 12};
+        int[] array2 = new int[0];
+        int sequenceCount = longestSortedSequence(array1);
+        System.out.println("Your array: " + Arrays.toString(array1));
+        System.out.println("Longest sorted sequence = " + sequenceCount);
+
+        int sequenceCount2 = longestSortedSequence(array2); // test empty array 
+        System.out.println("Your array: " + Arrays.toString(array2));
+        System.out.println("Longest sorted sequence = " + sequenceCount2);
+    }
+
+    public static int longestSortedSequence(int[] array) {
+        if(array.length == 0) { // if empty list, return 0 
+            return 0;
+        }
+        int count = 1, maxCount = 1;
+        for(int i=0;i<array.length-1;i++) { // while next index value is greater than current increment count   
+            if(array[i+1] >= array[i]) {
+                count++;
+            // if next index value is less than current stop and compare current count to max count
+            } else if(array[i+1] < array[i] && count > maxCount) {
+                maxCount = count; // if current count is greater, it becomes maxcount
+                count = 1; // start over
+            } else {
+                count = 1; // start over in any other case 
+            }
+        }
+        return maxCount;
+    }
+}
