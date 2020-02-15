@@ -212,9 +212,6 @@ public class Mode {
     }
 }
 
-
-
-
 /* Exercise 6: Write a method called stdev that returns the standard deviation 
  * of an array of integers.
  *
