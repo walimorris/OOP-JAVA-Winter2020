@@ -41,7 +41,8 @@ import java.io.*;
 
 public class BoysGirlsName {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner input = new Scanner(new File("BoysGirlsName.txt"));
+        // boysgirls.txt lives in the same directory as BoysGirlsName.java
+        Scanner input = new Scanner(new File("boygirls.txt"));
 
         while(input.hasNextLine()) {
             String text = input.nextLine();
@@ -50,7 +51,7 @@ public class BoysGirlsName {
     }
     /* This function is passed one parameter, a line of text. The first piece of text read 
      * is a name, followed by an integer. It's decided if the name is a boy name or girl 
-     * name. We know boys are first, so the first name and its integer goes to the sum of 
+     * name. We know a boy's name is first, so the first name and its integer goes to the sum of 
      * boys. Every other name must be a girls name and so its integer goes to the sum of girls.
      * The absolute difference of the boy and girl integers is printed to the console. 
      */
@@ -61,22 +62,23 @@ public class BoysGirlsName {
         int girlsSum = 0;
         int sum = 0;
         while(data.hasNext()) {
-            String name = data.next();
+            String name = data.next(); // get boy name
             System.out.print(name + "(boy): ");
-            int boys = data.nextInt();
+            int boys = data.nextInt(); // get integer following the boy name
             System.out.println(boys);
-            boysSum += boys;
+            boysSum += boys; // add integer to total sum of boy name
+            
             /* Atleast one name exists, but names may be odd so in this case we must scan ahead
-             * to ensure a name exists' and it's the eof. If it's the end of file, we must stop reading.
-             */
-            if(data.hasNext()) {
+             * to ensure a name exists' and it's the eof. If it's the end of file, we must stop reading. */
+            if(data.hasNext()) { // get girl name, if there is one
                 name = data.next();
                 System.out.print(name + "(girl): ");
-                int girls = data.nextInt();
+                int girls = data.nextInt(); // get integer following girl name 
                 System.out.println(girls);
-                girlsSum += girls;
+                girlsSum += girls; // add integer to the total sum of girl name
             }
         }
+        // report totals
         System.out.println("Boys sum: " + boysSum);
         System.out.println("Girls sum: " + girlsSum);
         System.out.println("Absolute difference: " + Math.abs(boysSum - girlsSum));
