@@ -581,3 +581,66 @@ public class LongestSortedSequence {
         return maxCount;
     }
 }
+
+* Exercise 14: Write a method called contains that accepts two arrays 
+ * of integers and returns a boolean value indicating whether or not 
+ * the sequence of one array appears in the other. 
+ *
+ * Author : Wali Morris 
+ * File   : Contains.java
+ * Date   : 02/15/2020 
+ */
+
+import java.util.*;
+
+public class Contains {
+    public static void main(String[] args) {
+        //int[] a1 = {1, 6, 2, 1, 4, 1, 2, 1, 8}; 
+        //int[] a2 = {1, 2, 1}; 
+        //boolean match = contains(a1, a2); 
+        //System.out.println("Is there a match: " + match);
+        int[] a = {1, 2, 3, 5, 6, 7};
+        int beg = 2;
+        int end = 4;
+        int[] finalArr = subArray(a, beg, end);
+        System.out.println(Arrays.toString(finalArr));
+    }
+    /* There should be a array passed to subArray followed by
+     * the index in which you want to start and the index in
+     * which you want to end, to receive the subarray */
+    public static int[] subArray(int[] array, int beg, int end) {
+        int[] first = {array[beg]};
+        int[] newArr = first;
+        try {
+            for(int i=1;i<end-beg+1;i++) {
+                int newVal = array[beg+1];
+                newArr = first;
+                newArr[i+1] = newVal;
+            }
+        } catch(Exception e) {
+            System.out.println("Error: " + e);
+        }
+        return newArr;
+    }
+    public static boolean contains(int[] array1, int[] array2) {
+        int[] shortest = new int[0];
+        int[] longest = new int[0];
+        if(array1.length < array2.length) { // find the shortest array 
+            shortest = array1;
+            longest = array2;
+        } else {
+            shortest = array2;
+            longest = array1;
+        }
+        int subIndex = shortest.length; // get length of shortest array
+        for(int i=0;i<longest.length-1;i++) {
+            int beg = i, end = shortest.length + 1;
+            int[] subarray = subArray(longest, beg, end);
+            if(Arrays.equals(shortest, subarray)) {
+                System.out.println(Arrays.toString(subarray));
+                return true;
+            }
+        }
+        return false;
+    }
+}
