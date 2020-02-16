@@ -582,7 +582,7 @@ public class LongestSortedSequence {
     }
 }
 
-* Exercise 14: Write a method called contains that accepts two arrays 
+ /* Exercise 14: Write a method called contains that accepts two arrays 
  * of integers and returns a boolean value indicating whether or not 
  * the sequence of one array appears in the other. 
  *
