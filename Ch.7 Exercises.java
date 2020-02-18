@@ -716,3 +716,40 @@ public class Collapse {
     }
 }
 
+/* Exercise 16: Write a method called append that accepts two integer arrays 
+ * as parameters and returns a new array that contains the result of appending 
+ * the second array's values at the end of the first array or vice versa. 
+ *
+ * Author : Wali Morris 
+ * File   : Appends.java
+ * Date   : 02/17/2020
+ */
+
+import java.util.*;
+
+public class Append {
+    public static void main(String[] args) {
+        int[] arrayX = {2, 4, 6};
+        int[] arrayY = {1, 2, 3, 4, 5};
+        int[] combinedArray1 = append(arrayX, arrayY);
+        int[] combinedArray2 = append(arrayY, arrayX);
+        System.out.println("Combining array X to array Y: " + Arrays.toString(combinedArray1));
+        System.out.println("Combining array Y to array X: " + Arrays.toString(combinedArray2));
+    }
+
+    public static int[] append(int[] aX, int[] aY) { // receives two arrays, arrayX and arrayY
+        int xLength = aX.length, yLength = aY.length; // get lengths  
+        int[] xyArr = new int[xLength + yLength]; // create new array with length equal to length sum of aX and aY 
+        int count = 0; // record count for appending next array
+        for(int i=0;i<xLength;i++) {
+            xyArr[i] = aX[i]; // new array with both arrays appended equals index at array X[i]
+            count++;
+        }
+        int yCount = 0;
+        for(int i=count;i<xyArr.length;i++) { // continuing where left off in last loop
+            xyArr[i] = aY[yCount]; // the remaining length of xyArr equals the length of array Y, continue
+            yCount++;
+        }
+        return xyArr;
+    }
+}
