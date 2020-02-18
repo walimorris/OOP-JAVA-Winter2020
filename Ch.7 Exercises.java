@@ -680,7 +680,7 @@ public class Collapse {
     public static int[] collapse(int[] array) {
         if(array.length == 0) { // throw exception if array size is less than 1 
             throw new IllegalArgumentException("Minimum size of array must be 1");
-        } else if(array.length / 2 == 0) { // if the array is even 
+        } else if(array.length % 2 == 0) { // if the array is even 
             int[] newArr = collapseEven(array);
             return newArr;
         } else { // if the array is odd
