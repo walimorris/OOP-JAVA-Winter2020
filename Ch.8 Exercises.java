@@ -61,27 +61,27 @@ public class Person {
     public String getFullName() {
         return firstName + " " + lastName;
     }
-    
+    // returns the current age 
     public int getAge() {
         return age;
     }
-
+    // returns height as a double 
     public double getHeight() {
         return height;
     }
-
+    // weight may change, returns current weight as a double
     public double getWeight() {
         return weight;
     }
-
+    // returns birthyear 
     public int getBirthYear() {
         return birthyear;
     }
-
+    // returns the firstname of Person
     public String getFirstName() {
         return firstName;
     }
-
+    // returns the lastname of Person
     public String getLastName() {
         return lastName;
     }
