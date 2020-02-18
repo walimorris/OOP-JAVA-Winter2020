@@ -644,3 +644,74 @@ public class Contains {
         return false;
     }
 }
+
+/* Exercise 15: Write a method called collapse that accepts an array of integers 
+ * as a parameter and returns a new array containing the result of replacing each 
+ * pair of intergers with the sum of that pair. Then the call should return a new
+ * array. Your method should not change the array passed as a parameter. 
+ *
+ * Author : Wali Morris
+ * File   : Collapse.java
+ * Date   : 02/16/2020
+ */
+
+import java.util.*;
+
+public class Collapse {
+    public static void main(String[] args) {
+        int[] array1 = {7, 2, 8, 9, 4, 13, 7, 1, 9, 10};
+        int[] array2 = {1, 2, 3, 4, 5};
+        int[] array3 = {2, 4, 5, 1, 6, 12, 14};
+        int[] array4 = {98, 65, 34, 22, 13, 14, 22, 34, 56};
+        int[] array5 = {}; // throws exception  
+        int[] solution1 = collapse(array1);
+        int[] solution2 = collapse(array2);
+        System.out.println(Arrays.toString(solution1));
+        System.out.println(Arrays.toString(solution2));
+        int[] solution3 = collapse(array3);
+        int[] solution4 = collapse(array4);
+        int[] solution5 = collapse(array5);
+        System.out.println(Arrays.toString(solution3));
+        System.out.println(Arrays.toString(solution4));
+        System.out.println(Arrays.toString(solution4));
+    }
+
+    public static int[] collapse(int[] array) {
+        if(array.length == 0) { // throw exception if array size is less than 1 
+            throw new IllegalArgumentException("Minimum size of array must be 1");
+        } else if(array.length / 2 == 0) { // if the array is even 
+            int[] newArr = collapseEven(array);
+            return newArr;
+        } else { // if the array is odd
+            int[] newArr = collapseOdd(array);
+            return newArr;
+        }
+    }
+
+    public static int[] collapseEven(int[] oldArr) {
+        int[] newArr = new int[oldArr.length / 2]; // create new array of half length 
+        int j = 0;
+        for(int i=0;i<newArr.length;i++) { // add every two consecutive values
+            newArr[i] = oldArr[j] + oldArr[j+1]; // store the sum in new array
+            j+=2; // skip to next two values
+        }
+        return newArr;
+    }
+    
+    public static int[] collapseOdd(int[] array) {
+        int[] oldArr = new int[array.length + 1];
+        // create array with same values of the array passed with 0 appended to the end
+        for(int i=0;i<array.length;i++) {
+            oldArr[i] = array[i];
+        }
+        // create new even array
+        int[] newArr = new int[oldArr.length / 2];
+        int j = 0;
+        for(int i=0;i<newArr.length;i++) { // add every two consecutive vales
+            newArr[i] = oldArr[j] + oldArr[j+1]; // store the sum in new array
+            j+=2; // skip to next two values
+        }
+        return newArr;
+    }
+}
+
