@@ -16,21 +16,21 @@
  * Name, age, height, weight are some things for now. */
 
 public class Person {
-    String firstName;
-    String lastName;
-    int age;
-    int birthyear;
-    double height;
-    double weight;
+    private String firstName;
+    private String lastName;
+    private int age;
+    private int birthyear;
+    private double height;
+    private double weight;
     
     // constructs a new person with the given values
     public Person(String fn, String ln, int age, int by, double ht, double wt) {
-        firstName = fn;
-        lastName = ln;
-        age = age;
-        birthyear = by;       
-        height = ht;    
-        weight = wt;    
+        this.firstName = fn;
+        this.lastName = ln;
+        this.age = age;
+        this.birthyear = by;       
+        this.height = ht;    
+        this.weight = wt;    
     }
     
     /* INSTANCE METHODS: A METHOD INSIDE AN OBJECT THAT OPERATES ON THAT OBJECT. 
@@ -40,28 +40,49 @@ public class Person {
 
     // Instance method to add weight 
     public void gain(double pounds) {
-        weight += pounds;
+        this.weight += pounds;
     }
 
     /* Instance method to subtract weight. Do not add a subtraction symbol for amount of
      * weight to subtract. An unsigned integer or float will do.
      */
     public void drop(double pounds) {
-        weight -= pounds;
+        this.weight -= pounds;
     }
 
     // Instance method to add age 
     public void age(int num) {
-        age += num;
+        this.age += num;
     }
 
     /* Accessors are unlike mutators; the state of an object doesn't change. Rather, the state 
-     * of the object is reported.
+     * of the object is reported. Below are a few class accessor methods. 
      */
-
-    // returns the full name of a Person
     public String getFullName() {
         return firstName + " " + lastName;
     }
-}
+    
+    public int getAge() {
+        return age;
+    }
 
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public int getBirthYear() {
+        return birthyear;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+}
