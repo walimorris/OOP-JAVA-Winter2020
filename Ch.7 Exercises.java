@@ -589,6 +589,7 @@ public class LongestSortedSequence {
  * Author : Wali Morris 
  * File   : Contains.java
  * Date   : 02/15/2020 
+ * NOTE   : NOT COMPLETE!
  */
 
 import java.util.*;
