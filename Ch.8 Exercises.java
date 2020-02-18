@@ -23,6 +23,16 @@ public class Person {
     double height;
     double weight;
     
+    // constructs a new person with the given values
+    public Person(String fn, String ln, int age, int by, double ht, double wt) {
+        firstName = fn;
+        lastName = ln;
+        age = age;
+        birthyear = by;       
+        height = ht;    
+        weight = wt;    
+    }
+    
     /* INSTANCE METHODS: A METHOD INSIDE AN OBJECT THAT OPERATES ON THAT OBJECT. 
      * Some things I can think of doing: gaining and losing weight, and getting 
      * older. Instance methods can be thought of as mutators; changing the state 
