@@ -86,3 +86,34 @@ public class Person {
         return lastName;
     }
 }
+
+/* A short client program using the Person.java class 
+ *
+ * Author : Wali Morris
+ * File   : PersonMain1.java
+ * Date   : 02/17/2020
+ */
+
+public class PersonMain1 {
+    public static void main(String[] args) {
+        // Create a person 
+        Person p = new Person("Wali", "Morris", 29, 1991, 72.5, 220.2);
+        // get persons full name
+        String fullName = p.getFullName();
+        if(p.getAge() > 21) {
+            System.out.println("Hire " + fullName);
+        } else {
+            System.out.println("Let's work on an internship with " + fullName);
+        }
+        double tall = 74.0; // height in inches  
+        if(p.getHeight() >= tall) {
+            System.out.println(fullName + " is tall");
+        } else {
+            System.out.println(fullName + " is not tall..." );
+        }
+        System.out.println(fullName + " started at " + p.getWeight() + "lbs.");
+        System.out.print("but after training for a mountain climb " + fullName);
+        p.drop(20);
+        System.out.println(" weighed in at " + p.getWeight() + "lbs!");
+    }
+}
