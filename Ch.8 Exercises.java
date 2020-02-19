@@ -91,7 +91,7 @@ public class Person {
     /**
      * get the Person's height, should remain the same unless needs to be changed
      * if so, see changeHeight()
-     * @returns height get Person's height
+     * @return height get Person's height
      */
     public double getHeight() {
         return height;
@@ -182,7 +182,11 @@ public class Point {
         this(0, 0); // calls Point(int, int) constructor
     }
 
-    // constructs a new point with the given (x, y) location
+    /**
+     * constructs a new point with the given (x, y) location
+     * @param x sets x coordinate
+     * @param y sets y coordinate
+     */
     public Point(int x, int y) {
         setLocation(x, y);
     }
@@ -191,14 +195,24 @@ public class Point {
     public double distanceFromOrigin() {
         return Math.sqrt(x * x + y * y);
     }
-
+    
     // returns the x-coordinate of this point 
     public int getX() {
         return x;
     }
+
     // returns the y-coordinate of this point
     public int getY() {
         return y;
+    }
+
+    // returns true if the given point lines up vertically with this point. 
+    public boolean isVertical(Point other) {
+        if(this.x == other.x) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     // returns which quandrant of the x/y plane the current Point object falls in 
@@ -216,7 +230,22 @@ public class Point {
         }
     }
     
-    // sets this point's (x, y) location to the given values
+     /**
+     * Returns the "Manhattan distance", refers to the distance between two 
+     * places if one can travel between them only by moving horizontally 
+     * or vertically, as though driving on the streets of Manhattan.
+     * @param Point The current (x, y) coordinates 
+     * @param other The (x, y) coordinates of the other point
+     */
+    public int manhattanDistance(Point other) {
+        return (this.x - other.x) + (this.y - other.y);
+    }
+
+    /**
+     * Set points (x, y) coordinates 
+     * @param x The points x coordinate 
+     * @param y The points y coordinate 
+     */
     public void setLocation(int x, int y) {
         this.x = x;
         this.y = y;
@@ -231,7 +260,7 @@ public class Point {
     public void translate(int dx, int dy) {
         setLocation(x + dx, y + dy);
     }
-
+    
     // Negates and swaps the x/y coordinates of the Point object
     public void flip() {
         int temp = this.x; // hold x value
@@ -240,6 +269,7 @@ public class Point {
     }
 }
 
+    
 /* A short client program for the Point.java class
  *
  * Author : Wali Morris 
