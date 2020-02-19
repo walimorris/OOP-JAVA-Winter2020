@@ -23,7 +23,15 @@ public class Person {
     private double height;
     private double weight;
     
-    // constructs a new person with the given values
+    /**
+     * constructs a new person with the given values
+     @param fn   sets Person's first name
+     @param ln   sets Person's last name
+     @param age  sets Person's age
+     @param by   sets Person's birth year
+     @param ht   sets Person's height
+     @param wt   Sets Person's weight
+     */
     public Person(String fn, String ln, int age, int by, double ht, double wt) {
         this.firstName = fn;
         this.lastName = ln;
@@ -38,38 +46,61 @@ public class Person {
      * older. Instance methods can be thought of as mutators; changing the state 
      * of an object. */
 
-    // Instance method to add weight 
+    /** 
+     * Instance method to add weight
+     * @param pounds weight in pounds added to Person's current weight
+     */
     public void gain(double pounds) {
         this.weight += pounds;
     }
 
-    /* Instance method to subtract weight. Do not add a subtraction symbol for amount of
+    /** 
+     * Instance method to subtract weight. Do not add a subtraction symbol for amount of
      * weight to subtract. An unsigned integer or float will do.
+     * @param pounds weight in pounds subtracted from Person's current weight 
      */
     public void drop(double pounds) {
         this.weight -= pounds;
     }
 
-    // Instance method to add age 
+    /** 
+     * Instance method to add age
+     * @param num integer amount to add to Person's current age in years
+     */
     public void age(int num) {
         this.age += num;
     }
 
-    /* Accessors are unlike mutators; the state of an object doesn't change. Rather, the state 
+    /** 
+     * Accessors are unlike mutators the state of an object doesn't change. Rather, the state 
      * of the object is reported. Below are a few class accessor methods. 
+     * @return fullname The Person's first and last name combined
      */
     public String getFullName() {
         return firstName + " " + lastName;
     }
-    // returns the current age 
+    
+    /** 
+     * get the Person's age
+     * @return age The Person's current age
+     */
     public int getAge() {
         return age;
     }
-    // returns height as a double 
+    
+    /**
+     * get the Person's height, should remain the same unless needs to be changed
+     * if so, see changeHeight()
+     * @returns height get Person's height
+     */
     public double getHeight() {
         return height;
     }
-    // weight may change, returns current weight as a double
+    
+    /**
+     * weight may change, returns current weight as a double
+     * @return wight get Person's current wight
+     */
     public double getWeight() {
         return weight;
     }
