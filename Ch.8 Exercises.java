@@ -115,5 +115,16 @@ public class PersonMain1 {
         System.out.print("but after training for a mountain climb " + fullName);
         p.drop(20);
         System.out.println(" weighed in at " + p.getWeight() + "lbs!");
+        System.out.println("A hundred years roll by...");
+        int currentAge = p.getAge();
+        while(p.getAge() <= currentAge + 100) {
+            if(p.getAge() > 60) {
+                p.age(1);
+                System.out.println(p.getAge() + " Years young!");
+            } else {
+                p.age(1);
+                System.out.println(p.getAge() + " years old");
+            }
+        }
     }
 }
