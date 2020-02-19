@@ -272,7 +272,18 @@ public class PointMain {
         // print the new flipped points 
         System.out.print("After the points are flipped p1 = " + p1.toString());
         System.out.println(" p2 = " + p2.toString());
+        
+        // get the manhattan distance between point 1 and point 2
+        int manDist = p1.manhattanDistance(p2);
+        System.out.print("Manhattan Distance from " + p1.toString() + " and " + p2.toString() + " is: ");
+        System.out.println(manDist);
+
+        // check if Points are vertical 
+        System.out.print("Are " + p1.toString() + " and " + p2.toString() + " vertical: ");
+        System.out.println(p1.isVertical(p2));
     }
 }
+
+ 
 
     
