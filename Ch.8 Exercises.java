@@ -128,3 +128,120 @@ public class PersonMain1 {
         }
     }
 }
+
+/* Point.java Class 
+ * 
+ * A Point object represents a pair of (x, y) coordinates.
+ *
+ * This file is from Building Java Programs textbook. Chapter 8 exercises 
+ * include building upon the Point.java class introduced in this chapter's
+ * text. 
+ *
+ * Author: Wali Morris 
+ * File  : Point.java 
+ * Date  : 02/18/2020
+ */
+
+public class Point {
+    private int x;
+    private int y;
+
+    // constructs a new point at the origin (0, 0)
+    public Point() {
+        this(0, 0); // calls Point(int, int) constructor
+    }
+
+    // constructs a new point with the given (x, y) location
+    public Point(int x, int y) {
+        setLocation(x, y);
+    }
+
+    // returns the distance between this Point and (0, 0)
+    public double distanceFromOrigin() {
+        return Math.sqrt(x * x + y * y);
+    }
+
+    // returns the x-coordinate of this point 
+    public int getX() {
+        return x;
+    }
+    // returns the y-coordinate of this point
+    public int getY() {
+        return y;
+    }
+
+    // returns which quandrant of the x/y plane the current Point object falls in 
+    public int quadrant() {
+        if(x > 0 && y > 0) {
+            return 1;
+        } else if(x < 0 && y > 0) {
+            return 2;
+        } else if(x < 0 && y< 0) {
+            return 3;
+        } else if(x > 0 && y < 0) {
+            return 4;
+        } else {
+            return 0;
+        }
+    }
+    
+    // sets this point's (x, y) location to the given values
+    public void setLocation(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // returns a String representation of this point
+    public String toString() {
+        return "(" + x + ", " + y + ")";
+    }
+
+    // shifts this point's location by the given amount
+    public void translate(int dx, int dy) {
+        setLocation(x + dx, y + dy);
+    }
+
+    // Negates and swaps the x/y coordinates of the Point object
+    public void flip() {
+        int temp = this.x; // hold x value
+        this.x = y * -1;
+        this.y = temp * -1;
+    }
+}
+
+/* A short client program for the Point.java class
+ *
+ * Author : Wali Morris 
+ * File   : PointMain.java
+ * Date   : 02/18/2020
+ */
+
+import java.util.*;
+
+public class PointMain {
+    public static void main(String[] args) {
+        // create two point objects 
+        Point p1 = new Point(5, 2);
+        Point p2 = new Point(9, 13);
+
+        // show which quandrants the points live
+        int quadrantp1 = p1.quadrant();
+        int quadrantp2 = p2.quadrant();
+        System.out.println("Point " + p1 + " is in quadrant " + quadrantp1);
+        System.out.println("Point " + p2 + " is in quadrant " + quadrantp2);
+
+        // show the current points 
+        System.out.print("Before the points are flipped p1 = " + p1.toString());
+        System.out.println(" p2 = " + p2.toString());
+
+        // flip the points 
+        p1.flip();
+        p2.flip();
+
+        // print the new flipped points 
+        System.out.print("After the points are flipped p1 = " + p1.toString());
+        System.out.println(" p2 = " + p2.toString());
+    }
+}
+
+    
