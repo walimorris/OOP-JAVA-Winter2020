@@ -126,20 +126,23 @@ import java.util.*;
 
 public class SortingArrays {
     public static void main(String[] args) {
-        // create some lists to test
+        // create some arrays to test
         double[] list1 = {16.1, 12.3, 22.2, 14.4};
         double[] list2 = {1.5, 4.3, 7.0, 19.5, 25.1, 46.2};
         double[] list3 = {5.0};
+        double[] list4 = {1.5, 4.3, 7.0, 19.5, 25.1, 46.2, 13.1};
 
-        // call isSorted on list objects
+        // call isSorted on array objects
         boolean list1Result = isSorted(list1);
         boolean list2Result = isSorted(list2);
         boolean list3Result = isSorted(list3);
+        boolean list4Result = isSorted(list4);
 
         //results
         System.out.println(Arrays.toString(list1) + " is sorted: " + list1Result);
         System.out.println(Arrays.toString(list2) + " is sorted: " + list2Result);
         System.out.println(Arrays.toString(list3) + " is sorted: " + list3Result);
+        System.out.println(Arrays.toString(list4) + " is sorted: " + list4Result);
     }
 
     public static boolean isSorted(double[] list) {
@@ -148,7 +151,7 @@ public class SortingArrays {
         }
         // if current value in array is greater than next value, array is not sorted min to max 
         for(int i=0;i<list.length-1;i++) {
-            // stopping loop one index short of the last index ensures last index value can be compared 
+            // stopping one index short of the last index ensures last index value can be compared 
             if(list[i] > list[i+1]) {
                 return false;
             }
