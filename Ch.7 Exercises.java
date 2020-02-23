@@ -444,9 +444,9 @@ public class Unique {
     }
 
     public static boolean isUnique(int[] array) {
-        for(int i=0;i<array.length;i++) { // start at first value in array
-            // for every current value compare next value up until end of array 
-            for(int j=i+1;j<array.length;j++) {
+        for(int i=0;i<array.length;i++) { // i represents the current value in array
+            // for every current value compare every other value 
+            for(int j=i+1;j<array.length;j++) { // j represents every other value in array
                 // if current value appears twice, the list is not unique return false 
                 if(array[j] == array[i]) {
                     return false;
