@@ -148,6 +148,7 @@ public class SortingArrays {
         }
         // if current value in array is greater than next value, array is not sorted min to max 
         for(int i=0;i<list.length-1;i++) {
+            // stopping loop one index short of the last index ensures last index value can be compared 
             if(list[i] > list[i+1]) {
                 return false;
             }
