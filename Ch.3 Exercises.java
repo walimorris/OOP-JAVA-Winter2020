@@ -240,6 +240,36 @@ public class AbsoluteValues {
     }
 }
 
+/* Exercise 7: Write a variation of the largestAbsVal method from the last 
+ * exercise that takes three integers as parameters and returns the largest of 
+ * their three absolute values. 
+ *
+ * Author: Wali Morris 
+ * File  : LargestValue2.java
+ * Date  : 02/24/2020 
+ */
+
+import java.util.*;
+
+public class LargestValue2 {
+    public static void main(String[] args) {
+        // A test case for main
+        int a = 8, b = 17, c = -5;
+        int largestVal = largestAbsVal(a, b, c);
+        System.out.println("The largest absolute value: " + largestVal);
+    }
+
+    public static int largestAbsVal(int a, int b, int c) {
+        //get absolute values
+        int absA = Math.abs(a), absB = Math.abs(b), absC = Math.abs(c);
+        // compare first two values A and B
+        int max1 = Math.max(absA, absB);
+        // get the largest
+        int finalMax = Math.max(max1, absC);
+        return finalMax;
+    }
+}
+
 /* Exercise 8: Write a method called quadratic that solves quadratic equations 
  * and prints their roots. In this solution you can assume assume the equations
  * have two real roots, although this is not always the case mathematically. 
