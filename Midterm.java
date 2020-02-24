@@ -23,6 +23,7 @@ public class AntCrawl {
            int random = r.nextInt(2); // 0 = fall, 1 = climb 
            if(random == 0) {
                fall++; // add 1 if ant falls
+               height = 0; 
            } else {
                height++; // add 1 if ant climbs 
            }
