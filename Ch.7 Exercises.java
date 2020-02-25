@@ -757,3 +757,49 @@ public class Append {
         return xyArr;
     }
 }
+
+/* Exercise 17: Write a method called vowelCount that accepts a String as a 
+ * parameter and produces and returns an array of integers representing the 
+ * counts of each vowel in the String. The array returned by your method 
+ * should hold five elements: the first is the count of As, the second is 
+ * the count of Es, the third is the cound of Is, the fourth Os, and the 
+ * fifth Us. Assume that the string doesn't contain uppercase letters. 
+ *
+ * Author: Wali Morris 
+ * File  : VowelCount.java
+ * Date  : 02/24/2020
+ */
+
+import java.util.*;
+
+public class VowelCount {
+    public static void main(String[] args) {
+        String phrase = " i think, therefore i am ";
+        int[] vowelsResult = vowelCount(phrase);
+        System.out.println(Arrays.toString(vowelsResult));
+    }
+
+    public static int[] vowelCount(String phrase) {
+        char a = 'a', e = 'e', i = 'i', o = 'o', u = 'u';
+        int aInt = 0, eInt = 0, iInt = 0, oInt = 0, uInt = 0;
+        for(int j = 0; j < phrase.length() - 1; j++) { // loop through String phrase 
+            // examine every character, if character is a certain vowel add to its count
+            if(phrase.charAt(j) == a) {
+                aInt++;
+            } else if(phrase.charAt(j) == e) {
+                eInt++;
+            } else if(phrase.charAt(j) == i) {
+                iInt++;
+            } else if(phrase.charAt(j) == o) {
+                oInt++;
+            } else {
+                if(phrase.charAt(j) == u) {
+                    uInt++;
+                }
+            }
+        }
+        // initialize array with each index representing every vowel from a - u
+        int[] vowelArray = {aInt, eInt, iInt, oInt, uInt};
+        return vowelArray;
+    }
+}
