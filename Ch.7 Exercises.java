@@ -803,3 +803,53 @@ public class VowelCount {
         return vowelArray;
     }
 }
+
+/* Exercise 18: Write a method called evenBeforeOdd that accepts an array 
+ * of integers and rearranges its elements so that all even values appear 
+ * before all odds. The exact order does not matter, so long as all even 
+ * numbers appear before all odd values.
+ *
+ * Author : Wali Morris
+ * File   : SortEvens
+ * Date   : 02/24/2020
+ */
+
+import java.util.*;
+
+public class SortEvens {
+    public static void main(String[] args) {
+        int[] array1 = {5, 5, 2, 11, 9, 10, 4, 7, 3};
+        System.out.print(Arrays.toString(array1) + " becomes: ");
+        int[] newArray1 = evenBeforeOdd(array1);
+        System.out.println(Arrays.toString(newArray1));
+
+        int[] array2 = {81, 9, 2, 6, 11, 5, 9, 10, 1, 12};
+        System.out.print(Arrays.toString(array2) + " becomes: ");
+        int[] newArray2 = evenBeforeOdd(array2);
+        System.out.println(Arrays.toString(newArray2));
+
+        int[] array3 = {1, 3, 5, 7, 2, 4, 6, 8, 10, 11, 13, 35, 25, 22, 18, 16, 5, 43, 19, 18};
+        System.out.print(Arrays.toString(array3) + " becomes: ");
+        int[] newArray3 = evenBeforeOdd(array3);
+        System.out.println(Arrays.toString(newArray3));
+    }
+
+    public static int[] evenBeforeOdd(int[] array) {
+        for(int i = 0; i < array.length-1; i++) { // examine current value
+            for(int j = i; j < array.length-1; j++) { // examine current value against all other values
+                if(array[j] % 2 == 0) { // if current value is even: move on 
+                    break;
+                } else {
+                    int k = j; // k increments and reads each value if array[j] is odd, this continues until array[j] is even 
+                    while(array[j] % 2 != 0 && k < array.length-1) {
+                        int temp = array[k+1]; // hold next value
+                        array[k+1] = array[j]; // next value becomes current value
+                        array[j] = temp; // current value equals the next value
+                        k++; // k increments, so if array[j] is still odd the variable temp holds the very next value k+1       
+                    }
+                }
+            }
+        }
+        return array;
+    }
+}
