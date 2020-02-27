@@ -273,11 +273,8 @@ public class Point {
      * @return Slope
      */
     public double slope(Point other) {
-        if(this.x == other.x) {
+        if(this.x == other.x) { 
             throw new IllegalArgumentException("x-coordinates must be different");
-        } catch(IllegalArgumentException e) {
-            System.out.println("x-coordinates cannot be the same");
-            return -1;
         } else {
             return ((double)other.y - (double)this.x) / ((double)other.y - (double)this.y);
         }
