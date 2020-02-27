@@ -267,7 +267,44 @@ public class Point {
         this.x = y * -1;
         this.y = temp * -1;
     }
+    
+    /**
+     * @param  Another (x,y) point object
+     * @return Slope
+     */
+    public double slope(Point other) {
+        if(this.x == other.x) {
+            throw new IllegalArgumentException("x-coordinates must be different");
+        } catch(IllegalArgumentException e) {
+            System.out.println("x-coordinates cannot be the same");
+            return -1;
+        } else {
+            return ((double)other.y - (double)this.x) / ((double)other.y - (double)this.y);
+        }
+    }
+
+    /**
+     * @param two other (x,y) points
+     * @return true or false if points are collinear
+     * points are collinear when their x or y coordinates are equal 
+     * or when their slopes are equal
+     */
+    public boolean isCollinear(Point p1, Point p2) {
+        try {
+            // all y-coordinates may be equal, testing slope equality checks this case
+            double slopeA = slope(p1); // get slope of this point and point1
+            if(slopeA == slope(p2)) { // same x-coordinates will attempt to throw exception
+                return true; // if slopes are equal return true
+            }
+        } catch(Exception e) { // catches x-coordinate exception
+            if(p2.x == p1.x) { // returns true if all x coordinates are equal
+                return true;
+            }
+        }
+        return false;
+    }
 }
+
 
     
 /* A short client program for the Point.java class
@@ -311,8 +348,43 @@ public class PointMain {
         // check if Points are vertical 
         System.out.print("Are " + p1.toString() + " and " + p2.toString() + " vertical: ");
         System.out.println(p1.isVertical(p2));
+        
+        // get slope of p1 and p2
+        double slope = p1.slope(p2);
+        System.out.println("The slope of " + p1.toString() + " and " + p2.toString() + ": " + slope);
+
+        // create a new pont: initialize with same point x as p1: should catch exception
+        Point p3 = new Point(-2, 5);
+
+        // collinear note
+        System.out.print("Collinear points are three points with the same x or y coordinates");
+        System.out.println(" or, simply, equal slopes.");
+        System.out.println("The next series of tests conducts experiments with collinear and non-collinear points");
+
+        // test collinear of current points
+        boolean collinear = p1.isCollinear(p2, p3);
+        System.out.print("Points " + p1.toString() + ", " + p2.toString() + ", " + p3.toString());
+        System.out.println(" is Collinear: " + collinear);
+
+        // create 3 new points
+        Point p4 = new Point(1, 2);
+        Point p5 = new Point(1, 4);
+        Point p6 = new Point(1, 6);
+        boolean collinear2 = p4.isCollinear(p5, p6);
+        System.out.print("Points " + p4.toString() + ", " + p5.toString() + ", " + p6.toString());
+        System.out.println(" is Collinear: " + collinear2);
+
+        // create 3 points with same y-coordinates
+        Point p7 = new Point(1, 5);
+        Point p8 = new Point(8, 5);
+        Point p9 = new Point(11, 5);
+        boolean collinear3 = p7.isCollinear(p8, p9);
+        System.out.print("Points " + p7.toString() + ", " + p8.toString() + ", " + p9.toString());
+        System.out.println(" is Collinear: " + collinear3);
+
     }
 }
+
 
  
 
