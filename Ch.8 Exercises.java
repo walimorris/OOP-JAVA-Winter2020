@@ -188,6 +188,8 @@ public class Point {
      * @param y sets y coordinate
      */
     public Point(int x, int y) {
+        if(x < 0 || y < 0) { 
+            throw new IllegalArgumentException("x and y coords must be greater than zero."); 
         setLocation(x, y);
     }
 
