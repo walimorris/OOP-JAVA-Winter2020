@@ -209,9 +209,10 @@ public class Point {
     }
 
     // returns true if the given point lines up vertically with this point. 
-    public boolean isVertical(Point other) {
-        if(this.x == other.x) {
-            return true;
+    public boolean isVertical(object o) {
+        if(o instanceof Point) {
+            Point other = (Point) o;
+            return this.x == other.x && this.y == other.y; 
         } else {
             return false;
         }
