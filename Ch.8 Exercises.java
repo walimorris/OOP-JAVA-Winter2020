@@ -31,6 +31,7 @@ public class Product {
         this.price = price;
         this.count = count; // number of products in inventory 
     }
+    
     /**
      * A constructor to initialize a zeroed Product
      */
@@ -70,7 +71,7 @@ public class Product {
      */
     public String getDescription() {
         try {
-            if ( description.equals(null) ) {
+            if ( this.description.equals(null) ) {
                 return this.description;
             }
         } catch ( NullPointerException e) {
@@ -151,7 +152,7 @@ public class Product {
     }
 }
 
-/* A short example using the generic Product class API
+/* A short client program using the generic Product class API
  *
  * Author : Wali Morris 
  * File   : ProductMain.java
@@ -166,6 +167,7 @@ public class ProductMain {
 
         // product p1: initialize  
         Product p1 = new Product();
+        System.out.println("P1 Product Description: " + p1.getDescription()); // testing getDescription() method
         p1.setCode(1234);
         p1.setDescription("Seasonal Calender");
         p1.setPrice(5.99);
