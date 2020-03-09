@@ -1,5 +1,195 @@
 // Chapter 8 is an introduction to object Oriented Programming and encapsulation
 
+/** 
+ * The Product class is a generic product description which includes a product
+ * code, product description, and product count 
+ *
+ * @author : Wali Morris 
+ * File    : Product.java
+ * Date    : 03/09/2020
+ */
+
+import java.util.*;
+import java.text.*;
+
+public class Product {
+    private int code;
+    private String description;
+    private double price;
+    private int count;
+
+    /**
+     * Constructor to initialize full product with code, description, price
+     * @param  code  this is a product ID linking this product
+     * @param  desc  a short description of this product
+     * @param  price a floating point price of this product
+     * @param  count the number of products available  
+     */
+    public Product(int code, String desc, double price, int count) {
+        this.code = code;
+        this.description = desc;
+        this.price = price;
+        this.count = count; // number of products in inventory 
+    }
+    /**
+     * A constructor to initialize a zeroed Product
+     */
+    public Product() {
+        this(0, null, 0, 0);
+    }
+    
+    /**
+     * method to setCode or product id
+     * @param id products id number 
+     */
+    public void setCode(int id) {
+        this.code = id;
+    }
+
+    /**
+     * method to receive this products id number
+     * @return product id code
+     */
+    public int getCode() {
+        return this.code;
+    }
+
+    /**
+     * method to set a product description
+     * @param desc product description
+     */
+    public void setDescription(String desc) {
+        this.description = desc;
+    }
+    
+    /**
+     * this method returns the description of this product 
+     * if description is null, this method returns the string
+     * "no description"
+     * @return product's description 
+     */
+    public String getDescription() {
+        try {
+            if ( description.equals(null) ) {
+                return this.description;
+            }
+        } catch ( NullPointerException e) {
+            return "no description";
+        }
+        return this.description;
+    }
+
+    /**
+     * this method sets a product price 
+     * @param price a products price as a float
+     */
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    /**
+     * This method formats the price of a product
+     * @return current product floating price as a String
+     */
+    public String getPrice() {
+        String formattedPrice = NumberFormat.getCurrencyInstance().format(this.price);
+        return formattedPrice;
+    }
+    
+    /**
+     * This method formats the price of a bundle of products 
+     * @return bundle price
+     */
+    public String getBundlePrice() {
+        double bundlePrice = this.price * this.getCount();
+        String price = NumberFormat.getCurrencyInstance().format(bundlePrice);
+        return price;
+    }
+
+    /**
+     * This method sets a product count 
+     * @param num the current number of products
+     */
+    public void setCount(int num) {
+        this.count = num;
+    }
+
+    /**
+     * method to get the current count of this product
+     * @return the number of products currently
+     */
+    public int getCount() {
+        return this.count;
+    }
+
+    /** 
+     * A method to add to product count
+     * @param num the number of products to add to this product
+     */
+    public void add(int num) {
+        this.count += num;
+    }
+    
+    /**
+     * A method to subtract from product count
+     * @param num the number of products to decrease
+     */
+    public void drop(int num) {
+        this.count -= num;
+    }
+
+    /**
+     * returns the complete data of a product
+     * @returns the product id, description, price and count
+     */
+    public String toString() {
+        String result = "(" + "Product id: " + this.getCode() + ", " + "Description: "
+                         + this.getDescription() + ", " + "Price: " + this.getPrice()
+                         + ", " + "Count: " + this.getCount() + ")";
+
+        return result;
+    }
+}
+
+/* A short example using the generic Product class API
+ *
+ * Author : Wali Morris 
+ * File   : ProductMain.java
+ * Date   : 03/09/2020
+ */
+
+import java.util.*;
+
+public class ProductMain {
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+
+        // product p1: initialize  
+        Product p1 = new Product();
+        p1.setCode(1234);
+        p1.setDescription("Seasonal Calender");
+        p1.setPrice(5.99);
+        p1.setCount(10);
+        System.out.println("Number of Calenders: " + p1.getCount());
+
+        // add calenders
+        System.out.print("How many calenders would you like to add to order: ");
+        int order1 = console.nextInt();
+        p1.add(order1);
+        System.out.println("After this order of calenders you now have: " + p1.getCount());
+        System.out.println("Calender order Summary: " + p1.toString());
+        System.out.println("Total Price: " + p1.getBundlePrice());
+        System.out.println();
+
+        // Product 2    
+        Product p2 = new Product(5678, "Healthy Cat Food", 12.00, 5);
+        System.out.println("The Price of " + p2.getCount() + " bags of cat food: " + p2.getBundlePrice());
+        p2.drop(2);
+        System.out.println("Cat Food order Summary: " + p2.toString());
+        System.out.println("Total Price: " + p2.getBundlePrice());
+    }
+}
+    
 /* Following along with Ch.8: Object-Oriented Programming. This class uses 
  * a Person object rather than the book's Point object from java.awt class. 
  *
