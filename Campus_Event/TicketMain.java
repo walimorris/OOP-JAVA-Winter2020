@@ -1,3 +1,10 @@
+/* A short client program to test all the ticket classes 
+ * 
+ * Author : Wali Morris
+ * File   : TicketMain.java
+ * Date   : 03/13/2020
+ */ 
+
 import java.util.*; 
 
 public class TicketMain { 
