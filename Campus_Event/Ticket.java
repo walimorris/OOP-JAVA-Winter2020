@@ -1,7 +1,6 @@
 /**
- * Tickets represent a ticket type for a campus event, each ticket 
- * has a unique number and price; this class serves as the super 
- * class for all ticket types 
+ * Tickets represent a ticket type for a campus event, each ticket has a unique number and
+ * price; this class serves as the super class for all ticket types 
  * 
  * @author Wali Morris
  */
@@ -16,8 +15,7 @@ abstract class Ticket {
     private final int number;   
     
     /**
-     * Constructor for Ticket which generates random number
-     * for the ticket
+     * Constructor for Ticket which generates random number for the ticket
      */
     public Ticket() { 
 	Random r = new Random(); 
