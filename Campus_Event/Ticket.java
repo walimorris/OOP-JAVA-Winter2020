@@ -24,13 +24,18 @@ abstract class Ticket {
         this.number = r.nextInt(10000);	
     }
     
+    /**
+    * @return randomly generated ticket number 
+    */
     public int getNumber() { 
 	return this.number; 
     } 	
     
     /**
-     * Abstract method getPrice is implemented in child classes 
-     * @return price of ticket
+     * Abstract method implemented in child classes 
+     * @see WalkupTicket.java
+     * @see AdvancedTicket.java
+     * @see StudentAdvanceTicket.java
      */ 
     abstract String getPrice(); 
     
@@ -41,8 +46,3 @@ abstract class Ticket {
 	return "Ticket#: " + this.number + ", " + "Price: " + this.getPrice(); 
     } 
 } 
-	
-        	    
-	 
-
-
