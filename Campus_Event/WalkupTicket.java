@@ -1,5 +1,5 @@
 /**
-* Walkup Tickets are categorized as tickets brought at the event. 
+* Walkup Tickets are categorized as tickets purchased at the event. 
 * 
 * @author Wali Morris 
 */ 
