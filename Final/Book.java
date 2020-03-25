@@ -1,3 +1,7 @@
+/* The Book class extends a Library item with added fields representing a 
+ * books characteristics. 
+ */
+
 public class Book extends LibraryItem {
     private String title; 
     private String author;
@@ -34,5 +38,3 @@ public class Book extends LibraryItem {
                this.getReservation(); 
     } 	
 } 
-
-
