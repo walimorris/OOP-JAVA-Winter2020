@@ -1,3 +1,5 @@
+/* The DVD class extends Library Item with the added characteristics of a DVD */ 
+
 public class DVD extends LibraryItem { 	
     private final String title; 
     private final String director; 
