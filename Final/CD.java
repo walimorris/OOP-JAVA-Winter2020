@@ -1,3 +1,9 @@
+/* The CD class is a subclass of DVD. There are a few minor observations: the CD class inherits 
+ * title and title for a DVD is the name of the movie. In the case of a CD, title represents the 
+ * name of the album. This might be a little confusing but it makes sense to inherit this meaning
+ * because an Album is generally the title of an artists' CD. 
+ */ 
+
 public class CD extends DVD { 
     private final String artist;  
     private final String label; 
