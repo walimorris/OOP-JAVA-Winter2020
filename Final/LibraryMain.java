@@ -37,6 +37,18 @@ public class LibraryMain {
         // setting a book to 5days late and receiving fines accrued
 	book1.setDaysLate(5); 
         System.out.println("Days Book 1 is late: " + book1.getDaysLate());
-        System.out.println("Fine owed: " + book1.getFinesAccrued()); 	
+        System.out.println("Fine owed: " + book1.getFinesAccrued());
+	
+	// checking if movie is checked in or out and getting its status  
+	System.out.println("Is " + movie1.getTitle() + " checked in: " + movie1.checkStatus()); 
+	System.out.println("Checking out " + movie1.getTitle() + "..."); 
+	movie1.checkOut(); 
+        System.out.println("Is " + movie1.getTitle() + " checked in: " + movie1.checkStatus()); 
+        movie1.setDaysLate(10); 
+        System.out.println("Days Movie 1 is late: " + movie1.getDaysLate()); 
+        System.out.println("Fine owed: " + movie1.getFinesAccrued()); 	
+	System.out.println("Checking " + movie1.getTitle() + " back in..."); 
+	movie1.checkIn(); 
+	System.out.println("Is " + movie1.getTitle() + " checked in: " + movie1.checkStatus());
     } 
 }     
