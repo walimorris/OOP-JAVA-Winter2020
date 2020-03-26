@@ -1,5 +1,5 @@
 /* The magazine class inherits from the Book class with the added characteristics
- * of a magazine, including the Magazine volume and issue number
+ * of a magazine, the Magazine volume and issue number
  */
 
 public class Magazine extends Book {
